@@ -153,6 +153,7 @@ function App() {
                         isAnalyzing={isAnalyzing}
                         canAnalyze={canAnalyze()}
                         onUpgradeClick={() => setShowUpgradeModal(true)}
+                        isPremium={userState.isPremium}
                     />
                 ) : (
                     <ResultsPage

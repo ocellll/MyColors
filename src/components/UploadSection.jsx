@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react'
+import { AdBannerHorizontal } from './AdBanner'
 
-function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, canAnalyze, onUpgradeClick }) {
+function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, canAnalyze, onUpgradeClick, isPremium }) {
     const [isDragging, setIsDragging] = useState(false)
     const [showCamera, setShowCamera] = useState(false)
     const fileInputRef = useRef(null)
@@ -302,6 +303,9 @@ function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, ca
                         </p>
                     </div>
                 </div>
+
+                {/* Ad Banner - Below Upload Box */}
+                <AdBannerHorizontal isPremium={isPremium} />
             </section>
 
             {/* How It Works */}

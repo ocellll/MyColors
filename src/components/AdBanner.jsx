@@ -25,7 +25,7 @@ function AdBanner({ isPremium, slot, format = 'auto', className = '' }) {
             <ins
                 className="adsbygoogle"
                 style={{ display: 'block' }}
-                data-ad-client="ca-pub-XXXXXXXXXX"
+                data-ad-client={import.meta.env.VITE_ADSENSE_CLIENT || "ca-pub-6468719418870560"}
                 data-ad-slot={slot}
                 data-ad-format={format}
                 data-full-width-responsive="true"
