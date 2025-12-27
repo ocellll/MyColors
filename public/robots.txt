@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mycolors.app/sitemap.xml
+Sitemap: https://mycolorspro.vercel.app/sitemap.xml
