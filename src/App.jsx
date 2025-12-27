@@ -46,7 +46,11 @@ function App() {
 
     // Handle image upload
     const handleImageUpload = (file) => {
-        if (!file) return
+        if (!file) {
+            setUploadedImage(null)
+            setImagePreview(null)
+            return
+        }
 
         // Check file type
         if (!file.type.startsWith('image/')) {
