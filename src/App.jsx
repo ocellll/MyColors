@@ -3,6 +3,7 @@ import Header from './components/Header'
 import UploadSection from './components/UploadSection'
 import ResultsPage from './components/ResultsPage'
 import UpgradeModal from './components/UpgradeModal'
+import Footer from './components/Footer'
 import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
 import { SEASON_PALETTES } from './data/seasonColors'
@@ -170,6 +171,8 @@ function App() {
                     />
                 )}
             </main>
+
+            <Footer />
 
             {/* Upgrade Modal */}
             {showUpgradeModal && (

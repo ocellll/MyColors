@@ -28,8 +28,8 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
                                 </svg>
                             </div>
                             <div>
-                                <h1 className="text-xl font-bold text-gradient">MyColors</h1>
-                                <p className="text-xs text-gray-500 hidden sm:block">Descubre tus colores</p>
+                                <h1 className="text-xl font-bold text-gradient">MyColors — Test de Color</h1>
+                                <p className="text-xs text-gray-500 hidden sm:block">Análisis de colorimetría personal</p>
                             </div>
                         </div>
                     </div>
