@@ -32,11 +32,13 @@ function UpgradeModal({ onClose, onSuccess }) {
             } catch (error) {
                 console.error('Stripe error:', error)
                 // Fallback to demo mode
-                simulateUpgrade()
+                console.warn('Stripe checkout failed. Check console for details.')
+                alert('Error al iniciar el pago. Por favor intenta más tarde.')
             }
         } else {
-            // Demo mode - simulate upgrade
-            simulateUpgrade()
+            // Check for missing keys
+            console.error('Stripe Public Key is missing or invalid in .env')
+            alert('El sistema de pagos no está configurado correctamente. Contacta al soporte.')
         }
     }
 
@@ -108,9 +110,9 @@ function UpgradeModal({ onClose, onSuccess }) {
                 {/* Pricing */}
                 <div className="text-center mb-6">
                     <div className="inline-flex items-baseline gap-1">
-                        <span className="text-lg text-gray-400 line-through mr-2">$4.99</span>
-                        <span className="text-4xl font-bold text-gradient">$1.99</span>
-                        <span className="text-gray-500">USD</span>
+                        <span className="text-lg text-gray-400 line-through mr-2">4,99 €</span>
+                        <span className="text-4xl font-bold text-gradient">1,99 €</span>
+                        <span className="text-gray-500">EUR</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-1">
                         Pago único • Sin suscripciones

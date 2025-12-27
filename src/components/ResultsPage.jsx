@@ -76,17 +76,18 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
             ctx.fillStyle = '#FFFFFF'
             ctx.fillText('Tu paleta de colores', 540, 680)
 
-            // Color palette grid (4x3)
-            const colorSize = 180
+            // Color palette grid
+            const isExtended = colors.length > 12
+            const colorSize = isExtended ? 130 : 180
             const gap = 20
-            const startX = (canvas.width - (colorSize * 4 + gap * 3)) / 2
+            const startX = (canvas.width - (4 * colorSize + 3 * gap)) / 2
             const startY = 740
 
-            colors.slice(0, 12).forEach((color, index) => {
+            colors.forEach((color, index) => {
                 const row = Math.floor(index / 4)
                 const col = index % 4
                 const x = startX + col * (colorSize + gap)
-                const y = startY + row * (colorSize + gap + 30)
+                const y = startY + row * (colorSize + gap + (isExtended ? 45 : 30))
 
                 // Color swatch
                 ctx.fillStyle = color.hex
@@ -101,8 +102,9 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
 
                 // Color name
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.9)'
-                ctx.font = '16px Inter, Arial'
-                ctx.fillText(color.name, x + colorSize / 2, y + colorSize + 25)
+                ctx.font = isExtended ? '12px Inter, Arial' : '16px Inter, Arial'
+                const textY = y + colorSize + (isExtended ? 20 : 25)
+                ctx.fillText(color.name, x + colorSize / 2, textY)
             })
 
             // Watermark if not premium

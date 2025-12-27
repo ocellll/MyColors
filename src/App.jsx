@@ -6,7 +6,7 @@ import UpgradeModal from './components/UpgradeModal'
 import Footer from './components/Footer'
 import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
-import { SEASON_PALETTES } from './data/seasonColors'
+import { SEASON_PALETTES, PREMIUM_PALETTES } from './data/seasonColors'
 
 function App() {
     // User state
@@ -88,22 +88,29 @@ function App() {
         setIsAnalyzing(true)
 
         try {
-            // Simulate analysis time for better UX
-            await new Promise(resolve => setTimeout(resolve, 1500))
+            // Simulate analysis time for better UX (faster for premium)
+            const analysisDelay = userState.isPremium ? 500 : 1500
+            await new Promise(resolve => setTimeout(resolve, analysisDelay))
 
             // Analyze the image
             const skinTone = await analyzeImage(uploadedImage)
             const seasonResult = determineSeason(skinTone)
-            const palette = SEASON_PALETTES[seasonResult.season]
+            const basePalette = SEASON_PALETTES[seasonResult.season]
+
+            // Merge premium colors if applicable
+            let finalColors = basePalette.colors
+            if (userState.isPremium && PREMIUM_PALETTES[seasonResult.season]) {
+                finalColors = [...basePalette.colors, ...PREMIUM_PALETTES[seasonResult.season].additionalColors]
+            }
 
             setAnalysisResult({
                 skinTone,
                 season: seasonResult,
-                colors: palette.colors,
-                avoidColors: palette.avoidColors,
-                bestCombinations: palette.bestCombinations,
-                gradientStart: palette.gradientStart,
-                gradientEnd: palette.gradientEnd
+                colors: finalColors,
+                avoidColors: basePalette.avoidColors,
+                bestCombinations: basePalette.bestCombinations,
+                gradientStart: basePalette.gradientStart,
+                gradientEnd: basePalette.gradientEnd
             })
 
             // Update user state

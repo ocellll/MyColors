@@ -29,7 +29,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-                    <p>© 2024 MyColors. Todos los derechos reservados.</p>
+                    <p>© 2025 MyColors. Todos los derechos reservados.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-purple-500 transition-colors">Instagram</a>
                         <a href="#" className="hover:text-purple-500 transition-colors">TikTok</a>
