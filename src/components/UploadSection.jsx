@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { AdBannerHorizontal } from './AdBanner'
 
 function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, canAnalyze, onUpgradeClick, isPremium }) {
@@ -7,6 +7,13 @@ function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, ca
     const fileInputRef = useRef(null)
     const videoRef = useRef(null)
     const streamRef = useRef(null)
+
+    // Handle camera stream binding
+    useEffect(() => {
+        if (showCamera && streamRef.current && videoRef.current) {
+            videoRef.current.srcObject = streamRef.current
+        }
+    }, [showCamera])
 
     // Handle drag events
     const handleDragOver = useCallback((e) => {
@@ -43,9 +50,6 @@ function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, ca
                 video: { facingMode: 'user' }
             })
             streamRef.current = stream
-            if (videoRef.current) {
-                videoRef.current.srcObject = stream
-            }
             setShowCamera(true)
         } catch (error) {
             console.error('Camera error:', error)
