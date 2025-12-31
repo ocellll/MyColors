@@ -110,16 +110,22 @@ function App() {
                     body: JSON.stringify({ imageBase64 })
                 })
 
-                if (!response.ok) throw new Error('AI analysis failed')
+                if (!response.ok) {
+                    const errorDetails = await response.json()
+                    throw new Error(errorDetails.message || `API Error ${response.status}`)
+                }
 
                 const aiData = await response.json()
                 seasonResult = aiData
                 skinTone = aiData.skinTone
             } catch (aiError) {
-                console.warn('AI analysis failed, falling back to local algorithm:', aiError)
+                console.error('AI analysis failed:', aiError)
                 // 2. Fallback to Local Algorithmic Analysis
                 skinTone = await analyzeImage(uploadedImage)
                 seasonResult = determineSeason(skinTone)
+
+                // Alert the user that we are using fallback mode (for debugging)
+                console.warn('Using local fallback mode due to:', aiError.message)
             }
 
             const basePalette = SEASON_PALETTES[seasonResult.season]

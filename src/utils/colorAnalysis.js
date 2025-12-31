@@ -20,50 +20,58 @@ export async function analyzeImage(imageFile) {
                 canvas.height = img.height
                 ctx.drawImage(img, 0, 0)
 
-                // Extract face region (center-upper portion where face likely is)
-                const faceX = Math.floor(img.width * 0.30)
-                const faceY = Math.floor(img.height * 0.15)
-                const faceWidth = Math.floor(img.width * 0.40)
-                const faceHeight = Math.floor(img.height * 0.35)
+                // Define multiple potential skin sampling regions
+                const regions = [
+                    { x: 0.45, y: 0.20, w: 0.10, h: 0.10 }, // Forehead
+                    { x: 0.35, y: 0.45, w: 0.10, h: 0.10 }, // Left cheek
+                    { x: 0.55, y: 0.45, w: 0.10, h: 0.10 }, // Right cheek
+                    { x: 0.45, y: 0.60, w: 0.10, h: 0.10 }, // Chin / Jaw
+                    { x: 0.30, y: 0.30, w: 0.40, h: 0.40 }  // Large center box (fallback)
+                ]
 
-                // Get pixel data from face region
-                const imageData = ctx.getImageData(faceX, faceY, faceWidth, faceHeight)
-                const pixels = imageData.data
+                let bestSkinPixels = []
+                let maxSkinCount = 0
 
-                // Sample pixels and filter for likely skin tones
-                const skinPixels = []
-                const sampleRate = 10 // Sample every 10th pixel for performance
+                for (const region of regions) {
+                    const rx = Math.floor(img.width * region.x)
+                    const ry = Math.floor(img.height * region.y)
+                    const rw = Math.floor(img.width * region.w)
+                    const rh = Math.floor(img.height * region.h)
 
-                for (let i = 0; i < pixels.length; i += 4 * sampleRate) {
-                    const r = pixels[i]
-                    const g = pixels[i + 1]
-                    const b = pixels[i + 2]
+                    const imageData = ctx.getImageData(rx, ry, rw, rh)
+                    const pixels = imageData.data
+                    const sampledPixels = []
+                    let skinCount = 0
 
-                    // Basic skin tone detection heuristic
-                    if (isSkinTone(r, g, b)) {
-                        skinPixels.push([r, g, b])
+                    for (let i = 0; i < pixels.length; i += 4) {
+                        const r = pixels[i], g = pixels[i + 1], b = pixels[i + 2]
+                        if (isSkinTone(r, g, b)) {
+                            skinCount++
+                            sampledPixels.push([r, g, b])
+                        }
+                    }
+
+                    if (skinCount > maxSkinCount) {
+                        maxSkinCount = skinCount
+                        bestSkinPixels = sampledPixels
                     }
                 }
 
-                // Calculate average skin color from detected skin pixels
+                // Calculate average skin color from best detected region
                 let avgR = 0, avgG = 0, avgB = 0
 
-                if (skinPixels.length > 0) {
-                    skinPixels.forEach(([r, g, b]) => {
-                        avgR += r
-                        avgG += g
-                        avgB += b
+                if (bestSkinPixels.length > 0) {
+                    bestSkinPixels.forEach(([r, g, b]) => {
+                        avgR += r; avgG += g; avgB += b
                     })
-                    avgR = Math.round(avgR / skinPixels.length)
-                    avgG = Math.round(avgG / skinPixels.length)
-                    avgB = Math.round(avgB / skinPixels.length)
+                    avgR = Math.round(avgR / bestSkinPixels.length)
+                    avgG = Math.round(avgG / bestSkinPixels.length)
+                    avgB = Math.round(avgB / bestSkinPixels.length)
                 } else {
-                    // Fallback to Color Thief if no skin detected
+                    // Fallback to Color Thief dominant color if NO skin pixels found anywhere
                     const colorThief = new ColorThief()
                     const dominant = colorThief.getColor(img)
-                    avgR = dominant[0]
-                    avgG = dominant[1]
-                    avgB = dominant[2]
+                    avgR = dominant[0]; avgG = dominant[1]; avgB = dominant[2]
                 }
 
                 const dominantColor = [avgR, avgG, avgB]
@@ -97,27 +105,28 @@ export async function analyzeImage(imageFile) {
  * Check if RGB values represent a likely skin tone
  */
 function isSkinTone(r, g, b) {
-    // Skin tone detection using RGB rules
-    // Based on research on skin color detection
-
-    // Rule 1: R > G > B pattern (common in most skin tones)
-    const rgbPattern = r > g && g > b
-
-    // Rule 2: R and G should be higher than B
-    const warmCondition = r > 95 && g > 40 && b > 20
-
-    // Rule 3: Max-Min difference
+    // Improved skin tone detection (Support for all ethnicities)
     const max = Math.max(r, g, b)
     const min = Math.min(r, g, b)
     const diff = max - min
 
-    // Rule 4: Not too saturated (avoid clothing, makeup)
-    const saturationOk = diff < 150
+    // Basic range for human skin
+    if (r < 40 || g < 20 || b < 10) return false // Too dark
+    if (r > 250 && g > 250 && b > 250) return false // Too bright (probably snow/background)
 
-    // Rule 5: Not too dark or too bright
-    const brightnessOk = r > 60 && r < 250 && g > 40 && g < 230
+    // Rule 1: R > G and R > B (Universal for human skin except in very odd lighting)
+    const rDominant = r > g && r > b
 
-    return (rgbPattern || warmCondition) && saturationOk && brightnessOk
+    // Rule 2: Saturation check (Skin isn't neon)
+    const saturationOk = diff > 10 && diff < 150
+
+    // Rule 3: RGB distribution rules for skin
+    const ratioOk = (r / g > 1.1) && (r / b > 1.1)
+
+    // Rule 4: Exclude gray/neutral backgrounds (common in snowy or cloudy photos)
+    const notGray = diff > 15
+
+    return (rDominant || ratioOk) && saturationOk && notGray
 }
 
 /**

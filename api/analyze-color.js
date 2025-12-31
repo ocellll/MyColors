@@ -34,19 +34,25 @@ export default async function handler(req, res) {
                     {
                         parts: [
                             {
-                                text: `Eres un experto profesional en colorimetría personal y asesoría de imagen. 
-                                Analiza cuidadosamente la piel, ojos y cabello de la persona en esta foto para determinar su temporada de color.
+                                text: `Eres un experto profesional en colorimetría personal y asesoría de imagen de élite. 
+                                Tu tarea es realizar un análisis de colorimetría basado en la teoría de las 12 estaciones.
                                 
-                                Responde ESTRICTAMENTE en formato JSON plano con esta estructura (no incluyas markdown, solo el objeto):
+                                INSTRUCCIONES CRÍTICAS:
+                                1. IGNORA EL FONDO, ROPA O ACCESORIOS (gafas de sol, sombreros, etc.). Enfócate solo en la piel, ojos y labios.
+                                2. Analiza el contraste, la temperatura (warm/cool) y la profundidad.
+                                3. En la foto puede haber elementos distractores (como nieve o gafas de esquí), NO dejes que afecten al análisis. Extrae el tono de piel real de las zonas visibles de la cara o cuello.
+                                
+                                Responde ÚNICAMENTE con un objeto JSON válido. No incluyas explicaciones fuera del JSON.
+                                Estructura:
                                 {
                                   "season": "PRIMAVERA" | "VERANO" | "OTOÑO" | "INVIERNO",
-                                  "type": "Ej: Cálida y Luminosa",
-                                  "description": "Explicación detallada de por qué se ha elegido esta temporada basada en sus rasgos",
-                                  "characteristics": ["Característica 1", "Característica 2"],
-                                  "bestFor": "Resumen de lo que mejor le queda",
-                                  "avoid": "Lo que debe evitar",
+                                  "type": "Nombre específico de la sub-estación (ej: Invierno Brillante, Otoño Cálido)",
+                                  "description": "Explicación técnica de por qué los rasgos del usuario encajan en esta estación, mencionando específicamente su contraste y undertone.",
+                                  "characteristics": ["Ej: Contraste alto", "Subtono frío", "Piel oliva"],
+                                  "bestFor": "Resumen de su paleta ideal",
+                                  "avoid": "Colores que apagan su rostro",
                                   "skinTone": {
-                                    "hex": "#XXXXXX",
+                                    "hex": "#XXXXXX (el tono percibido)",
                                     "warmth": 0-100,
                                     "lightness": 0-100,
                                     "saturation": 0-100,
@@ -71,15 +77,22 @@ export default async function handler(req, res) {
 
         if (!response.ok) {
             const errorData = await response.json();
-            throw new Error(errorData.error?.message || 'Gemini API Error');
+            console.error('Gemini API Error details:', JSON.stringify(errorData));
+            throw new Error(errorData.error?.message || `Gemini API Error (${response.status})`);
         }
 
         const data = await response.json();
-        const aiResponseText = data.candidates[0].content.parts[0].text;
 
-        // Parse the JSON response from AI
+        if (!data.candidates || !data.candidates[0]) {
+            throw new Error('No se recibió respuesta de la IA');
+        }
+
+        let aiResponseText = data.candidates[0].content.parts[0].text;
+
+        // Defensive JSON parsing: remove possible markdown blocks
+        aiResponseText = aiResponseText.replace(/```json\s?|```/g, '').trim();
+
         const analysis = JSON.parse(aiResponseText);
-
         res.status(200).json(analysis);
     } catch (err) {
         console.error('AI Analysis Error:', err);
