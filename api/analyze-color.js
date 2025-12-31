@@ -23,8 +23,8 @@ export default async function handler(req, res) {
         const mimeType = mimeTypeMatch ? mimeTypeMatch[1] : 'image/jpeg';
         const base64Data = imageBase64.replace(/^data:image\/\w+;base64,/, '');
 
-        // Call Gemini 2.0 Flash API
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
+        // Call Gemini 1.5 Flash API (More stable for free tier quotas)
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
