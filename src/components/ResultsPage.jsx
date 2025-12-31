@@ -322,10 +322,10 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
                                     onClick={onUpgradeClick}
                                     className="btn-premium text-lg"
                                 >
-                                    Hazte Premium - Solo $1.99
+                                    Hazte Premium - Solo 1,99 €/mes
                                 </button>
                                 <p className="text-sm text-gray-500 mt-4">
-                                    Pago único • Sin suscripciones
+                                    Suscripción mensual • Cancela cuando quieras
                                 </p>
                             </div>
                         </div>

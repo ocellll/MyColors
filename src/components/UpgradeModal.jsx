@@ -112,10 +112,10 @@ function UpgradeModal({ onClose, onSuccess }) {
                     <div className="inline-flex items-baseline gap-1">
                         <span className="text-lg text-gray-400 line-through mr-2">4,99 €</span>
                         <span className="text-4xl font-bold text-gradient">1,99 €</span>
-                        <span className="text-gray-500">EUR</span>
+                        <span className="text-gray-500 font-medium">/ mes</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-1">
-                        Pago único • Sin suscripciones
+                        Suscripción mensual • Cancela en cualquier momento
                     </p>
                     <p className="text-xs text-green-600 font-medium mt-2">
                         🎉 ¡Oferta de lanzamiento! Ahorra 60%
@@ -128,7 +128,7 @@ function UpgradeModal({ onClose, onSuccess }) {
                     onClick={handleUpgrade}
                     className="btn-premium w-full text-lg flex items-center justify-center gap-2 py-4"
                 >
-                    <span>Activar Premium Ahora</span>
+                    <span>Suscribirse Ahora</span>
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
