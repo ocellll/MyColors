@@ -73,6 +73,16 @@ function App() {
         reader.readAsDataURL(file)
     }
 
+    // Helper to convert file to base64
+    const fileToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader()
+            reader.readAsDataURL(file)
+            reader.onload = () => resolve(reader.result)
+            reader.onerror = (error) => reject(error)
+        })
+    }
+
     // Handle analyze click
     const handleAnalyze = async () => {
         if (!uploadedImage) {
@@ -88,13 +98,30 @@ function App() {
         setIsAnalyzing(true)
 
         try {
-            // Simulate analysis time for better UX (faster for premium)
-            const analysisDelay = userState.isPremium ? 500 : 1500
-            await new Promise(resolve => setTimeout(resolve, analysisDelay))
+            let seasonResult;
+            let skinTone;
 
-            // Analyze the image
-            const skinTone = await analyzeImage(uploadedImage)
-            const seasonResult = determineSeason(skinTone)
+            try {
+                // 1. Try Real AI Analysis (Gemini)
+                const imageBase64 = await fileToBase64(uploadedImage)
+                const response = await fetch('/api/analyze-color', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ imageBase64 })
+                })
+
+                if (!response.ok) throw new Error('AI analysis failed')
+
+                const aiData = await response.json()
+                seasonResult = aiData
+                skinTone = aiData.skinTone
+            } catch (aiError) {
+                console.warn('AI analysis failed, falling back to local algorithm:', aiError)
+                // 2. Fallback to Local Algorithmic Analysis
+                skinTone = await analyzeImage(uploadedImage)
+                seasonResult = determineSeason(skinTone)
+            }
+
             const basePalette = SEASON_PALETTES[seasonResult.season]
 
             // Merge premium colors if applicable
