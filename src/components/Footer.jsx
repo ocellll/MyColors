@@ -24,15 +24,29 @@ function Footer() {
                         <ul className="space-y-2 text-sm text-gray-500">
                             <li>Políticas de Privacidad</li>
                             <li>Términos de Servicio</li>
-                            <li>Cookies</li>
+                            <li>
+                                <a
+                                    href="https://billing.stripe.com/p/login/3cI28r4Qr7Kw0Wx1OXdfG00"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-purple-500 transition-colors font-medium text-purple-400"
+                                >
+                                    Gestionar Suscripción
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-                    <p>© 2025 MyColors. Todos los derechos reservados.</p>
-                    <div className="flex gap-6">
-                        <a href="#" className="hover:text-purple-500 transition-colors">Instagram</a>
-                        <a href="#" className="hover:text-purple-500 transition-colors">TikTok</a>
+                <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                    <p className="md:max-w-md text-center md:text-left italic">
+                        * MyColors se encuentra en fase de lanzamiento. El análisis por IA es una herramienta de orientación y puede presentar variaciones. Seguimos mejorando cada día.
+                    </p>
+                    <div className="flex flex-col md:items-end gap-1">
+                        <p>© 2025 MyColors. Todos los derechos reservados.</p>
+                        <div className="flex justify-center md:justify-end gap-6 text-sm">
+                            <a href="#" className="hover:text-purple-500 transition-colors font-medium">Instagram</a>
+                            <a href="#" className="hover:text-purple-500 transition-colors font-medium">TikTok</a>
+                        </div>
                     </div>
                 </div>
             </div>

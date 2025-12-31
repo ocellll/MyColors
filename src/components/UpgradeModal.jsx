@@ -18,7 +18,7 @@ function UpgradeModal({ onClose, onSuccess }) {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         priceId: import.meta.env.VITE_STRIPE_PRICE_ID || 'price_xxx',
-                        successUrl: `${window.location.origin}?upgraded=true`,
+                        successUrl: `${window.location.origin}?success=true`,
                         cancelUrl: window.location.origin
                     })
                 })
@@ -135,19 +135,30 @@ function UpgradeModal({ onClose, onSuccess }) {
                 </button>
 
                 {/* Trust signals */}
-                <div className="flex items-center justify-center gap-6 mt-6 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                        <span>Pago seguro</span>
+                <div className="flex flex-col items-center gap-4 mt-6">
+                    <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                            <span>Pago seguro</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Garantía 30 días</span>
+                        </div>
                     </div>
-                    <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>Garantía 30 días</span>
-                    </div>
+
+                    <a
+                        href="https://billing.stripe.com/p/login/3cI28r4Qr7Kw0Wx1OXdfG00"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-purple-600 hover:underline font-medium"
+                    >
+                        ¿Ya has pagado? Gestionar o restaurar acceso
+                    </a>
                 </div>
 
                 {/* Stripe badge */}

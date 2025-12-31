@@ -282,15 +282,18 @@ function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, ca
                         )}
 
                         {!canAnalyze && (
-                            <div className="p-4 bg-yellow-50 rounded-xl border border-yellow-200 text-center">
-                                <p className="text-yellow-800 mb-2">
-                                    Has alcanzado el límite de análisis gratuitos
+                            <div className="p-6 bg-amber-50 rounded-2xl border border-amber-200 text-center shadow-sm">
+                                <p className="text-amber-800 font-bold mb-1">
+                                    Límite diario alcanzado ⏳
+                                </p>
+                                <p className="text-amber-700 text-sm mb-4">
+                                    Vuelve mañana para tu próximo análisis gratuito o suscríbete para acceso ilimitado.
                                 </p>
                                 <button
                                     onClick={onUpgradeClick}
-                                    className="text-yellow-600 font-medium hover:underline"
+                                    className="btn-premium w-full text-sm py-3"
                                 >
-                                    Hazte Premium para análisis ilimitados →
+                                    Hazte Premium - Acceso Ilimitado 👑
                                 </button>
                             </div>
                         )}

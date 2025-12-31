@@ -33,16 +33,42 @@ function App() {
         localStorage.setItem('mycolors_user', JSON.stringify(userState))
     }, [userState])
 
+    // Check for payment success in URL
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search)
+        if (params.get('success') === 'true' && !userState.isPremium) {
+            setUserState(prev => ({ ...prev, isPremium: true }))
+            showToast('¡Pago completado! Ya eres Premium ✨')
+            // Clean URL
+            window.history.replaceState({}, document.title, "/")
+        }
+    }, [])
+
     // Check if user can analyze
     const canAnalyze = () => {
         if (userState.isPremium) return true
-        return userState.analyzesUsed < 1
+
+        // Allow up to 2 analyses
+        if (userState.analyzesUsed < 2) return true
+
+        // If they have used 2 or more, check if 22h have passed since the last one
+        if (userState.lastAnalysisDate) {
+            const lastDate = new Date(userState.lastAnalysisDate).getTime()
+            const now = new Date().getTime()
+            const diffHours = (now - lastDate) / (1000 * 60 * 60)
+
+            // If more than 22h passed, reset count (effectively)
+            if (diffHours >= 22) return true
+        }
+
+        return false
     }
 
     // Show toast notification
     const showToast = (message, duration = 3000) => {
         setToast(message)
-        setTimeout(() => setToast(null), duration)
+        if (window._toastTimeout) clearTimeout(window._toastTimeout)
+        window._toastTimeout = setTimeout(() => setToast(null), duration)
     }
 
     // Handle image upload
@@ -152,11 +178,17 @@ function App() {
             })
 
             // Update user state
-            setUserState(prev => ({
-                ...prev,
-                analyzesUsed: prev.analyzesUsed + 1,
-                lastAnalysisDate: new Date().toISOString()
-            }))
+            setUserState(prev => {
+                const now = new Date()
+                const lastDate = prev.lastAnalysisDate ? new Date(prev.lastAnalysisDate) : null
+                const diffHours = lastDate ? (now - lastDate) / (1000 * 60 * 60) : 22
+
+                return {
+                    ...prev,
+                    analyzesUsed: diffHours >= 22 ? 1 : prev.analyzesUsed + 1,
+                    lastAnalysisDate: now.toISOString()
+                }
+            })
 
             setCurrentPage('results')
         } catch (error) {

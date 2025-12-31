@@ -332,6 +332,13 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
                     </div>
                 </section>
             )}
+
+            {/* AI Disclaimer */}
+            <div className="max-w-2xl mx-auto px-4 pb-8 text-center">
+                <p className="text-[10px] text-gray-400 italic leading-relaxed">
+                    * MyColors AI se encuentra en fase de mejora continua. El análisis es orientativo y puede verse afectado por la iluminación o calidad de la imagen. Agradecemos tu paciencia mientras perfeccionamos nuestra tecnología.
+                </p>
+            </div>
         </div>
     )
 }
