@@ -4,8 +4,8 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-40 pointer-events-none">
-            <div className="glass-card mx-4 mt-4 px-6 py-4 rounded-2xl pointer-events-auto">
+        <header className="fixed top-0 left-0 right-0 z-[999]">
+            <div className="glass-card mx-4 mt-4 px-6 py-4 rounded-2xl">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
@@ -43,8 +43,9 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
                             </div>
                         ) : (
                             <button
+                                type="button"
                                 onClick={onUpgradeClick}
-                                className="btn-premium flex items-center gap-2"
+                                className="btn-premium flex items-center gap-2 cursor-pointer"
                             >
                                 <span>👑</span>
                                 <span>Upgrade to Premium</span>
@@ -54,8 +55,9 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
 
                     {/* Mobile Menu Button */}
                     <button
+                        type="button"
                         onClick={() => setMenuOpen(!menuOpen)}
-                        className="md:hidden p-2 hover:bg-gray-100 rounded-full transition-colors"
+                        className="md:hidden p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
                         aria-label="Menu"
                     >
                         <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -219,6 +219,14 @@ function App() {
 
     return (
         <div className="min-h-screen">
+            {/* Upgrade Modal */}
+            {showUpgradeModal && (
+                <UpgradeModal
+                    onClose={() => setShowUpgradeModal(false)}
+                    onSuccess={handleUpgradeSuccess}
+                />
+            )}
+
             <Header
                 isPremium={userState.isPremium}
                 onUpgradeClick={() => setShowUpgradeModal(true)}
@@ -250,14 +258,6 @@ function App() {
             </main>
 
             <Footer />
-
-            {/* Upgrade Modal */}
-            {showUpgradeModal && (
-                <UpgradeModal
-                    onClose={() => setShowUpgradeModal(false)}
-                    onSuccess={handleUpgradeSuccess}
-                />
-            )}
 
             {/* Toast Notification */}
             {toast && (
