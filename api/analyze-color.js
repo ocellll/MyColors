@@ -23,26 +23,27 @@ export default async function handler(req, res) {
         const mimeType = mimeTypeMatch ? mimeTypeMatch[1] : 'image/jpeg';
         const base64Data = imageBase64.replace(/^data:image\/\w+;base64,/, '');
 
-        // List of models to try in order of preference/stability
-        const modelsToTry = [
-            'gemini-1.5-flash',
-            'gemini-1.5-flash-latest',
-            'gemini-1.5-pro',
-            'gemini-2.0-flash'
+        // List of models and endpoints to try (Updated for Dec 2025 standards)
+        const attempts = [
+            { model: 'gemini-2.5-flash', api: 'v1' },
+            { model: 'gemini-2.5-flash-lite', api: 'v1' },
+            { model: 'gemini-2.0-flash', api: 'v1' },
+            { model: 'gemini-3-flash', api: 'v1beta' }
         ];
 
         let lastError = null;
         let analysis = null;
 
-        for (const model of modelsToTry) {
+        for (const attempt of attempts) {
             try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
+                const url = `https://generativelanguage.googleapis.com/${attempt.api}/models/${attempt.model}:generateContent?key=${apiKey}`;
+                const response = await fetch(url, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         contents: [{
                             parts: [
-                                { text: `Eres un experto en colorimetría. Analiza la foto y responde SOLO con un JSON: {"season": "PRIMAVERA"|"VERANO"|"OTOÑO"|"INVIERNO", "type": "...", "description": "...", "characteristics": [], "bestFor": "...", "avoid": "...", "skinTone": {"hex": "...", "warmth": 0, "lightness": 0, "saturation": 0, "undertone": "..."}}` },
+                                { text: "Eres un experto en colorimetría profesional. Analiza solo la piel de la cara y responde ESTRICTAMENTE con este JSON: {\"season\": \"PRIMAVERA\"|\"VERANO\"|\"OTOÑO\"|\"INVIERNO\", \"type\": \"...\", \"description\": \"...\", \"characteristics\": [], \"bestFor\": \"...\", \"avoid\": \"...\", \"skinTone\": {\"hex\": \"...\", \"warmth\": 0, \"lightness\": 0, \"saturation\": 0, \"undertone\": \"...\"}}" },
                                 { inline_data: { mime_type: mimeType, data: base64Data } }
                             ]
                         }]
@@ -51,9 +52,9 @@ export default async function handler(req, res) {
 
                 if (!response.ok) {
                     const errorMsg = await response.text();
-                    console.warn(`Model ${model} failed: ${errorMsg}`);
+                    console.warn(`Attempt with ${attempt.model} (${attempt.api}) failed: ${errorMsg}`);
                     lastError = new Error(errorMsg);
-                    continue; // Try next model
+                    continue;
                 }
 
                 const data = await response.json();
