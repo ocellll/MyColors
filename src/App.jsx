@@ -116,6 +116,11 @@ function App() {
                 }
 
                 const aiData = await response.json()
+
+                if (aiData.error) {
+                    throw new Error(aiData.error);
+                }
+
                 seasonResult = aiData
                 skinTone = aiData.skinTone
             } catch (aiError) {

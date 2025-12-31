@@ -43,7 +43,22 @@ export default async function handler(req, res) {
                     body: JSON.stringify({
                         contents: [{
                             parts: [
-                                { text: "Eres un experto en colorimetría profesional. Analiza solo la piel de la cara y responde ESTRICTAMENTE con este JSON: {\"season\": \"PRIMAVERA\"|\"VERANO\"|\"OTOÑO\"|\"INVIERNO\", \"type\": \"...\", \"description\": \"...\", \"characteristics\": [], \"bestFor\": \"...\", \"avoid\": \"...\", \"skinTone\": {\"hex\": \"...\", \"warmth\": 0, \"lightness\": 0, \"saturation\": 0, \"undertone\": \"...\"}}" },
+                                {
+                                    text: `Eres un experto en colorimetría profesional. 
+                                Sigue estas reglas estrictas:
+                                1. Si no hay personas o caras visibles en la foto, responde solo con: {"error": "No se detectó ninguna cara en la imagen. Por favor, sube una foto donde se vea bien tu rostro."}
+                                2. Si hay más de una persona clara, responde solo con: {"error": "Se detectaron varias personas. Por favor, sube una foto de una sola persona para un análisis preciso."}
+                                3. Si hay una persona clara, analiza solo la piel de su cara y responde ESTRICTAMENTE con este JSON: 
+                                {
+                                  "status": "success",
+                                  "season": "PRIMAVERA"|"VERANO"|"OTOÑO"|"INVIERNO", 
+                                  "type": "...", 
+                                  "description": "...", 
+                                  "characteristics": [], 
+                                  "bestFor": "...", 
+                                  "avoid": "...", 
+                                  "skinTone": {"hex": "...", "warmth": 0, "lightness": 0, "saturation": 0, "undertone": "..."}
+                                }` },
                                 { inline_data: { mime_type: mimeType, data: base64Data } }
                             ]
                         }]
