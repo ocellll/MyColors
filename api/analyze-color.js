@@ -61,17 +61,14 @@ export default async function handler(req, res) {
                                 }`
                             },
                             {
-                                inlineData: {
-                                    mimeType: mimeType,
+                                inline_data: {
+                                    mime_type: mimeType,
                                     data: base64Data
                                 }
                             }
                         ]
                     }
-                ],
-                generationConfig: {
-                    responseMimeType: "application/json"
-                }
+                ]
             })
         });
 
