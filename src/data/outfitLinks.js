@@ -36,11 +36,20 @@ export const AFFILIATE_CONFIG = {
 }
 
 /**
- * Generate Amazon affiliate link (funciona con búsquedas)
+ * Generate Amazon affiliate link (detects country based on browser language)
  */
 export function generateAmazonLink(searchQuery, tag = AFFILIATE_CONFIG.AMAZON_TAG) {
     const encodedQuery = encodeURIComponent(searchQuery)
-    return `https://www.amazon.es/s?k=${encodedQuery}&tag=${tag}`
+
+    // Basic country detection by browser language
+    const lang = (navigator.language || 'en-US').toLowerCase()
+    let tld = 'com' // Default to Global (.com)
+
+    if (lang.includes('es-es') || lang === 'es') tld = 'es'
+    else if (lang.includes('es-mx') || lang.includes('es-419')) tld = 'com.mx'
+    else if (lang.startsWith('es')) tld = 'com' // Other Spanish speakers often use Global .com 
+
+    return `https://www.amazon.${tld}/s?k=${encodedQuery}&tag=${tag}`
 }
 
 /**
