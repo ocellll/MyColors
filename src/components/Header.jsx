@@ -37,10 +37,15 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-4">
                         {isPremium ? (
-                            <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white font-medium">
+                            <a
+                                href="https://billing.stripe.com/p/login/3cI28r4Qr7Kw0Wx1OXdfG00"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white font-medium hover:scale-105 transition-transform shadow-md cursor-pointer"
+                            >
                                 <span>👑</span>
-                                <span>Premium</span>
-                            </div>
+                                <span>Premium Activo</span>
+                            </a>
                         ) : (
                             <button
                                 type="button"
