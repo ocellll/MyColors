@@ -24,7 +24,8 @@ function UpgradeModal({ onClose, onSuccess }) {
                 })
 
                 if (!response.ok) {
-                    throw new Error('Failed to create checkout session')
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || errorData.error || `Server Error: ${response.status}`);
                 }
 
                 const session = await response.json()
