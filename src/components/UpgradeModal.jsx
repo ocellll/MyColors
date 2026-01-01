@@ -31,9 +31,8 @@ function UpgradeModal({ onClose, onSuccess }) {
                 await stripe.redirectToCheckout({ sessionId: session.id })
             } catch (error) {
                 console.error('Stripe error:', error)
-                // Fallback to demo mode
-                console.warn('Stripe checkout failed. Check console for details.')
-                alert('Error al iniciar el pago. Por favor intenta más tarde.')
+                // Show the actual error to help debugging
+                alert(`Error: ${error.message || 'Error desconocido'}`)
             }
         } else {
             // Check for missing keys
