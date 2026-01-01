@@ -31,7 +31,10 @@ function App() {
     const [uploadedImage, setUploadedImage] = useState(null)
     const [imagePreview, setImagePreview] = useState(null)
     const [isAnalyzing, setIsAnalyzing] = useState(false)
-    const [analysisResult, setAnalysisResult] = useState(null)
+    const [analysisResult, setAnalysisResult] = useState(() => {
+        const saved = localStorage.getItem('mycolors_result')
+        return saved ? JSON.parse(saved) : null
+    })
     const [showUpgradeModal, setShowUpgradeModal] = useState(false)
     const [toast, setToast] = useState(null)
 
@@ -44,6 +47,11 @@ function App() {
     useEffect(() => {
         localStorage.setItem('mycolors_wardrobe', JSON.stringify(wardrobe))
     }, [wardrobe])
+
+    // Persist analysis result
+    useEffect(() => {
+        localStorage.setItem('mycolors_result', JSON.stringify(analysisResult))
+    }, [analysisResult])
 
     // Check for payment success in URL
     useEffect(() => {
