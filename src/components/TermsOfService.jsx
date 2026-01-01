@@ -113,7 +113,7 @@ function TermsOfService({ onBack }) {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">9. Contacto</h2>
                             <p>
-                                Para cualquier consulta sobre estos Términos de Servicio, contacta con nosotros en: <a href="mailto:contacto@mycolors.app" className="text-purple-600 hover:underline">contacto@mycolors.app</a>
+                                Para cualquier consulta sobre estos Términos de Servicio, contacta con nosotros en: <a href="mailto:catnamerly@gmail.com" className="text-purple-600 hover:underline">catnamerly@gmail.com</a>
                             </p>
                         </section>
                     </div>

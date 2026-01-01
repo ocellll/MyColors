@@ -100,7 +100,7 @@ function PrivacyPolicy({ onBack }) {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">7. Contacto</h2>
                             <p>
-                                Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos en: <a href="mailto:contacto@mycolors.app" className="text-purple-600 hover:underline">contacto@mycolors.app</a>
+                                Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos en: <a href="mailto:catnamerly@gmail.com" className="text-purple-600 hover:underline">catnamerly@gmail.com</a>
                             </p>
                         </section>
                     </div>

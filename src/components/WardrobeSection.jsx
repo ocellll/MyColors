@@ -1,45 +1,110 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import ColorThief from 'colorthief'
-import { rgbToHex, calculateWarmth, calculateLightness, calculateSaturation } from '../utils/colorAnalysis'
+import { rgbToHex } from '../utils/colorAnalysis'
+
+// Convert hex to RGB for color distance calculation
+const hexToRgb = (hex) => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null
+}
+
+// Calculate color distance (Delta E approximation)
+const colorDistance = (hex1, hex2) => {
+    const c1 = hexToRgb(hex1)
+    const c2 = hexToRgb(hex2)
+    if (!c1 || !c2) return 999
+
+    return Math.sqrt(
+        Math.pow(c1.r - c2.r, 2) +
+        Math.pow(c1.g - c2.g, 2) +
+        Math.pow(c1.b - c2.b, 2)
+    )
+}
 
 function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) {
     const [isAnalyzing, setIsAnalyzing] = useState(false)
-    const [previewImage, setPreviewImage] = useState(null)
     const fileInputRef = useRef(null)
 
     // Helper to check if a color fits the user's season
-    const checkColorFit = (hex) => {
-        if (!userSeason || !userSeason.colors) return { fits: false, message: 'Primero analiza tu rostro' }
+    const checkColorFit = useCallback((hex) => {
+        if (!userSeason || !userSeason.colors) {
+            return {
+                fits: false,
+                message: 'Primero analiza tu rostro para poder comparar colores.',
+                closestColor: null
+            }
+        }
 
-        // Simple distance-based check against the season's palette
-        // In a more advanced version, we could use CIELAB Delta E
-        const colorNames = userSeason.colors.map(c => c.hex)
-        const isMatch = colorNames.includes(hex.toUpperCase())
+        // Find the closest color in the palette
+        let minDistance = Infinity
+        let closestColor = null
 
-        if (isMatch) return { fits: true, message: '¡Este color es perfecto para ti!' }
+        for (const paletteColor of userSeason.colors) {
+            const distance = colorDistance(hex, paletteColor.hex)
+            if (distance < minDistance) {
+                minDistance = distance
+                closestColor = paletteColor
+            }
+        }
+
+        // Thresholds:
+        // < 30: Perfect match
+        // 30-60: Close match (acceptable)
+        // > 60: Not a match
+        if (minDistance < 30) {
+            return {
+                fits: true,
+                message: `¡Perfecto! Este color coincide con "${closestColor.name}" de tu paleta.`,
+                closestColor
+            }
+        } else if (minDistance < 60) {
+            return {
+                fits: true,
+                message: `Buena elección. Es similar a "${closestColor.name}" de tu paleta.`,
+                closestColor
+            }
+        }
 
         return {
             fits: false,
-            message: 'Este color no está en tu paleta principal, pero podrías usarlo con accesorios que sí te favorezcan.'
+            message: 'Este color no está en tu paleta. Combínalo con accesorios de tus colores ideales.',
+            closestColor
         }
-    }
+    }, [userSeason])
 
-    const handleFileUpload = (e) => {
-        const file = e.target.files[0]
-        if (file) {
+    // Convert file to base64 for persistent storage
+    const fileToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
             const reader = new FileReader()
-            reader.onload = (event) => setPreviewImage(event.target.result)
             reader.readAsDataURL(file)
-            analyzeClothing(file)
-        }
+            reader.onload = () => resolve(reader.result)
+            reader.onerror = (error) => reject(error)
+        })
     }
 
-    const analyzeClothing = async (file) => {
+    const handleFileUpload = async (e) => {
+        const file = e.target.files[0]
+        if (!file) return
+
+        // Reset input for re-upload of same file
+        e.target.value = ''
+
         setIsAnalyzing(true)
         try {
+            // Convert to base64 for persistent storage
+            const imageBase64 = await fileToBase64(file)
+
+            // Create image for color analysis
             const img = new Image()
-            img.src = URL.createObjectURL(file)
-            await new Promise(resolve => img.onload = resolve)
+            img.src = imageBase64
+            await new Promise((resolve, reject) => {
+                img.onload = resolve
+                img.onerror = reject
+            })
 
             const colorThief = new ColorThief()
             const dominantRGB = colorThief.getColor(img)
@@ -48,21 +113,21 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
 
             const newItem = {
                 id: Date.now(),
-                image: img.src,
+                image: imageBase64, // Store base64 for persistence
                 color: hex,
                 fit: fitResult.fits,
                 message: fitResult.message,
-                date: new Date().toLocaleDateString()
+                closestColor: fitResult.closestColor?.hex,
+                date: new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })
             }
 
-            onUpdateWardrobe([...wardrobe, newItem])
+            onUpdateWardrobe([newItem, ...wardrobe]) // Add to front
             showToast('¡Prenda añadida a tu armario! 👕')
         } catch (error) {
             console.error('Error analyzing clothing:', error)
-            showToast('Error al analizar la prenda')
+            showToast('Error al analizar la prenda. Intenta con otra foto.')
         } finally {
             setIsAnalyzing(false)
-            setPreviewImage(null)
         }
     }
 
@@ -71,13 +136,24 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
         showToast('Prenda eliminada')
     }
 
+    const clearAll = () => {
+        if (wardrobe.length === 0) return
+        onUpdateWardrobe([])
+        showToast('Armario vaciado')
+    }
+
     return (
         <div className="max-w-6xl mx-auto px-4 py-24">
             <header className="mb-12 text-center">
                 <h2 className="text-4xl font-bold text-gray-800 mb-4">Mi Armario Inteligente</h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                    Sube fotos de tu ropa para saber si combinan con tu colorimetría personal y mantén tu estilo siempre al máximo.
+                    Sube fotos de tu ropa para saber si combinan con tu colorimetría personal.
                 </p>
+                {!userSeason && (
+                    <div className="mt-4 inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+                        ⚠️ Primero analiza tu rostro para comparar colores
+                    </div>
+                )}
             </header>
 
             <div className="grid lg:grid-cols-3 gap-8">
@@ -101,7 +177,7 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                                         </svg>
                                     </div>
-                                    <p className="text-sm text-gray-600">Haz clic para subir una foto de tu prenda</p>
+                                    <p className="text-sm text-gray-600">Haz clic para subir una foto</p>
                                 </div>
                             )}
                             <input
@@ -117,9 +193,18 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                             <div className="p-4 bg-blue-50 rounded-2xl border border-blue-100">
                                 <p className="text-xs text-blue-700 flex gap-2">
                                     <span>💡</span>
-                                    <span>Usa fotos con buena iluminación para que la detección de color sea precisa.</span>
+                                    <span>Usa fotos con buena iluminación para mejor detección.</span>
                                 </p>
                             </div>
+
+                            {wardrobe.length > 0 && (
+                                <button
+                                    onClick={clearAll}
+                                    className="w-full text-sm text-red-500 hover:text-red-700 py-2"
+                                >
+                                    Vaciar armario
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -130,37 +215,46 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                         <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-3xl p-12 text-center">
                             <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <h4 className="text-xl font-bold text-gray-800 mb-2">Tu armario está vacío</h4>
-                            <p className="text-gray-500">Comienza subiendo fotos de tus prendas favoritas para analizarlas.</p>
+                            <p className="text-gray-500">Sube fotos de tus prendas para analizarlas.</p>
                         </div>
                     ) : (
                         <div className="grid sm:grid-cols-2 gap-6">
                             {wardrobe.map(item => (
                                 <div key={item.id} className="glass-card overflow-hidden group">
-                                    <div className="relative h-48 overflow-hidden">
+                                    <div className="relative h-48 overflow-hidden bg-gray-100">
                                         <img
                                             src={item.image}
                                             alt="Prenda"
-                                            className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                            className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                            loading="lazy"
                                         />
                                         <div className="absolute top-3 right-3">
                                             <button
                                                 onClick={() => removeItem(item.id)}
-                                                className="w-8 h-8 bg-white/90 backdrop-blur shadow-md rounded-full flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-white transition-all"
+                                                className="w-8 h-8 bg-white/90 backdrop-blur shadow-md rounded-full flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-white transition-all cursor-pointer"
                                             >
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </button>
                                         </div>
-                                        <div className="absolute bottom-3 left-3">
+                                        <div className="absolute bottom-3 left-3 flex gap-2">
                                             <div
                                                 className="w-8 h-8 rounded-lg shadow-lg border-2 border-white"
                                                 style={{ backgroundColor: item.color }}
+                                                title={`Color detectado: ${item.color}`}
                                             />
+                                            {item.closestColor && (
+                                                <div
+                                                    className="w-8 h-8 rounded-lg shadow-lg border-2 border-white/50"
+                                                    style={{ backgroundColor: item.closestColor }}
+                                                    title="Color más cercano en tu paleta"
+                                                />
+                                            )}
                                         </div>
                                     </div>
                                     <div className="p-5">
@@ -171,7 +265,7 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                                                 </span>
                                             ) : (
                                                 <span className="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full flex items-center gap-1">
-                                                    <span>!</span> NEUTRALIZAR
+                                                    <span>!</span> COMBINAR
                                                 </span>
                                             )}
                                             <span className="text-[10px] text-gray-400 ml-auto">{item.date}</span>
@@ -191,3 +285,4 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
 }
 
 export default WardrobeSection
+
