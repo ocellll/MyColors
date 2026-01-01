@@ -81,16 +81,34 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
         }
     }, [userSeason])
 
-    // Auto re-evaluate all wardrobe items when userSeason changes (after face analysis)
+    // Track if we've already re-evaluated to avoid loops
+    const hasReEvaluatedRef = useRef(false)
+
+    // Auto re-evaluate all wardrobe items when:
+    // 1. Component mounts with pending items and season available
+    // 2. userSeason becomes available after mounting
     useEffect(() => {
-        if (!hasUserSeason || wardrobe.length === 0) return
+        if (!hasUserSeason || wardrobe.length === 0) {
+            // Reset the ref if we don't have season data
+            hasReEvaluatedRef.current = false
+            return
+        }
 
         // Check if any items are pending or need re-evaluation
         const hasPendingItems = wardrobe.some(item => item.pending === true || item.fit === null)
+
+        // Skip if no pending items or already re-evaluated this session
         if (!hasPendingItems) return
+        if (hasReEvaluatedRef.current) return
+
+        // Mark that we've done re-evaluation
+        hasReEvaluatedRef.current = true
 
         // Re-evaluate all items with the new season data
         const updatedWardrobe = wardrobe.map(item => {
+            // Only re-evaluate pending items
+            if (!item.pending && item.fit !== null) return item
+
             const fitResult = checkColorFit(item.color)
             return {
                 ...item,
@@ -103,7 +121,8 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
 
         onUpdateWardrobe(updatedWardrobe)
         showToast('¡Tu armario ha sido re-evaluado! 🎉')
-    }, [hasUserSeason]) // Only run when hasUserSeason changes to true
+    }, [hasUserSeason, wardrobe, checkColorFit, onUpdateWardrobe, showToast]) // Include all dependencies
+
 
     // Convert file to base64 for persistent storage
     const fileToBase64 = (file) => {
