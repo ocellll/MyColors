@@ -51,7 +51,7 @@ export default async function handler(req, res) {
                                 3. Si hay una persona clara, analiza solo la piel de su cara y responde ESTRICTAMENTE con este JSON: 
                                 {
                                   "status": "success",
-                                  "season": "PRIMAVERA"|"VERANO"|"OTOÑO"|"INVIERNO", 
+                                  "season": "BRIGHT_SPRING"|"WARM_SPRING"|"LIGHT_SPRING"|"LIGHT_SUMMER"|"COOL_SUMMER"|"SOFT_SUMMER"|"SOFT_AUTUMN"|"WARM_AUTUMN"|"DEEP_AUTUMN"|"DEEP_WINTER"|"COOL_WINTER"|"BRIGHT_WINTER", 
                                   "type": "...", 
                                   "description": "...", 
                                   "characteristics": [], 

@@ -4,7 +4,7 @@ import OutfitSuggestions from './OutfitSuggestions'
 import ShareButtons from './ShareButtons'
 import { AdBannerHorizontal } from './AdBanner'
 
-function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgradeClick, showToast }) {
+function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgradeClick, showToast, onWardrobeClick }) {
     if (!result) return null
 
     const { season, colors, avoidColors, bestCombinations } = result
@@ -16,8 +16,21 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
         canvas.height = 1920
         const ctx = canvas.getContext('2d')
 
-        // Season-specific gradients
+        // Season-specific gradients for 12 seasons
         const gradients = {
+            BRIGHT_SPRING: ['#FF007F', '#FFD700'],
+            WARM_SPRING: ['#FF7F50', '#FFD700'],
+            LIGHT_SPRING: ['#FFB7C5', '#FFFACD'],
+            LIGHT_SUMMER: ['#B0E0E6', '#FFC0CB'],
+            COOL_SUMMER: ['#6495ED', '#DA70D6'],
+            SOFT_SUMMER: ['#9370DB', '#BC8F8F'],
+            SOFT_AUTUMN: ['#BDB76B', '#CD853F'],
+            WARM_AUTUMN: ['#D2691E', '#B8860B'],
+            DEEP_AUTUMN: ['#8B0000', '#8B4513'],
+            DEEP_WINTER: ['#000000', '#4B0082'],
+            COOL_WINTER: ['#0000FF', '#FF00FF'],
+            BRIGHT_WINTER: ['#FF007F', '#00BFFF'],
+            // Legacy support
             PRIMAVERA: ['#FF6B9D', '#FFD700'],
             VERANO: ['#87CEEB', '#E6E6FA'],
             OTOÑO: ['#D2691E', '#DAA520'],
@@ -60,11 +73,11 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
             ctx.arc(540, 280, 154, 0, Math.PI * 2)
             ctx.stroke()
 
-            // Season title
+            // Season title (Granular)
             ctx.fillStyle = '#FFFFFF'
             ctx.font = 'bold 64px Inter, Arial'
             ctx.textAlign = 'center'
-            ctx.fillText(season.season, 540, 520)
+            ctx.fillText(season.type, 540, 520)
 
             // Season type
             ctx.font = '32px Inter, Arial'
@@ -149,7 +162,11 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
         'Undertone dorado': '🌟',
         'Undertone rosado': '🌷',
         'Undertone azulado': '💎',
-        'Undertone dorado/oliva': '🫒'
+        'Undertone dorado/oliva': '🫒',
+        'Contraste alto': '⬛',
+        'Brillo intenso': '✨',
+        'Subtono cálido': '☀️',
+        'Frialdad extrema': '❄️'
     }
 
     return (
@@ -193,6 +210,17 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* Interactive Draping Tool */}
+            <section className="py-16 px-4 bg-white">
+                <div className="max-w-6xl mx-auto">
+                    <DrapingTool
+                        userPhoto={userPhoto}
+                        colors={colors}
+                        seasonName={season.type}
+                    />
                 </div>
             </section>
 
@@ -301,6 +329,30 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
                         </div>
 
                         <ShareButtons season={season} showToast={showToast} />
+                    </div>
+                </div>
+            </section>
+
+            {/* Wardrobe CTA */}
+            <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20 px-4 text-center text-white">
+                <div className="max-w-4xl mx-auto">
+                    <div className="mb-8 inline-block p-4 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20">
+                        <span className="text-5xl">👕</span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6">¿Quieres saber si tu ropa te favorece?</h2>
+                    <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        No dejes que tu inversión en moda se pierda. Usa nuestro **Armario Inteligente** para analizar tus prendas actuales y comprar con total confianza.
+                    </p>
+                    <button
+                        onClick={onWardrobeClick}
+                        className="px-10 py-5 bg-white text-purple-900 font-bold rounded-full text-xl shadow-2xl hover:scale-105 transition-all active:scale-95 cursor-pointer"
+                    >
+                        Probar Mi Armario Digital
+                    </button>
+                    <div className="mt-10 flex flex-wrap justify-center gap-6 opacity-70 italic text-sm">
+                        <span className="flex items-center gap-2">✨ Análisis Ilimitado</span>
+                        <span className="flex items-center gap-2">🛍️ Guía de Compras</span>
+                        <span className="flex items-center gap-2">🔄 Gestión de Estilo</span>
                     </div>
                 </div>
             </section>

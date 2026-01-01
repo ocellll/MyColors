@@ -1,158 +1,143 @@
-/**
- * Determine the user's color season based on skin tone analysis
- * @param {Object} skinTone - Analyzed skin tone data
- * @returns {Object} - Season determination with details
- */
 export function determineSeason(skinTone) {
     const { warmth, lightness, undertone, saturation } = skinTone
-
-    // Calculate contrast score (useful for Winter detection)
     const contrastScore = saturation > 30 ? 'high' : saturation > 15 ? 'medium' : 'low'
 
-    // PRIMAVERA (Warm Spring)
-    // Characteristics: Warm undertone, light to medium skin, high luminosity
-    // Think: Golden, peach, coral tones
-    if (
-        undertone === 'warm' &&
-        lightness >= 55 &&
-        warmth >= 52
-    ) {
-        return {
-            season: 'PRIMAVERA',
-            type: 'Cálida y Luminosa',
-            description: 'Tu piel tiene un brillo dorado natural que resplandece con luz. Los colores cálidos y vivos como coral, durazno y turquesa te hacen brillar con energía y frescura.',
-            characteristics: ['Tono cálido', 'Luminosidad alta', 'Undertone dorado'],
-            bestFor: 'Colores vibrantes y claros con base amarilla',
-            avoid: 'Colores apagados, negros puros, grises fríos'
-        }
-    }
-
-    // VERANO (Cool Summer)
-    // Characteristics: Cool undertone, light to medium skin, soft/muted colors
-    // Think: Rose, lavender, soft blue tones
-    if (
-        undertone === 'cool' &&
-        lightness >= 45 &&
-        warmth <= 48
-    ) {
-        return {
-            season: 'VERANO',
-            type: 'Fresca y Suave',
-            description: 'Tu piel tiene undertones rosados o azulados que le dan un aspecto delicado. Los colores fríos y suaves como lavanda, rosa polvo y azul cielo te favorecen especialmente.',
-            characteristics: ['Tono frío', 'Suavidad', 'Undertone rosado'],
-            bestFor: 'Colores suaves y fríos con tonos apagados',
-            avoid: 'Naranjas intensos, amarillos cálidos, colores muy saturados'
-        }
-    }
-
-    // OTOÑO (Warm Autumn)
-    // Characteristics: Warm undertone, medium to deep skin, rich/earthy colors
-    // Think: Terracotta, mustard, olive, rust tones
-    if (
-        undertone === 'warm' &&
-        lightness < 60 &&
-        warmth >= 48
-    ) {
-        return {
-            season: 'OTOÑO',
-            type: 'Cálida y Profunda',
-            description: 'Tu piel tiene una riqueza y profundidad únicas con tonos dorados u oliva. Los colores tierra como terracota, mostaza y verde oliva resaltan tu calidez natural.',
-            characteristics: ['Tono cálido', 'Profundidad', 'Undertone dorado/oliva'],
-            bestFor: 'Colores tierra ricos y profundos',
-            avoid: 'Rosas chicle, azules eléctricos, colores neón'
-        }
-    }
-
-    // INVIERNO (Cool Winter)
-    // Characteristics: Cool undertone, high contrast, deep or very fair skin
-    // Think: Pure white, black, jewel tones, high contrast
-    if (
-        undertone === 'cool' &&
-        (lightness <= 40 || lightness >= 65) &&
-        warmth <= 50
-    ) {
-        return {
-            season: 'INVIERNO',
-            type: 'Fría y Contrastante',
-            description: 'Tu piel tiene un alto contraste natural que destaca con colores intensos. Los colores vibrantes y fríos como negro, blanco puro, rojo intenso y azul royal te potencian.',
-            characteristics: ['Alto contraste', 'Tono frío', 'Undertone azulado'],
-            bestFor: 'Colores intensos y contrastantes',
-            avoid: 'Beige, naranja, colores apagados o terrosos'
-        }
-    }
-
-    // NEUTRAL CASES - Classify based on strongest characteristics
-
-    // Neutral-Warm (leans Spring or Autumn)
-    if (undertone === 'neutral' && warmth >= 50) {
-        if (lightness >= 55) {
-            // Light neutral-warm → Spring
+    // PRIMAVERA (Spring)
+    if (undertone === 'warm' || (undertone === 'neutral' && warmth >= 52)) {
+        if (saturation >= 25 && (contrastScore === 'high' || warmth < 55)) {
             return {
-                season: 'PRIMAVERA',
-                type: 'Cálida y Luminosa',
-                description: 'Tu piel tiene un equilibrio entre tonos cálidos y neutros con buena luminosidad. Puedes usar tanto colores cálidos vibrantes como algunos neutros claros.',
-                characteristics: ['Tono cálido', 'Luminosidad alta', 'Undertone dorado'],
-                bestFor: 'Colores vibrantes y claros con base amarilla',
-                avoid: 'Colores apagados, negros puros, grises fríos'
-            }
-        } else {
-            // Deep neutral-warm → Autumn
-            return {
-                season: 'OTOÑO',
-                type: 'Cálida y Profunda',
-                description: 'Tu piel combina undertones neutros con calidez y profundidad. Los colores tierra y los tonos ricos te favorecen especialmente.',
-                characteristics: ['Tono cálido', 'Profundidad', 'Undertone dorado/oliva'],
-                bestFor: 'Colores tierra ricos y profundos',
-                avoid: 'Rosas chicle, azules eléctricos, colores neón'
+                season: 'BRIGHT_SPRING',
+                type: 'Primavera Brillante',
+                description: 'Tienes un brillo natural y un contraste alto. Los colores vibrantes y saturados son los que mejor te hacen lucir.',
+                characteristics: ['Contraste alto', 'Brillo intenso', 'Subtono cálido'],
+                bestFor: 'Colores neón, corales vibrantes y turquesas',
+                avoid: 'Colores apagados y grises'
             }
         }
-    }
-
-    // Neutral-Cool (leans Summer or Winter)
-    if (undertone === 'neutral' && warmth < 50) {
-        if (lightness >= 50 && contrastScore !== 'high') {
-            // Light neutral-cool, low contrast → Summer
+        if (warmth >= 58) {
             return {
-                season: 'VERANO',
-                type: 'Fresca y Suave',
-                description: 'Tu piel tiene undertones neutro-fríos con un aspecto suave. Los colores delicados y fríos te dan un look elegante y sofisticado.',
-                characteristics: ['Tono frío', 'Suavidad', 'Undertone rosado'],
-                bestFor: 'Colores suaves y fríos con tonos apagados',
-                avoid: 'Naranjas intensos, amarillos cálidos, colores muy saturados'
+                season: 'WARM_SPRING',
+                type: 'Primavera Cálida',
+                description: 'Tu característica principal es la calidez. Los tonos dorados y melocotón son tus mejores aliados.',
+                characteristics: ['Muy cálida', 'Dorado', 'Luminosa'],
+                bestFor: 'Dorado, naranja melocotón, verde amarillento',
+                avoid: 'Colores fríos y azules eléctricos'
             }
-        } else {
-            // High contrast or deep → Winter
-            return {
-                season: 'INVIERNO',
-                type: 'Fría y Contrastante',
-                description: 'Tu piel destaca con alto contraste y colores dramáticos. Los tonos intensos y puros te hacen ver espectacular.',
-                characteristics: ['Alto contraste', 'Tono frío', 'Undertone azulado'],
-                bestFor: 'Colores intensos y contrastantes',
-                avoid: 'Beige, naranja, colores apagados o terrosos'
-            }
+        }
+        return {
+            season: 'LIGHT_SPRING',
+            type: 'Primavera Clara',
+            description: 'Tu piel es delicada y luminosa. Los colores claros y cálidos te dan un aspecto fresco y radiante.',
+            characteristics: ['Luminosidad alta', 'Suavidad', 'Cálida'],
+            bestFor: 'Rosa pastel, amarillo pálido, crema',
+            avoid: 'Colores oscuros y pesados'
         }
     }
 
-    // Ultimate fallback - use lightness as primary indicator
-    if (lightness >= 55) {
-        return warmth >= 50 ? determineSeason({ ...skinTone, undertone: 'warm' })
-            : determineSeason({ ...skinTone, undertone: 'cool' })
-    } else {
-        return warmth >= 50 ? {
-            season: 'OTOÑO',
-            type: 'Cálida y Profunda',
-            description: 'Tu piel tiene una riqueza natural que combina bien con colores tierra y tonos cálidos profundos.',
-            characteristics: ['Tono cálido', 'Profundidad', 'Undertone dorado/oliva'],
-            bestFor: 'Colores tierra ricos y profundos',
-            avoid: 'Rosas chicle, azules eléctricos, colores neón'
-        } : {
-            season: 'INVIERNO',
-            type: 'Fría y Contrastante',
-            description: 'Tu piel destaca naturalmente con colores dramáticos e intensos que crean impacto visual.',
-            characteristics: ['Alto contraste', 'Tono frío', 'Undertone azulado'],
-            bestFor: 'Colores intensos y contrastantes',
-            avoid: 'Beige, naranja, colores apagados o terrosos'
+    // VERANO (Summer)
+    if (undertone === 'cool' || (undertone === 'neutral' && warmth <= 48)) {
+        if (lightness >= 65) {
+            return {
+                season: 'LIGHT_SUMMER',
+                type: 'Verano Claro',
+                description: 'Tu piel es muy clara con subtonos fríos. Los colores pasteles fríos te hacen brillar con elegancia.',
+                characteristics: ['Luminosidad alta', 'Muy fría', 'Suave'],
+                bestFor: 'Lavanda, azul bebé, rosa pálido',
+                avoid: 'Contrastes fuertes y colores negros'
+            }
         }
+        if (warmth <= 42) {
+            return {
+                season: 'COOL_SUMMER',
+                type: 'Verano Frío',
+                description: 'La frialdad es tu rasgo principal. Los azules y rosas fríos resaltan tu belleza natural.',
+                characteristics: ['Frialdad extrema', 'Subtono azulado', 'Elegante'],
+                bestFor: 'Azul real, orquídea, verde mar',
+                avoid: 'Dorado, naranja y amarillos cálidos'
+            }
+        }
+        return {
+            season: 'SOFT_SUMMER',
+            type: 'Verano Suave',
+            description: 'Tienes una belleza etérea y matizada. Los colores polvorientos y apagados son ideales para ti.',
+            characteristics: ['Suavidad polvorienta', 'Muted', 'Neutral-fría'],
+            bestFor: 'Gris azulado, malva, rosa polvoriento',
+            avoid: 'Colores brillantes y saturados'
+        }
+    }
+
+    // OTOÑO (Autumn)
+    if (undertone === 'warm' || (undertone === 'neutral' && warmth >= 50)) {
+        if (saturation <= 20) {
+            return {
+                season: 'SOFT_AUTUMN',
+                type: 'Otoño Suave',
+                description: 'Tu calidez es sutil y matizada. Los colores tierra suaves y neutros te favorecen enormemente.',
+                characteristics: ['Suavidad', 'Tierra suave', 'Neutral-cálida'],
+                bestFor: 'Oliva suave, arena, rosa viejo',
+                avoid: 'Colores chillones y vibrantes'
+            }
+        }
+        if (warmth >= 55 && lightness > 45) {
+            return {
+                season: 'WARM_AUTUMN',
+                type: 'Otoño Cálido',
+                description: 'Eres la esencia del otoño. Los colores ricos y dorados de la naturaleza son perfectos para ti.',
+                characteristics: ['Calidez rica', 'Especia', 'Vibrante'],
+                bestFor: 'Terracota, mostaza, verde oliva',
+                avoid: 'Grises fríos y colores neón'
+            }
+        }
+        return {
+            season: 'DEEP_AUTUMN',
+            type: 'Otoño Profundo',
+            description: 'Tu piel tiene profundidad y fuerza. Los colores oscuros y cálidos te dan un aspecto sofisticado.',
+            characteristics: ['Profundidad', 'Contraste alto', 'Cálida'],
+            bestFor: 'Berenjena, verde bosque, café',
+            avoid: 'Colores pálidos y pasteles'
+        }
+    }
+
+    // INVIERNO (Winter)
+    if (undertone === 'cool' || (undertone === 'neutral' && warmth < 50)) {
+        if (lightness <= 35) {
+            return {
+                season: 'DEEP_WINTER',
+                type: 'Invierno Profundo',
+                description: 'Tu rasgo principal es la profundidad. Los colores más oscuros y fríos te hacen lucir espectacular.',
+                characteristics: ['Muy profunda', 'Contraste alto', 'Fria'],
+                bestFor: 'Negro, azul medianoche, granate',
+                avoid: 'Colores tierra y melocotón'
+            }
+        }
+        if (warmth <= 40) {
+            return {
+                season: 'COOL_WINTER',
+                type: 'Invierno Frío',
+                description: 'Eres puramente fría. Los colores de hielo y joyas son tus mejores aliados.',
+                characteristics: ['Frialdad glaciar', 'Contraste', 'Icy'],
+                bestFor: 'Azul eléctrico, plata, fucsia',
+                avoid: 'Naranja, dorado y amarillo huevo'
+            }
+        }
+        return {
+            season: 'BRIGHT_WINTER',
+            type: 'Invierno Brillante',
+            description: 'Tienes un contraste extremo y una claridad cristalina. Los colores más vivos y puros son para ti.',
+            characteristics: ['Brillo máximo', 'Cristalina', 'Vibrante'],
+            bestFor: 'Rojo puro, cian, verde lima',
+            avoid: 'Colores apagados y pasteles polvorientos'
+        }
+    }
+
+    // Default fallback to one of the 12
+    return {
+        season: 'WARM_AUTUMN',
+        type: 'Otoño Cálido',
+        description: 'Según el análisis, este es tu perfil más probable. Colores ricos y cálidos resaltan tu belleza.',
+        characteristics: ['Cálida', 'Equilibrada'],
+        bestFor: 'Terracota, Mostaza',
+        avoid: 'Fríos intensos'
     }
 }
 

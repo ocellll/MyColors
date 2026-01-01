@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
+function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick, onWardrobeClick }) {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return (
@@ -35,7 +35,13 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-4">
+                    <div className="hidden md:flex items-center gap-6">
+                        <button
+                            onClick={onWardrobeClick}
+                            className="text-gray-600 hover:text-purple-600 font-medium transition-colors"
+                        >
+                            Mi Armario
+                        </button>
                         {isPremium ? (
                             <a
                                 href="https://billing.stripe.com/p/login/3cI28r4Qr7Kw0Wx1OXdfG00"
@@ -77,7 +83,16 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick }) {
 
                 {/* Mobile Menu */}
                 {menuOpen && (
-                    <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
+                    <div className="md:hidden mt-4 pt-4 border-t border-gray-200 flex flex-col gap-4">
+                        <button
+                            onClick={() => {
+                                onWardrobeClick()
+                                setMenuOpen(false)
+                            }}
+                            className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-left"
+                        >
+                            👕 Mi Armario
+                        </button>
                         {isPremium ? (
                             <div className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white font-medium">
                                 <span>👑</span>

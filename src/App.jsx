@@ -3,6 +3,7 @@ import Header from './components/Header'
 import UploadSection from './components/UploadSection'
 import ResultsPage from './components/ResultsPage'
 import UpgradeModal from './components/UpgradeModal'
+import WardrobeSection from './components/WardrobeSection'
 import Footer from './components/Footer'
 import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
@@ -20,7 +21,11 @@ function App() {
     })
 
     // App state
-    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results'
+    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results' | 'wardrobe'
+    const [wardrobe, setWardrobe] = useState(() => {
+        const saved = localStorage.getItem('mycolors_wardrobe')
+        return saved ? JSON.parse(saved) : []
+    })
     const [uploadedImage, setUploadedImage] = useState(null)
     const [imagePreview, setImagePreview] = useState(null)
     const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -32,6 +37,11 @@ function App() {
     useEffect(() => {
         localStorage.setItem('mycolors_user', JSON.stringify(userState))
     }, [userState])
+
+    // Persist wardrobe changes
+    useEffect(() => {
+        localStorage.setItem('mycolors_wardrobe', JSON.stringify(wardrobe))
+    }, [wardrobe])
 
     // Check for payment success in URL
     useEffect(() => {
@@ -159,7 +169,12 @@ function App() {
                 console.warn('Using local fallback mode due to:', aiError.message)
             }
 
-            const basePalette = SEASON_PALETTES[seasonResult.season]
+            let basePalette = SEASON_PALETTES[seasonResult.season]
+
+            // Handle aliases/legacy support
+            if (basePalette?.alias) {
+                basePalette = SEASON_PALETTES[basePalette.alias]
+            }
 
             // Merge premium colors if applicable
             let finalColors = basePalette.colors
@@ -230,12 +245,13 @@ function App() {
             <Header
                 isPremium={userState.isPremium}
                 onUpgradeClick={() => setShowUpgradeModal(true)}
-                showBackButton={currentPage === 'results'}
+                showBackButton={currentPage !== 'home'}
                 onBackClick={handleBackToHome}
+                onWardrobeClick={() => setCurrentPage('wardrobe')}
             />
 
             <main>
-                {currentPage === 'home' ? (
+                {currentPage === 'home' && (
                     <UploadSection
                         imagePreview={imagePreview}
                         onImageUpload={handleImageUpload}
@@ -245,13 +261,25 @@ function App() {
                         onUpgradeClick={() => setShowUpgradeModal(true)}
                         isPremium={userState.isPremium}
                     />
-                ) : (
+                )}
+
+                {currentPage === 'results' && analysisResult && (
                     <ResultsPage
                         result={analysisResult}
                         userPhoto={imagePreview}
                         isPremium={userState.isPremium}
                         onAnalyzeAnother={handleBackToHome}
                         onUpgradeClick={() => setShowUpgradeModal(true)}
+                        showToast={showToast}
+                        onWardrobeClick={() => setCurrentPage('wardrobe')}
+                    />
+                )}
+
+                {currentPage === 'wardrobe' && (
+                    <WardrobeSection
+                        userSeason={analysisResult?.season}
+                        wardrobe={wardrobe}
+                        onUpdateWardrobe={setWardrobe}
                         showToast={showToast}
                     />
                 )}
