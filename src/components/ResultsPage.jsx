@@ -2,6 +2,7 @@ import ColorPalette from './ColorPalette'
 import SeasonBadge from './SeasonBadge'
 import OutfitSuggestions from './OutfitSuggestions'
 import ShareButtons from './ShareButtons'
+import DrapingTool from './DrapingTool'
 import { AdBannerHorizontal } from './AdBanner'
 
 function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgradeClick, showToast, onWardrobeClick }) {
