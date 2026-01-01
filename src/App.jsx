@@ -4,6 +4,8 @@ import UploadSection from './components/UploadSection'
 import ResultsPage from './components/ResultsPage'
 import UpgradeModal from './components/UpgradeModal'
 import WardrobeSection from './components/WardrobeSection'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import TermsOfService from './components/TermsOfService'
 import Footer from './components/Footer'
 import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
@@ -21,7 +23,7 @@ function App() {
     })
 
     // App state
-    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results' | 'wardrobe'
+    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results' | 'wardrobe' | 'privacy' | 'terms'
     const [wardrobe, setWardrobe] = useState(() => {
         const saved = localStorage.getItem('mycolors_wardrobe')
         return saved ? JSON.parse(saved) : []
@@ -283,9 +285,19 @@ function App() {
                         showToast={showToast}
                     />
                 )}
+                {currentPage === 'privacy' && (
+                    <PrivacyPolicy onBack={handleBackToHome} />
+                )}
+
+                {currentPage === 'terms' && (
+                    <TermsOfService onBack={handleBackToHome} />
+                )}
             </main>
 
-            <Footer />
+            <Footer
+                onPrivacyClick={() => setCurrentPage('privacy')}
+                onTermsClick={() => setCurrentPage('terms')}
+            />
 
             {/* Toast Notification */}
             {toast && (

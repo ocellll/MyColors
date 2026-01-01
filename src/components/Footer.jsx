@@ -1,4 +1,4 @@
-function Footer() {
+function Footer({ onPrivacyClick, onTermsClick }) {
     return (
         <footer className="bg-white border-t border-gray-100 py-12 px-4">
             <div className="max-w-6xl mx-auto">
@@ -22,8 +22,22 @@ function Footer() {
                     <div>
                         <h4 className="font-bold text-gray-800 mb-4">Legal</h4>
                         <ul className="space-y-2 text-sm text-gray-500">
-                            <li>Políticas de Privacidad</li>
-                            <li>Términos de Servicio</li>
+                            <li>
+                                <button
+                                    onClick={onPrivacyClick}
+                                    className="hover:text-purple-500 transition-colors cursor-pointer"
+                                >
+                                    Política de Privacidad
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    onClick={onTermsClick}
+                                    className="hover:text-purple-500 transition-colors cursor-pointer"
+                                >
+                                    Términos de Servicio
+                                </button>
+                            </li>
                             <li>
                                 <a
                                     href="https://billing.stripe.com/p/login/3cI28r4Qr7Kw0Wx1OXdfG00"
