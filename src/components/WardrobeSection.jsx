@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import ColorThief from 'colorthief'
 import { rgbToHex } from '../utils/colorAnalysis'
 
@@ -28,14 +28,18 @@ const colorDistance = (hex1, hex2) => {
 function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) {
     const [isAnalyzing, setIsAnalyzing] = useState(false)
     const fileInputRef = useRef(null)
+    const hasUserSeason = userSeason && userSeason.colors && userSeason.colors.length > 0
 
-    // Helper to check if a color fits the user's season
-    const checkColorFit = useCallback((hex) => {
+    // Helper to check if a color fits the user's season (returns pending status if no season)
+    const checkColorFit = useCallback((hex, forPending = false) => {
         if (!userSeason || !userSeason.colors) {
             return {
-                fits: false,
-                message: 'Primero analiza tu rostro para poder comparar colores.',
-                closestColor: null
+                fits: null, // null = pending evaluation
+                message: forPending
+                    ? 'Pendiente de evaluación. Analiza tu rostro para ver si te favorece.'
+                    : 'Primero analiza tu rostro para poder comparar colores.',
+                closestColor: null,
+                pending: true
             }
         }
 
@@ -72,9 +76,34 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
         return {
             fits: false,
             message: 'Este color no está en tu paleta. Combínalo con accesorios de tus colores ideales.',
-            closestColor
+            closestColor,
+            pending: false
         }
     }, [userSeason])
+
+    // Auto re-evaluate all wardrobe items when userSeason changes (after face analysis)
+    useEffect(() => {
+        if (!hasUserSeason || wardrobe.length === 0) return
+
+        // Check if any items are pending or need re-evaluation
+        const hasPendingItems = wardrobe.some(item => item.pending === true || item.fit === null)
+        if (!hasPendingItems) return
+
+        // Re-evaluate all items with the new season data
+        const updatedWardrobe = wardrobe.map(item => {
+            const fitResult = checkColorFit(item.color)
+            return {
+                ...item,
+                fit: fitResult.fits,
+                message: fitResult.message,
+                closestColor: fitResult.closestColor?.hex,
+                pending: false
+            }
+        })
+
+        onUpdateWardrobe(updatedWardrobe)
+        showToast('¡Tu armario ha sido re-evaluado! 🎉')
+    }, [hasUserSeason]) // Only run when hasUserSeason changes to true
 
     // Convert file to base64 for persistent storage
     const fileToBase64 = (file) => {
@@ -109,7 +138,7 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
             const colorThief = new ColorThief()
             const dominantRGB = colorThief.getColor(img)
             const hex = rgbToHex(dominantRGB)
-            const fitResult = checkColorFit(hex)
+            const fitResult = checkColorFit(hex, true) // true = forPending message
 
             const newItem = {
                 id: Date.now(),
@@ -118,11 +147,17 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                 fit: fitResult.fits,
                 message: fitResult.message,
                 closestColor: fitResult.closestColor?.hex,
+                pending: fitResult.pending || false,
                 date: new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })
             }
 
             onUpdateWardrobe([newItem, ...wardrobe]) // Add to front
-            showToast('¡Prenda añadida a tu armario! 👕')
+
+            if (fitResult.pending) {
+                showToast('Prenda añadida. ¡Analiza tu rostro para evaluarla! 👕')
+            } else {
+                showToast('¡Prenda añadida a tu armario! 👕')
+            }
         } catch (error) {
             console.error('Error analyzing clothing:', error)
             showToast('Error al analizar la prenda. Intenta con otra foto.')
@@ -259,7 +294,11 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                                     </div>
                                     <div className="p-5">
                                         <div className="flex items-center gap-2 mb-3">
-                                            {item.fit ? (
+                                            {item.pending || item.fit === null ? (
+                                                <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full flex items-center gap-1 animate-pulse">
+                                                    <span>⏳</span> PENDIENTE
+                                                </span>
+                                            ) : item.fit ? (
                                                 <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full flex items-center gap-1">
                                                     <span>✓</span> TU COLOR
                                                 </span>
