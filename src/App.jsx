@@ -15,6 +15,7 @@ import AboutPage from './components/AboutPage'
 import PrivacyBanner from './components/PrivacyBanner'
 import BlogList from './components/BlogList'
 import BlogPost from './components/BlogPost'
+import { blogPosts } from './data/blogPosts'
 
 function App() {
     // User state
@@ -65,10 +66,90 @@ function App() {
         if (params.get('success') === 'true' && !userState.isPremium) {
             setUserState(prev => ({ ...prev, isPremium: true }))
             showToast('¡Pago completado! Ya eres Premium ✨')
-            // Clean URL
-            window.history.replaceState({}, document.title, "/")
         }
     }, [])
+
+    // --- SEO & ROUTING LOGIC ---
+
+    // 1. Handle URL History (Back/Forward)
+    useEffect(() => {
+        const handlePopState = (event) => {
+            if (event.state) {
+                setCurrentPage(event.state.page || 'home')
+                setActiveBlogPost(event.state.postId || null)
+            } else {
+                // Default fallback
+                setCurrentPage('home')
+                setActiveBlogPost(null)
+            }
+        }
+        window.addEventListener('popstate', handlePopState)
+        return () => window.removeEventListener('popstate', handlePopState)
+    }, [])
+
+    // 2. Initial Load from URL
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search)
+        const page = params.get('p')
+        const postId = params.get('id')
+
+        if (page) {
+            setCurrentPage(page)
+            if (postId) setActiveBlogPost(postId)
+        }
+    }, [])
+
+    // 3. Update URL & Title when State Changes
+    useEffect(() => {
+        const params = new URLSearchParams()
+        let title = 'MyColors — Análisis de Color Personal'
+
+        if (currentPage !== 'home') {
+            params.set('p', currentPage)
+        }
+
+        switch (currentPage) {
+            case 'home':
+                title = 'MyColors — Análisis de Color Personal'
+                break
+            case 'results':
+                title = 'Mis Resultados — MyColors'
+                break
+            case 'wardrobe':
+                title = 'Mi Armario — MyColors'
+                break
+            case 'blog':
+                title = 'Blog de Moda y Colorimetría — MyColors'
+                break
+            case 'blog-post':
+                if (activeBlogPost) {
+                    params.set('id', activeBlogPost)
+                    const post = blogPosts.find(p => p.id === activeBlogPost)
+                    if (post) title = `${post.title} — MyColors Link`
+                }
+                break
+            case 'about':
+                title = 'Sobre Nosotros — MyColors'
+                break
+            case 'privacy':
+                title = 'Política de Privacidad — MyColors'
+                break
+            case 'terms':
+                title = 'Términos de Servicio — MyColors'
+                break
+        }
+
+        document.title = title
+
+        // Only push if it's different from current (avoid duplicate stack entries)
+        const newSearch = params.toString() ? `?${params.toString()}` : '/'
+        const currentSearch = window.location.search
+
+        if (newSearch !== currentSearch) {
+            window.history.pushState({ page: currentPage, postId: activeBlogPost }, '', newSearch)
+        }
+
+    }, [currentPage, activeBlogPost])
 
     // Check if user can analyze
     const canAnalyze = () => {
