@@ -13,6 +13,8 @@ import { SEASON_PALETTES, PREMIUM_PALETTES } from './data/seasonColors'
 import ContentSection from './components/ContentSection'
 import AboutPage from './components/AboutPage'
 import PrivacyBanner from './components/PrivacyBanner'
+import BlogList from './components/BlogList'
+import BlogPost from './components/BlogPost'
 
 function App() {
     // User state
@@ -40,6 +42,7 @@ function App() {
     })
     const [showUpgradeModal, setShowUpgradeModal] = useState(false)
     const [toast, setToast] = useState(null)
+    const [activeBlogPost, setActiveBlogPost] = useState(null)
 
     // Persist user state
     useEffect(() => {
@@ -245,6 +248,17 @@ function App() {
         showToast('¡Bienvenido a Premium! 🎉')
     }
 
+    const handleBlogClick = () => {
+        setCurrentPage('blog')
+        window.scrollTo(0, 0)
+    }
+
+    const handlePostClick = (postId) => {
+        setActiveBlogPost(postId)
+        setCurrentPage('blog-post')
+        window.scrollTo(0, 0)
+    }
+
     return (
         <div className="min-h-screen">
             {/* Upgrade Modal */}
@@ -261,6 +275,7 @@ function App() {
                 showBackButton={currentPage !== 'home'}
                 onBackClick={handleBackToHome}
                 onWardrobeClick={() => setCurrentPage('wardrobe')}
+                onBlogClick={handleBlogClick}
             />
 
             <main>
@@ -310,12 +325,21 @@ function App() {
                 {currentPage === 'about' && (
                     <AboutPage onBack={handleBackToHome} />
                 )}
+
+                {currentPage === 'blog' && (
+                    <BlogList onPostClick={handlePostClick} onBack={handleBackToHome} />
+                )}
+
+                {currentPage === 'blog-post' && (
+                    <BlogPost postId={activeBlogPost} onBack={handleBlogClick} />
+                )}
             </main>
 
             <Footer
                 onPrivacyClick={() => setCurrentPage('privacy')}
                 onTermsClick={() => setCurrentPage('terms')}
                 onAboutClick={() => setCurrentPage('about')}
+                onBlogClick={handleBlogClick}
             />
 
             <PrivacyBanner />

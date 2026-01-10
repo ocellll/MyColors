@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick, onWardrobeClick }) {
+function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick, onWardrobeClick, onBlogClick }) {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return (
@@ -36,6 +36,12 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick, onWard
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-6">
+                        <button
+                            onClick={onBlogClick}
+                            className="text-gray-600 hover:text-purple-600 font-medium transition-colors"
+                        >
+                            Blog
+                        </button>
                         <button
                             onClick={onWardrobeClick}
                             className="text-gray-600 hover:text-purple-600 font-medium transition-colors"
@@ -84,6 +90,15 @@ function Header({ isPremium, onUpgradeClick, showBackButton, onBackClick, onWard
                 {/* Mobile Menu */}
                 {menuOpen && (
                     <div className="md:hidden mt-4 pt-4 border-t border-gray-200 flex flex-col gap-4">
+                        <button
+                            onClick={() => {
+                                onBlogClick()
+                                setMenuOpen(false)
+                            }}
+                            className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-left"
+                        >
+                            📰 Blog
+                        </button>
                         <button
                             onClick={() => {
                                 onWardrobeClick()
