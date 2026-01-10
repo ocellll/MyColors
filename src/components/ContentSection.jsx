@@ -89,6 +89,36 @@ function ContentSection() {
                     </ul>
                 </div>
 
+                {/* Color Theory Section (E-A-T Content) */}
+                <div className="mb-20">
+                    <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
+                        Los 3 Pilares del Análisis de Color
+                    </h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="glass-card p-6 text-center">
+                            <div className="w-12 h-12 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-2xl">🎨</div>
+                            <h4 className="font-bold text-gray-800 mb-2">1. Matiz (Hue)</h4>
+                            <p className="text-sm text-gray-600">
+                                Define si los colores que te favorecen son <strong>Cálidos</strong> (base amarilla/dorada) o <strong>Fríos</strong> (base azul/rosada). Es la base para determinar tu estación principal.
+                            </p>
+                        </div>
+                        <div className="glass-card p-6 text-center">
+                            <div className="w-12 h-12 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-2xl">💡</div>
+                            <h4 className="font-bold text-gray-800 mb-2">2. Valor (Value)</h4>
+                            <p className="text-sm text-gray-600">
+                                Se refiere a la luminosidad. ¿Te quedan mejor los colores <strong>Claros</strong> (mezclados con blanco) o los <strong>Oscuros</strong> (mezclados con negro)?
+                            </p>
+                        </div>
+                        <div className="glass-card p-6 text-center">
+                            <div className="w-12 h-12 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-2xl">✨</div>
+                            <h4 className="font-bold text-gray-800 mb-2">3. Croma (Chroma)</h4>
+                            <p className="text-sm text-gray-600">
+                                Mide la saturación o pureza del color. Algunas personas brillan con colores <strong>Vivos</strong> y saturados, mientras que otras se ven mejor con tonos <strong>Suaves</strong> y apagados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* FAQ Section */}
                 <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
