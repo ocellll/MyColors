@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
 import { SEASON_PALETTES, PREMIUM_PALETTES } from './data/seasonColors'
+import ContentSection from './components/ContentSection'
 
 function App() {
     // User state
@@ -262,15 +263,18 @@ function App() {
 
             <main>
                 {currentPage === 'home' && (
-                    <UploadSection
-                        imagePreview={imagePreview}
-                        onImageUpload={handleImageUpload}
-                        onAnalyze={handleAnalyze}
-                        isAnalyzing={isAnalyzing}
-                        canAnalyze={canAnalyze()}
-                        onUpgradeClick={() => setShowUpgradeModal(true)}
-                        isPremium={userState.isPremium}
-                    />
+                    <>
+                        <UploadSection
+                            imagePreview={imagePreview}
+                            onImageUpload={handleImageUpload}
+                            onAnalyze={handleAnalyze}
+                            isAnalyzing={isAnalyzing}
+                            canAnalyze={canAnalyze()}
+                            onUpgradeClick={() => setShowUpgradeModal(true)}
+                            isPremium={userState.isPremium}
+                        />
+                        <ContentSection />
+                    </>
                 )}
 
                 {currentPage === 'results' && analysisResult && (
@@ -308,12 +312,14 @@ function App() {
             />
 
             {/* Toast Notification */}
-            {toast && (
-                <div className="toast">
-                    {toast}
-                </div>
-            )}
-        </div>
+            {
+                toast && (
+                    <div className="toast">
+                        {toast}
+                    </div>
+                )
+            }
+        </div >
     )
 }
 
