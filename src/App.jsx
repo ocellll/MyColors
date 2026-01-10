@@ -389,7 +389,7 @@ function App() {
 
                 {currentPage === 'wardrobe' && (
                     <WardrobeSection
-                        userSeason={analysisResult?.season}
+                        userSeason={analysisResult}
                         wardrobe={wardrobe}
                         onUpdateWardrobe={setWardrobe}
                         showToast={showToast}
