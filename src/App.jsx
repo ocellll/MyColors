@@ -11,6 +11,8 @@ import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
 import { SEASON_PALETTES, PREMIUM_PALETTES } from './data/seasonColors'
 import ContentSection from './components/ContentSection'
+import AboutPage from './components/AboutPage'
+import PrivacyBanner from './components/PrivacyBanner'
 
 function App() {
     // User state
@@ -304,12 +306,19 @@ function App() {
                 {currentPage === 'terms' && (
                     <TermsOfService onBack={handleBackToHome} />
                 )}
+
+                {currentPage === 'about' && (
+                    <AboutPage onBack={handleBackToHome} />
+                )}
             </main>
 
             <Footer
                 onPrivacyClick={() => setCurrentPage('privacy')}
                 onTermsClick={() => setCurrentPage('terms')}
+                onAboutClick={() => setCurrentPage('about')}
             />
+
+            <PrivacyBanner />
 
             {/* Toast Notification */}
             {

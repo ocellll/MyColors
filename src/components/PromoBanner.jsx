@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
 /**
- * AdBanner Component - Displays Google AdSense ads
+ * PromoBanner Component - Displays Google AdSense ads
  * Only shown to non-premium users
  */
-function AdBanner({ isPremium, slot, format = 'auto', className = '' }) {
+function PromoBanner({ isPremium, slot, format = 'auto', className = '' }) {
     useEffect(() => {
         // Initialize AdSense after component mounts
         if (!isPremium && typeof window !== 'undefined') {
@@ -35,13 +35,13 @@ function AdBanner({ isPremium, slot, format = 'auto', className = '' }) {
 }
 
 /**
- * AdBannerHorizontal - For between sections
+ * PromoBannerHorizontal - For between sections
  */
-export function AdBannerHorizontal({ isPremium }) {
+export function PromoBannerHorizontal({ isPremium }) {
     return (
-        <AdBanner
+        <PromoBanner
             isPremium={isPremium}
-            slot="1234567890"
+            slot="1234567890" // TODO: Update with real Horizontal Slot ID
             format="horizontal"
             className="max-w-4xl mx-auto px-4"
         />
@@ -49,13 +49,13 @@ export function AdBannerHorizontal({ isPremium }) {
 }
 
 /**
- * AdBannerSquare - For sidebars or cards
+ * PromoBannerSquare - For sidebars or cards
  */
-export function AdBannerSquare({ isPremium }) {
+export function PromoBannerSquare({ isPremium }) {
     return (
-        <AdBanner
+        <PromoBanner
             isPremium={isPremium}
-            slot="0987654321"
+            slot="0987654321" // TODO: Update with real Square Slot ID
             format="rectangle"
             className="max-w-sm mx-auto"
         />
@@ -63,17 +63,17 @@ export function AdBannerSquare({ isPremium }) {
 }
 
 /**
- * AdBannerInFeed - For between content items
+ * PromoBannerInFeed - For between content items
  */
-export function AdBannerInFeed({ isPremium }) {
+export function PromoBannerInFeed({ isPremium }) {
     return (
-        <AdBanner
+        <PromoBanner
             isPremium={isPremium}
-            slot="1122334455"
+            slot="1122334455" // TODO: Update with real InFeed Slot ID
             format="fluid"
             className="w-full"
         />
     )
 }
 
-export default AdBanner
+export default PromoBanner

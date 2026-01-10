@@ -3,7 +3,7 @@ import SeasonBadge from './SeasonBadge'
 import OutfitSuggestions from './OutfitSuggestions'
 import ShareButtons from './ShareButtons'
 import DrapingTool from './DrapingTool'
-import { AdBannerHorizontal } from './AdBanner'
+import { PromoBannerHorizontal } from './PromoBanner'
 
 function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgradeClick, showToast, onWardrobeClick }) {
     if (!result) return null
@@ -237,7 +237,7 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
             </section>
 
             {/* Ad Banner - Between palette and avoid colors */}
-            <AdBannerHorizontal isPremium={isPremium} />
+            <PromoBannerHorizontal isPremium={isPremium} />
 
             {/* Colors to Avoid */}
             <section className="bg-gray-50 py-16 px-4">
@@ -292,7 +292,7 @@ function ResultsPage({ result, userPhoto, isPremium, onAnalyzeAnother, onUpgrade
             </section>
 
             {/* Ad Banner - Before outfit suggestions */}
-            <AdBannerHorizontal isPremium={isPremium} />
+            <PromoBannerHorizontal isPremium={isPremium} />
 
             {/* Outfit Suggestions */}
             <OutfitSuggestions season={season.season} colors={colors} />

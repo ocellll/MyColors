@@ -1,4 +1,4 @@
-function Footer({ onPrivacyClick, onTermsClick }) {
+function Footer({ onPrivacyClick, onTermsClick, onAboutClick }) {
     return (
         <footer className="bg-white border-t border-gray-100 py-12 px-4">
             <div className="max-w-6xl mx-auto">
@@ -22,6 +22,14 @@ function Footer({ onPrivacyClick, onTermsClick }) {
                     <div>
                         <h4 className="font-bold text-gray-800 mb-4">Legal</h4>
                         <ul className="space-y-2 text-sm text-gray-500">
+                            <li>
+                                <button
+                                    onClick={onAboutClick}
+                                    className="hover:text-purple-500 transition-colors cursor-pointer"
+                                >
+                                    Sobre Nosotros
+                                </button>
+                            </li>
                             <li>
                                 <button
                                     onClick={onPrivacyClick}

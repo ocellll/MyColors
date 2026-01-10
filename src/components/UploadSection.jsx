@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
-import { AdBannerHorizontal } from './AdBanner'
+import { PromoBannerHorizontal } from './PromoBanner'
 
 function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, canAnalyze, onUpgradeClick, isPremium }) {
     const [isDragging, setIsDragging] = useState(false)
@@ -312,7 +312,7 @@ function UploadSection({ imagePreview, onImageUpload, onAnalyze, isAnalyzing, ca
                 </div>
 
                 {/* Ad Banner - Below Upload Box */}
-                <AdBannerHorizontal isPremium={isPremium} />
+                <PromoBannerHorizontal isPremium={isPremium} />
             </section>
 
             {/* How It Works */}
