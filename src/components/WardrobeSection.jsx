@@ -1,28 +1,15 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import ColorThief from 'colorthief'
-import { rgbToHex } from '../utils/colorAnalysis'
+import { rgbToHex, deltaE, rgbToLab } from '../utils/colorAnalysis'
 
-// Convert hex to RGB for color distance calculation
-const hexToRgb = (hex) => {
+// Convert hex to RGB helper
+const hexToRgbArray = (hex) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-    return result ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
-    } : null
-}
-
-// Calculate color distance (Delta E approximation)
-const colorDistance = (hex1, hex2) => {
-    const c1 = hexToRgb(hex1)
-    const c2 = hexToRgb(hex2)
-    if (!c1 || !c2) return 999
-
-    return Math.sqrt(
-        Math.pow(c1.r - c2.r, 2) +
-        Math.pow(c1.g - c2.g, 2) +
-        Math.pow(c1.b - c2.b, 2)
-    )
+    return result ? [
+        parseInt(result[1], 16),
+        parseInt(result[2], 16),
+        parseInt(result[3], 16)
+    ] : null
 }
 
 function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) {
@@ -43,39 +30,47 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
             }
         }
 
-        // Find the closest color in the palette
+        // Find the closest color in the palette using Delta E
         let minDistance = Infinity
         let closestColor = null
 
+        const hexRgb = hexToRgbArray(hex)
+        if (!hexRgb) return { fits: false, message: 'Error al procesar color', pending: false }
+
         for (const paletteColor of userSeason.colors) {
-            const distance = colorDistance(hex, paletteColor.hex)
+            const paletteRgb = hexToRgbArray(paletteColor.hex)
+            if (!paletteRgb) continue
+
+            const distance = deltaE(hexRgb, paletteRgb)
+
             if (distance < minDistance) {
                 minDistance = distance
                 closestColor = paletteColor
             }
         }
 
-        // Thresholds:
-        // < 30: Perfect match
-        // 30-60: Close match (acceptable)
-        // > 60: Not a match
-        if (minDistance < 30) {
+        // Thresholds based on CIE76 Delta E:
+        // < 10: Very good match (perceptually close)
+        // < 23: Harmonious match (same family)
+        // > 23: Different
+
+        if (minDistance < 10) {
             return {
                 fits: true,
-                message: `¡Perfecto! Este color coincide con "${closestColor.name}" de tu paleta.`,
+                message: `✅ ¡Match perfecto! Es casi idéntico a "${closestColor.name}".`,
                 closestColor
             }
-        } else if (minDistance < 60) {
+        } else if (minDistance < 23) {
             return {
                 fits: true,
-                message: `Buena elección. Es similar a "${closestColor.name}" de tu paleta.`,
+                message: `✨ Buena combinación. Armoniza con "${closestColor.name}".`,
                 closestColor
             }
         }
 
         return {
             fits: false,
-            message: 'Este color no está en tu paleta. Combínalo con accesorios de tus colores ideales.',
+            message: `❌ Este tono no encaja. Prueba combinarlo con accesorios.`,
             closestColor,
             pending: false
         }
@@ -157,7 +152,9 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
             const colorThief = new ColorThief()
             const dominantRGB = colorThief.getColor(img)
             const hex = rgbToHex(dominantRGB)
-            const fitResult = checkColorFit(hex, true) // true = forPending message
+
+            // Should be pending if no season, BUT checks if season exists inside function
+            const fitResult = checkColorFit(hex, true)
 
             const newItem = {
                 id: Date.now(),
@@ -168,6 +165,17 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                 closestColor: fitResult.closestColor?.hex,
                 pending: fitResult.pending || false,
                 date: new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })
+            }
+
+            // Immediately apply season check if available (fix for "load info" issue)
+            if (hasUserSeason && newItem.pending) {
+                const retryFit = checkColorFit(hex, false)
+                if (!retryFit.pending) {
+                    newItem.pending = false
+                    newItem.fit = retryFit.fits
+                    newItem.message = retryFit.message
+                    newItem.closestColor = retryFit.closestColor?.hex
+                }
             }
 
             onUpdateWardrobe([newItem, ...wardrobe]) // Add to front
@@ -250,6 +258,29 @@ function WardrobeSection({ userSeason, wardrobe, onUpdateWardrobe, showToast }) 
                                     <span>Usa fotos con buena iluminación para mejor detección.</span>
                                 </p>
                             </div>
+
+                            {/* Manual Recheck Button (Fix for stuck pending items) */}
+                            {hasUserSeason && wardrobe.some(i => i.pending) && (
+                                <button
+                                    onClick={() => {
+                                        hasReEvaluatedRef.current = false // Force re-eval
+                                        // Trigger re-render/effect by setting state or just modifying array directly via prop
+                                        // Best way is to map and update
+                                        const updated = wardrobe.map(item => {
+                                            const fit = checkColorFit(item.color)
+                                            return { ...item, fit: fit.fits, message: fit.message, closestColor: fit.closestColor?.hex, pending: false }
+                                        })
+                                        onUpdateWardrobe(updated)
+                                        showToast('Armario actualizado ✅')
+                                    }}
+                                    className="w-full btn-secondary text-sm py-2 flex items-center justify-center gap-2"
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                    </svg>
+                                    Re-evaluar prendas
+                                </button>
+                            )}
 
                             {wardrobe.length > 0 && (
                                 <button

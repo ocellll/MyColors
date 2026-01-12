@@ -277,3 +277,58 @@ function hslToRgb(h, s, l) {
 
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)]
 }
+
+/**
+ * Convert RGB to LAB (CIELAB)
+ * Necessary for accurate color distance (Delta E)
+ */
+export function rgbToLab([r, g, b]) {
+    let R = r / 255, G = g / 255, B = b / 255
+
+    if (R > 0.04045) R = Math.pow(((R + 0.055) / 1.055), 2.4)
+    else R = R / 12.92
+    if (G > 0.04045) G = Math.pow(((G + 0.055) / 1.055), 2.4)
+    else G = G / 12.92
+    if (B > 0.04045) B = Math.pow(((B + 0.055) / 1.055), 2.4)
+    else B = B / 12.92
+
+    R *= 100
+    G *= 100
+    B *= 100
+
+    let X = R * 0.4124 + G * 0.3576 + B * 0.1805
+    let Y = R * 0.2126 + G * 0.7152 + B * 0.0722
+    let Z = R * 0.0193 + G * 0.1192 + B * 0.9505
+
+    // Observer= 2°, Illuminant= D65
+    X = X / 95.047
+    Y = Y / 100.000
+    Z = Z / 108.883
+
+    X = X > 0.008856 ? Math.pow(X, 1 / 3) : (7.787 * X) + (16 / 116)
+    Y = Y > 0.008856 ? Math.pow(Y, 1 / 3) : (7.787 * Y) + (16 / 116)
+    Z = Z > 0.008856 ? Math.pow(Z, 1 / 3) : (7.787 * Z) + (16 / 116)
+
+    const L = (116 * Y) - 16
+    const a = 500 * (X - Y)
+    const lab_b = 200 * (Y - Z) // Renamed variable to avoid conflict
+
+    return [L, a, lab_b]
+}
+
+/**
+ * Calculate Delta E (CIE76) distance between two RGB colors
+ * < 2.3 = JND (Just Noticeable Difference)
+ * < 10 = Close match
+ * < 25 = Similar/Harmonious
+ */
+export function deltaE(rgb1, rgb2) {
+    const lab1 = rgbToLab(rgb1)
+    const lab2 = rgbToLab(rgb2)
+
+    return Math.sqrt(
+        Math.pow(lab1[0] - lab2[0], 2) +
+        Math.pow(lab1[1] - lab2[1], 2) +
+        Math.pow(lab1[2] - lab2[2], 2)
+    )
+}
