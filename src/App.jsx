@@ -380,6 +380,55 @@ function App() {
                             isPremium={userState.isPremium}
                         />
                         <ContentSection />
+
+                        {/* Latest Blog Posts Preview */}
+                        <section className="py-20 px-4 max-w-6xl mx-auto border-t border-gray-100">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl font-bold text-gray-800 mb-4">Últimas Novedades</h2>
+                                <p className="text-gray-600">Descubre consejos expertos sobre colorimetría, moda y maquillaje</p>
+                            </div>
+
+                            <div className="grid md:grid-cols-3 gap-8">
+                                {blogPosts.slice(0, 3).map(post => (
+                                    <div
+                                        key={post.id}
+                                        onClick={() => handlePostClick(post.id)}
+                                        className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
+                                    >
+                                        <div className="aspect-[16/9] overflow-hidden">
+                                            <img
+                                                src={post.image}
+                                                alt={post.title}
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </div>
+                                        <div className="p-6">
+                                            <div className="flex items-center gap-2 mb-3">
+                                                <span className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-semibold">
+                                                    {post.category}
+                                                </span>
+                                                <span className="text-gray-400 text-xs">{post.readTime}</span>
+                                            </div>
+                                            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors line-clamp-2">
+                                                {post.title}
+                                            </h3>
+                                            <p className="text-gray-500 text-sm line-clamp-2">
+                                                {post.excerpt}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="text-center mt-12">
+                                <button
+                                    onClick={handleBlogClick}
+                                    className="btn-secondary px-8 py-3 rounded-full font-medium"
+                                >
+                                    Ver todos los artículos
+                                </button>
+                            </div>
+                        </section>
                     </>
                 )}
 
