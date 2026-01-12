@@ -15,6 +15,8 @@ import AboutPage from './components/AboutPage'
 import PrivacyBanner from './components/PrivacyBanner'
 import BlogList from './components/BlogList'
 import BlogPost from './components/BlogPost'
+import ContactPage from './components/ContactPage'
+import DisclaimerPage from './components/DisclaimerPage'
 import { blogPosts } from './data/blogPosts'
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
     })
 
     // App state
-    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results' | 'wardrobe' | 'privacy' | 'terms'
+    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results' | 'wardrobe' | 'privacy' | 'terms' | 'contact' | 'disclaimer'
     const [wardrobe, setWardrobe] = useState(() => {
         const saved = localStorage.getItem('mycolors_wardrobe')
         return saved ? JSON.parse(saved) : []
@@ -136,6 +138,12 @@ function App() {
                 break
             case 'terms':
                 title = 'Términos de Servicio — MyColors'
+                break
+            case 'contact':
+                title = 'Contacto — MyColors'
+                break
+            case 'disclaimer':
+                title = 'Aviso Legal — MyColors'
                 break
         }
 
@@ -414,6 +422,14 @@ function App() {
                 {currentPage === 'blog-post' && (
                     <BlogPost postId={activeBlogPost} onBack={handleBlogClick} />
                 )}
+
+                {currentPage === 'contact' && (
+                    <ContactPage onBack={handleBackToHome} />
+                )}
+
+                {currentPage === 'disclaimer' && (
+                    <DisclaimerPage onBack={handleBackToHome} />
+                )}
             </main>
 
             <Footer
@@ -421,6 +437,8 @@ function App() {
                 onTermsClick={() => setCurrentPage('terms')}
                 onAboutClick={() => setCurrentPage('about')}
                 onBlogClick={handleBlogClick}
+                onContactClick={() => setCurrentPage('contact')}
+                onDisclaimerClick={() => setCurrentPage('disclaimer')}
             />
 
             <PrivacyBanner />

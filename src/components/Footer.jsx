@@ -1,8 +1,8 @@
-function Footer({ onPrivacyClick, onTermsClick, onAboutClick, onBlogClick }) {
+function Footer({ onPrivacyClick, onTermsClick, onAboutClick, onBlogClick, onContactClick, onDisclaimerClick }) {
     return (
         <footer className="bg-white border-t border-gray-100 py-12 px-4">
             <div className="max-w-6xl mx-auto">
-                <div className="grid md:grid-cols-3 gap-12 mb-12">
+                <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div>
                         <h4 className="text-xl font-bold text-gradient mb-4">MyColors</h4>
                         <p className="text-gray-500 text-sm leading-relaxed">
@@ -20,7 +20,7 @@ function Footer({ onPrivacyClick, onTermsClick, onAboutClick, onBlogClick }) {
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-bold text-gray-800 mb-4">Legal</h4>
+                        <h4 className="font-bold text-gray-800 mb-4">Recursos</h4>
                         <ul className="space-y-2 text-sm text-gray-500">
                             <li>
                                 <button
@@ -40,6 +40,19 @@ function Footer({ onPrivacyClick, onTermsClick, onAboutClick, onBlogClick }) {
                             </li>
                             <li>
                                 <button
+                                    onClick={onContactClick}
+                                    className="hover:text-purple-500 transition-colors cursor-pointer"
+                                >
+                                    Contacto
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-gray-800 mb-4">Legal</h4>
+                        <ul className="space-y-2 text-sm text-gray-500">
+                            <li>
+                                <button
                                     onClick={onPrivacyClick}
                                     className="hover:text-purple-500 transition-colors cursor-pointer"
                                 >
@@ -52,6 +65,14 @@ function Footer({ onPrivacyClick, onTermsClick, onAboutClick, onBlogClick }) {
                                     className="hover:text-purple-500 transition-colors cursor-pointer"
                                 >
                                     Términos de Servicio
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    onClick={onDisclaimerClick}
+                                    className="hover:text-purple-500 transition-colors cursor-pointer"
+                                >
+                                    Aviso Legal
                                 </button>
                             </li>
                             <li>
@@ -72,10 +93,24 @@ function Footer({ onPrivacyClick, onTermsClick, onAboutClick, onBlogClick }) {
                         * MyColors se encuentra en fase de lanzamiento. El análisis por IA es una herramienta de orientación y puede presentar variaciones. Seguimos mejorando cada día.
                     </p>
                     <div className="flex flex-col md:items-end gap-1">
-                        <p>© 2025 MyColors. Todos los derechos reservados.</p>
+                        <p>© 2026 MyColors. Todos los derechos reservados.</p>
                         <div className="flex justify-center md:justify-end gap-6 text-sm">
-                            <a href="#" className="hover:text-purple-500 transition-colors font-medium">Instagram</a>
-                            <a href="#" className="hover:text-purple-500 transition-colors font-medium">TikTok</a>
+                            <a
+                                href="https://instagram.com/mycolors_ai"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-purple-500 transition-colors font-medium"
+                            >
+                                Instagram
+                            </a>
+                            <a
+                                href="https://tiktok.com/@mycolorspro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-purple-500 transition-colors font-medium"
+                            >
+                                TikTok
+                            </a>
                         </div>
                     </div>
                 </div>

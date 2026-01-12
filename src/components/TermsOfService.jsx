@@ -20,7 +20,7 @@ function TermsOfService({ onBack }) {
                     </button>
 
                     <h1 className="text-4xl font-bold text-gray-800 mb-8">Términos de Servicio</h1>
-                    <p className="text-gray-500 mb-8">Última actualización: 1 de enero de 2025</p>
+                    <p className="text-gray-500 mb-8">Última actualización: 12 de enero de 2026</p>
 
                     <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
                         <section>
@@ -113,7 +113,7 @@ function TermsOfService({ onBack }) {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">9. Contacto</h2>
                             <p>
-                                Para cualquier consulta sobre estos Términos de Servicio, contacta con nosotros en: <a href="mailto:catnamerly@gmail.com" className="text-purple-600 hover:underline">catnamerly@gmail.com</a>
+                                Para cualquier consulta sobre estos Términos de Servicio, contacta con nosotros en: <a href="mailto:hotdogdepeix@gmail.com" className="text-purple-600 hover:underline">hotdogdepeix@gmail.com</a>
                             </p>
                         </section>
                     </div>

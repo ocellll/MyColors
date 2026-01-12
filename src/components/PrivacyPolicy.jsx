@@ -20,7 +20,7 @@ function PrivacyPolicy({ onBack }) {
                     </button>
 
                     <h1 className="text-4xl font-bold text-gray-800 mb-8">Política de Privacidad</h1>
-                    <p className="text-gray-500 mb-8">Última actualización: 1 de enero de 2025</p>
+                    <p className="text-gray-500 mb-8">Última actualización: 12 de enero de 2026</p>
 
                     <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
                         <section>
@@ -78,9 +78,28 @@ function PrivacyPolicy({ onBack }) {
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">5. Publicidad</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">5. Publicidad y Cookies</h2>
+                            <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-2">5.1. Google AdSense</h3>
                             <p>
-                                Mostramos anuncios a través de Google AdSense. Google puede usar cookies para mostrar anuncios personalizados basados en tu historial de navegación. Puedes optar por no recibir anuncios personalizados en <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">la configuración de anuncios de Google</a>.
+                                Mostramos anuncios a través de <strong>Google AdSense</strong>, un servicio de publicidad de Google LLC. Google utiliza cookies y tecnologías similares para:
+                            </p>
+                            <ul className="list-disc pl-6 mt-2">
+                                <li>Mostrar anuncios basados en tus visitas anteriores a este sitio u otros sitios web.</li>
+                                <li>Medir la eficacia de los anuncios.</li>
+                                <li>Personalizar el contenido publicitario según tus intereses.</li>
+                            </ul>
+                            <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-2">5.2. Cookies de terceros</h3>
+                            <p>
+                                Los anunciantes y redes publicitarias pueden colocar cookies en tu dispositivo. Estas cookies permiten:
+                            </p>
+                            <ul className="list-disc pl-6 mt-2">
+                                <li>Recopilar información sobre tu navegación para ofrecer anuncios relevantes.</li>
+                                <li>Limitar el número de veces que ves un anuncio.</li>
+                                <li>Entender la efectividad de las campañas publicitarias.</li>
+                            </ul>
+                            <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-2">5.3. Opciones de exclusión</h3>
+                            <p>
+                                Puedes optar por no recibir anuncios personalizados visitando <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">la configuración de anuncios de Google</a> o utilizando la <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">página de exclusión de NAI</a>.
                             </p>
                         </section>
 
@@ -100,7 +119,7 @@ function PrivacyPolicy({ onBack }) {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">7. Contacto</h2>
                             <p>
-                                Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos en: <a href="mailto:catnamerly@gmail.com" className="text-purple-600 hover:underline">catnamerly@gmail.com</a>
+                                Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos en: <a href="mailto:hotdogdepeix@gmail.com" className="text-purple-600 hover:underline">hotdogdepeix@gmail.com</a>
                             </p>
                         </section>
                     </div>
