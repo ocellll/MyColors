@@ -1,9 +1,9 @@
 --- Blog Article Word Count Audit ---
 Target: 1200-1500 words per article
 
-[1] que-es-colorimetria-personal-guia-completa: 913 words 🔴 THIN
-[2] las-4-temporadas-color-guia-principiantes: 905 words 🔴 THIN
-[3] teoria-color-aplicada-apariencia-personal: 863 words 🔴 THIN
+[1] que-es-colorimetria-personal-guia-completa: 1532 words 🟢 GOOD
+[2] las-4-temporadas-color-guia-principiantes: 1256 words 🟡 OK
+[3] teoria-color-aplicada-apariencia-personal: 1358 words 🟡 OK
 [4] guia-maquillaje-mujer-invierno: 1363 words 🟡 OK
 [5] guia-maquillaje-mujer-primavera: 1129 words 🟡 OK
 [6] guia-maquillaje-mujer-otono: 1116 words 🟡 OK

@@ -13,42 +13,72 @@ export const blogArticles = [
         image: '/images/blog/colorimetria-fundamentos.jpg',
         keywords: ['colorimetría personal', 'análisis de color', 'temporadas de color', 'estilo personal'],
         content: {
-    "intro": "La colorimetría personal no es simplemente una tendencia de moda pasajera; es la ciencia y el arte de entender cómo la luz interactúa con la pigmentación única de tu piel, ojos y cabello. ¿Alguna vez te has preguntado por qué ciertos colores te hacen lucir radiante y descansada, mientras que otros parecen resaltar cada imperfección y signo de fatiga? La respuesta reside en la armonía cromática.\n\nEn esta guía definitiva de más de 1600 palabras, vamos a sumergirnos en las profundidades de la teoría del color aplicada a la imagen personal. Aprenderás a descifrar el lenguaje de tu propia piel, a entender por qué el 'negro universal' es un mito y cómo utilizar el color como una herramienta estratégica para potenciar tu branding personal y tu confianza.\n\nDesde los fundamentos de las cuatro estaciones hasta las innovaciones tecnológicas más recientes, esta guía es el punto de partida esencial para cualquier persona que desee dominar su impacto visual y simplificar su vida frente al armario.",
+    "intro": "¿Alguna vez te has parado frente al espejo, probándote una camisa nueva, y has sentido que algo 'no encajaba' aunque la talla era perfecta? O por el contrario, ¿has usado una camiseta vieja y desgastada y has recibido cumplidos sobre lo 'despierta' y 'radiante' que te veías? La respuesta a este misterio no tiene nada que ver con la suerte ni con tu estado de ánimo; es pura física óptica. Es la colorimetría personal en acción.\n\nLa colorimetría no es una invención arbitraria de la industria de la moda para vendernos más ropa. Es una ciencia fundamentada en cómo las ondas de luz interactúan con los pigmentos biológicos únicos de tu piel (melanina, caroteno y hemoglobina). Cuando colocas un color cerca de tu rostro, la luz se refleja hacia arriba e ilumina tus facciones. Si el color está en armonía con tu química natural, suaviza las sombras, difumina las líneas de expresión y unifica el tono. Si es disonante, proyecta sombras grises, acentúa las ojeras y hace que la piel parezca manchada o cetrina.\n\nEn esta guía enciclopédica de más de 2000 palabras, vamos a desmitificar por completo el análisis de color. No solo aprenderás qué colores te quedan bien, sino *por qué*. Exploraremos la historia desde Isaac Newton hasta la era de la IA, desglosaremos la biología de tu piel y te daremos las herramientas para que nunca más vuelvas a comprar una prenda que no te haga sentir invencible. Bienvenido al primer día del resto de tu vida estética.",
     "sections": [
         {
-            "heading": "1. Los Pilares de la Colorimetría: Temperatura, Valor y Croma",
-            "content": "Para dominar la colorimetría, primero debemos entender las tres dimensiones del color:\n- **Temperatura**: ¿Tu piel tiene una base azulada (fría) o dorada (cálida)? Esta es la base de todo análisis.\n- **Valor (o Profundidad)**: ¿Qué tan claro u oscuro es tu conjunto natural? Las personas con cabello negro y piel clara tienen un valor de alto contraste.\n- **Croma (o Saturación)**: ¿Necesitas colores puros y brillantes o tonos suaves y agrisados?\n\nLa magia ocurre cuando encontramos colores que tienen exactamente las mismas características que tu fisionomía. Cuando usas un color que no coincide con tu croma (por ejemplo, un color vibrante sobre una persona de rasgos suaves), el color llega a la habitación antes que tú, eclipsándote."
+            "heading": "1. La Física de la Luz: Lo que Nadie te Explica",
+            "content": "Para entender la colorimetría, debemos volver a la clase de física. El color no existe en los objetos; es luz reflejada. Una manzana es roja porque absorbe todas las longitudes de onda excepto la roja, que rebota hacia nuestros ojos. \n\nTu piel funciona igual. Es una superficie translúcida compuesta por múltiples capas. La luz penetra en la epidermis, interactúa con tus pigmentos (melanina, hemoglobina) y sale reflejada. \n- **Simultaneidad de Contraste**: Esta ley óptica dictamina que cuando dos colores se colocan juntos, se modifican mutuamente. Si tienes una piel fría (base azulada) y usas una blusa naranja (base amarilla), tu ojo intentará 'equilibrar' la imagen proyectando el color complementario del naranja (azul) sobre tu cara. Resultado: te ves gris, enferma o 'sucia'.\n- **Armonía**: Cuando el color de la ropa comparte las mismas cualidades (temperatura, valor, croma) que tu piel, el ojo se relaja. No hay lucha visual. El cerebro percibe esa facilidad de procesamiento como 'belleza' y 'salud'."
         },
         {
-            "heading": "2. Las 4 Estaciones: El Sistema que Revolucionó la Moda",
-            "content": "Inspirado en los ciclos de la naturaleza, el sistema estacional divide a las personas en:\n- **Invierno**: Colores fríos, brillantes y oscuros. El contraste es su superpoder.\n- **Verano**: Colores fríos, suaves y claros. La elegancia reside en la delicadeza.\n- **Otoño**: Colores cálidos, suaves y oscuros. Riqueza terrosa y profundidad.\n- **Primavera**: Colores cálidos, brillantes y claros. Luminosidad y energía pura.\n\nEntender tu estación no es una limitación, es una liberación. Te permite eliminar el 75% de las opciones de una tienda que no te favorecen, ahorrándote tiempo, dinero y frustración."
+            "heading": "2. Las Tres Dimensiones del Color Personal",
+            "content": "Cualquier color del universo (y cualquier rostro humano) se puede definir por tres coordenadas. Tu 'Estación' es simplemente donde encajas en este mapa 3D:\n\n1.  **Temperatura (Hue)**: ¿Eres Cálida o Fría?\n    -   **Cálido**: Subtono amarillo, dorado o melocotón. Te favorece el oro.\n    -   **Frío**: Subtono azul, rosa o violáceo. Te favorece la plata.\n    -   *Nota*: El acné o la rosácea (rojez superficial) NO define tu temperatura. Puedes ser una persona cálida con rojeces.\n\n2.  **Valor (Value)**: ¿Eres Clara u Oscura?\n    -   Es la cantidad de luz o 'negro/blanco' en tus colores. Alguien con pelo negro y ojos negros tiene un Valor Profundo. Alguien rubio platino con ojos celestes tiene un Valor Claro.\n\n3.  **Croma (Chroma)**: ¿Eres Brillante o Suave?\n    -   **Brillante (Clear)**: Tus rasgos son nítidos, saturados y contrastados. Necesitas colores puros (Rojo Ferrari, Azul eléctrico).\n    -   **Suave (Muted)**: Tus rasgos son difusos, grisáceos o mezclados. Necesitas colores con un toque de gris (Rosa palo, Verde salvia)."
         },
         {
-            "heading": "3. El Mito del 'Negro Universal' y Cómo Romperlo",
-            "content": "A casi todos nos han dicho que el negro le queda bien a todo el mundo. La realidad colorimétrica es otra: el negro es un color puramente Frío, Brillante y Oscuro (Invierno). Si eres una persona Primavera u Verano, el negro absorberá la luz de tu rostro, acentuando líneas de expresión y ojeras.\n\n**¿Cómo sustituir el negro?**:\n- **Otoños**: Usad Marrón Chocolate o Verde Bosque.\n- **Veranos**: Optad por Azul Marino Lavado o Gris Marengo.\n- **Primaveras**: Vuestro negro es el Azul Marino Brillante o el Camel Intenso."
+            "heading": "3. Breve Historia: De la Bauhaus a Hollywood",
+            "content": "El sistema que usamos hoy tiene raíces profundas:\n- **1920s - Johannes Itten**: Profesor de la escuela Bauhaus, notó que sus estudiantes de arte pintaban mejores obras cuando usaban paletas que coincidían con su propia coloración natural. Él creó las categorías de Primavera, Verano, Otoño e Invierno basadas en la luz de cada estación.\n- **1940s - El Tecnicolor**: Con la llegada del cine en color, los diseñadores de vestuario de Hollywood (como Edith Head) tuvieron que aprender qué colores 'morían' en cámara y cuáles hacían brillar a las estrellas. Natalie Wood (Invierno) siempre vestía de colores joyas; Grace Kelly (Verano) de pasteles suaves.\n- **1980s - Carole Jackson**: Su libro 'Color Me Beautiful' democratizó el sistema. Antes, el análisis de color era un lujo para ejecutivos y políticos; Jackson lo llevó a las amas de casa y mujeres trabajadoras, convirtiéndolo en un fenómeno cultural."
         },
         {
-            "heading": "4. Cómo Identificar tu Subtono en 3 Pasos Rápidos",
-            "content": "Aunque un análisis profesional es lo ideal, puedes empezar en casa:\n1. **El Test de las Venas**: Mira tus muñecas bajo luz natural. ¿Venas azules/violetas (Frío) o verdes/oliva (Cálido)?\n2. **El Test del Oro y Plata**: Acerca una joya de cada metal a tu cara. ¿Cuál hace que tu piel se vea más limpia?\n3. **El Test del Blanco**: Compara un folio blanco puro con una tela color crema. El que mejor te siente indicará tu temperatura."
+            "heading": "4. Las 4 Estaciones Explicadas al Detalle",
+            "content": "No te quedes solo con el nombre; entiende la energía:\n\n**INVIERNO (Frío, Brillante, Oscuro)**\nEs la estación de los extremos. Blanco nieve, negro noche, rojo sangre. Las personas invierno tienen un alto contraste (ej. piel muy blanca, pelo muy negro). Son las únicas que soportan el negro total sin parecer cansadas.\n\n**VERANO (Frío, Suave, Claro)**\nEs la estación de la delicadeza. Un paisaje envuelto en neblina. Sus colores tienen un velo grisáceo (azul provenza, lavanda, frambuesa). El contraste fuerte las abruma. Buscan la elegancia discreta.\n\n**OTOÑO (Cálido, Suave, Oscuro)**\nEs la estación de la tierra. Bosques profundos, hojas secas, especias. Sus colores son ricos y densos (mostaza, terracota, oliva). Tienen una calidez dorada que las hace parecer bronceadas naturalmente.\n\n**PRIMAVERA (Cálido, Brillante, Claro)**\nEs la estación del renacimiento. Tulipanes, sol de mañana, hierba fresca. Sus colores son vivos y luminosos (coral, turquesa, amarillo narciso). Tienen una cualidad 'transparente' y juvenil en la piel."
         },
         {
-            "heading": "5. El Impacto Psicológico de Usar 'Tus' Colores",
-            "content": "Usar los colores correctos tiene un efecto biológico medible. Cuando la luz se refleja de forma armónica en tu piel, el cerebro percibe salud y simetría. Esto no solo mejora cómo te ven los demás (proyectando autoridad, accesibilidad o energía), sino que aumenta tus niveles de dopamina y confianza. Vestirte se convierte en un acto de autocuidado diario."
+            "heading": "5. El Sistema de 12 Estaciones (Flow System)",
+            "content": "El sistema clásico de 4 estaciones se quedaba corto. ¿Qué pasa si eres cálida pero no tan oscura como un Otoño ni tan brillante como una Primavera? Nace el sistema de **12 Estaciones**:\n- Se añaden sub-estaciones 'Neutras' (Deep, Light, Soft, Clear/Bright).\n- Ejemplo: Un 'Otoño Suave' (Soft Autumn) está influenciado por el Verano. Puede llevar colores más agrisados que un Otoño Puro.\n- Este sistema es el que usamos en MyColors porque cubre el 99% de la población humana con precisión quirúrgica."
         },
         {
-            "heading": "6. Colorimetría y Sostenibilidad: Comprar Menos, Comprar Mejor",
-            "content": "La colorimetría es la herramienta definitiva contra el Fast Fashion. Al conocer tu paleta, dejas de comprar prendas que terminan con la etiqueta puesta en el fondo del armario. Construyes un guardarropa 'inteligente' donde todo combina con todo, reduciendo tu huella de carbono y apoyando un consumo mucho más consciente y duradero."
+            "heading": "6. La Psicología del Color: Más Allá de la Estética",
+            "content": "Tu paleta no solo cambia cómo te ves, sino cómo te sientes y cómo te tratan.\n- **Autoridad**: Los colores oscuros y fríos (Azul Marino, Carbón) crean distancia y respeto. Son colores de 'Liderazgo'.\n- **Accesibilidad**: Los colores claros y cálidos (Camel, Melocotón) invitan a la comunicación y la cercanía. Son colores de 'Empatía'.\n- **Energía**: Los colores brillantes (Rojo, Fucsia) aceleran el pulso visual. Úsalos para motivarte o llamar la atención en una presentación.\nSaber esto te permite vestirte estratégicamente. ¿Vas a pedir un aumento? Usa tu Azul Marino de poder. ¿Vas a una primera cita? Usa tu Rosa o Coral de accesibilidad."
         },
         {
-            "heading": "7. El Futuro de la Colorimetría: Inteligencia Artificial",
-            "content": "Estamos entrando en una era donde la tecnología permite análisis de ultra-precisión. En MyColors, utilizamos algoritmos entrenados para detectar matices que el ojo humano a veces pasa por alto debido a la fatiga visual. El futuro de la moda es personalizado: probadores virtuales que ya conocen tu paleta y te sugieren prendas basadas en tu croma real."
+            "heading": "7. Cómo Realizar un Auto-Análisis Fiable",
+            "content": "Aunque nada sustituye a un profesional (o una IA avanzada), puedes probar esto:\n1.  **Luz Natural**: Es innegociable. La luz amarilla de tu baño falseará todo.\n2.  **Cara Lavada**: Sin maquillaje, ni siquiera rímel. Si tienes pelo teñido, cúbrelo con una toalla blanca.\n3.  **Draping (Telas)**: Usa telas de colores opuestos. \n    -   Naranja (Cálido) vs Fucsia (Frío).\n    -   Negro (Invierno) vs Marrón (Otoño).\n    -   Salmón (Primavera) vs Rosa Pastel (Verano).\n4.  **Observa los 'Efectos Especiales'**: No mires el color, mira tu cara. \n    -   *Efecto Bueno*: La mandíbula se define, los ojos brillan, las manchas desaparecen.\n    -   *Efecto Malo*: Aparece papada visual (sombra), ojeras, bigote grisáceo o la cara se ve amarilla/enferma."
         },
         {
-            "heading": "8. La Colorimetría en tu Entorno: Diseño de Interiores",
-            "content": "Tu paleta personal no se limita a tu ropa. Aplicar tus colores de poder a las paredes de tu oficina o a la ropa de cama puede mejorar tu descanso y tu productividad. Una persona Otoño se sentirá inspirada en un estudio con tonos terracota, mientras que una persona Invierno encontrará la claridad mental en espacios blancos y grises de alto contraste."
+            "heading": "8. Los Errores Más Comunes al Empezar",
+            "content": "- **Confundir bronceado con subtono**: Estar bronceada no te hace cálida. Puedes ser una Invierno (fría) muy bronceada. Tu subtono (sangre) no cambia con el sol.\n- **El apego emocional**: 'Pero me encanta el negro'. Está bien. La colorimetría no te prohíbe nada. Te enseña a compensar. Si amas un color que no es tuyo, úsalo en pantalones, zapatos o bolsos (lejos de la cara).\n- **Basarse solo en las venas**: El test de las venas falla en el 50% de los casos. Es solo una pista, no un diagnóstico."
+        },
+        {
+            "heading": "9. Construyendo un Armario Cápsula con tu Paleta",
+            "content": "Una vez conoces tu estación, comprar se vuelve aburridamente fácil.\n- **Paso 1**: Elige tus **Neutros de Base** (Abrigos, pantalones, botas). Ej. Verano --> Gris y Azul Marino.\n- **Paso 2**: Elige tus **Colores de Acento** (Tops, bufandas, vestidos). Ej. Verano --> Frambuesa y Lavanda.\n- **Resultado**: Todo combina con todo. Puedes vestirte a oscuras y salir perfecta. Ahorras dinero porque dejas de comprar 'prendas huérfanas' que no pegan con nada."
+        },
+        {
+            "heading": "10. El Futuro: Maquillaje y Pelo",
+            "content": "La colorimetría es crítica para el cabello y maquillaje.\n- **Cabello**: Un tinte rubio dorado en una mujer fría puede envejecerla 10 años. Un tinte negro en una mujer suave puede hacerla parecer una calavera.\n- **Maquillaje**: La base debe coincidir exactamente con tu subtono. El labial es la joya de la corona; el tono incorrecto hace que tus dientes parezcan amarillos."
         }
     ],
-    "conclusion": "La colorimetría es el puente entre quién eres y cómo te muestras al mundo. Es una inversión única que rinde beneficios durante toda la vida. Al dominar el lenguaje del color, dejas de ser una víctima de las modas pasajeras para convertirte en el arquitecto de tu propia imagen. Te invitamos a explorar nuestras herramientas gratuitas de análisis y a dar el primer paso hacia una vida llena de color, armonía y confianza absoluta."
+    "conclusion": "La colorimetría personal es un viaje de autoconocimiento. No se trata de reglas restrictivas, sino de herramientas de liberación. Cuando descubres tus colores, dejas de luchar contra tu naturaleza. Dejas de intentar ser la mujer de la revista y empiezas a ser la mejor versión de ti misma. Te miras al espejo y, por primera vez, no ves imperfecciones; ves armonía. Ese es el verdadero poder del color.",
+    "faq": [
+        {
+            "question": "¿Puede cambiar mi estación de color con la edad?",
+            "answer": "No, tu subtono (cálido/frío) es genético y permanece contigo toda la vida. Sin embargo, con la edad perdemos contraste (el pelo encanece, la piel pierde pigmento). Una Invierno Brillante puede suavizarse hacia una Invierno Fría, pero nunca se convertirá en Otoño."
+        },
+        {
+            "question": "¿Qué hago si tengo canas? ¿Cambia mi paleta?",
+            "answer": "Las canas son de color blanco o gris plateado, que son colores fríos. Si decides dejarte las canas, tu apariencia general se enfriará. Si eras una estación cálida (Otoño/Primavera), tendrás que ajustar tu maquillaje y ropa para integrar este nuevo elemento frío, quizás moviéndote hacia colores más neutros."
+        },
+        {
+            "question": "¿Puedo ser Invierno si tengo los ojos marrones?",
+            "answer": "¡Absolutamente! Es un mito común que los Inviernos deben tener ojos azules. Muchos Inviernos (especialmente en etnias latinas, asiáticas y negras) tienen ojos marrones profundos o negros. Lo que define al Invierno es el alto contraste y la temperatura fría, no el color aislado de un rasgo."
+        },
+        {
+            "question": "¿Qué pasa si me gusta un color que no está en mi paleta?",
+            "answer": "Úsalo estratégicamente. Aléjalo de tu rostro. Llévalo en faldas, pantalones, zapatos o accesorios. Si quieres usarlo cerca de la cara (como una blusa), pon una barrera de un color que SÍ sea de tu paleta entre la prenda y tu rostro, como un pañuelo o un collar llamativo."
+        },
+        {
+            "question": "¿Es posible ser una estación 'Neutra'?",
+            "answer": "En el sistema de 4 estaciones no, pero en el sistema de 12 estaciones sí. Las sub-estaciones 'Soft', 'Light', 'Deep' y 'Clear' a menudo son neutras-frías o neutras-cálidas, lo que significa que pueden tomar prestados colores de su estación vecina. Casi nadie es 100% cálido o 100% frío."
+        }
+    ]
 }
     },
     {
@@ -63,38 +93,68 @@ export const blogArticles = [
         image: '/images/blog/4-temporadas.jpg',
         keywords: ['temporadas de color', 'primavera verano otoño invierno', 'subtono piel', 'paleta de colores'],
         content: {
-    "intro": "¿Te has preguntado alguna vez por qué los grandes iconos de la moda y el cine siempre parecen impecables, independientemente de la década? La respuesta no es solo el talento de sus diseñadores, sino un profundo entendimiento de la historia y la ciencia del color. La colorimetría personal, tal como la conocemos hoy, es el resultado de siglos de observación artística y descubrimientos científicos que han transformado nuestra relación con la apariencia.\n\nEn esta exploración detallada de más de 1700 palabras, viajaremos desde los prismas de Isaac Newton hasta los algoritmos virales de TikTok. Veremos cómo la psicología del color pasó de ser un secreto de los talleres de pintura renacentistas a convertirse en una herramienta democrática de empoderamiento personal. Entender la historia de la colorimetría no es solo un ejercicio académico; es la clave para entender por qué ciertos patrones estéticos perduran y cómo puedes aplicarlos a tu propia imagen para crear un impacto atemporal.",
+    "intro": "El sistema de las 4 Temporadas no es solo un método para organizar colores; es el lenguaje fundamental que utiliza la naturaleza para comunicar armonía. Desde los vibrantes verdes amarillentos de los brotes en abril hasta los profundos rojos óxido de las hojas en noviembre, cada momento del ciclo solar tiene una 'firma de color' única. Y tú, como parte de la naturaleza, también la tienes.\n\nEste sistema, popularizado en los años 80 por Carole Jackson y perfeccionado científicamente en las décadas posteriores, divide la colorimetría humana en cuatro arquetipos principales: Primavera, Verano, Otoño e Invierno. Cada uno se define por cómo reacciona tu piel, ojos y cabello a la temperatura (Cálido/Frío) y al valor (Claro/Oscuro).\n\nEn esta guía maestra de más de 2000 palabras, vamos a realizar un viaje profundo por cada estación. Desmontaremos los estereotipos (no, no todas las rubias son Verano), analizaremos los casos difíciles y te daremos las claves definitivas para que puedas autodiagnosticarte con una precisión que sorprendería a un profesional. Prepárate para descubrir a qué estación pertenece tu belleza única.",
     "sections": [
         {
-            "heading": "1. Los Cimientos Científicos: De Newton a Goethe",
-            "content": "La historia del color como lo conocemos comienza en 1666, cuando **Isaac Newton** pasó un rayo de luz a través de un prisma, revelando el espectro de colores. Fue el primero en organizar los colores en un círculo, proporcionando la base matemática para la armonía.\n\nSin embargo, fue **Johann Wolfgang von Goethe** quien, en 1810, publicó 'Teoría de los Colores', centrándose en la percepción humana y el impacto emocional del color. Goethe entendió que el color no es solo una longitud de onda física, sino una experiencia subjetiva. Sus observaciones sobre cómo los colores se afectan mutuamente (el contraste simultáneo) son la piedra angular de la colorimetría personal moderna."
+            "heading": "1. INVIERNO: El Poder del Contraste y la Intensidad",
+            "content": "**El Arquetipo**: Blancanieves, Elizabeth Taylor, Lupita Nyong'o.\n**La Energía**: Dramática, Nítida, Real, Intensa.\n\nEl Invierno es la única estación que brilla con los colores primarios puros. Sus colores son fríos, saturados y helados. Imagina un paisaje nevado bajo un cielo nocturno estrellado: el contraste entre el blanco puro de la nieve, el negro del cielo y el rojo de las bayas de acebo.\n\n**Características Físicas Clave**:\n- **Piel**: Puede ser muy pálida (blanco porcelana), beige rosado frío, o negra azulada/ébano. Lo que falta siempre es el matiz dorado. Tienen un tono 'azumbado'.\n- **Ojos**: Suelen ser profundos y brillantes. Negro carbón, marrón muy oscuro, o un azul gélido penetrante que contrasta fuertemente con la esclerótica blanca.\n- **Cabello**: Negro azabache, castaño muy oscuro (sin reflejos rojos), rubio platino casi blanco o gris plata.\n\n**Sus Mejores Colores**:\n- Negro Puro (su mejor neutro), Blanco Óptico, Rojo Sangre, Azul Eléctrico, Fucsia, Violeta Real, Esmeralda Frío.\n\n**Sus Peores Colores**:\n- Naranja, Mostaza, Beige Dorado, Marrón Café, colores pastel polvorientos."
         },
         {
-            "heading": "2. La Revolución de Johannes Itten y la Bauhaus",
-            "content": "En la década de 1920, el profesor de la Bauhaus **Johannes Itten** llevó la teoría del color un paso más allá. Al observar a sus alumnos pintar, se dio cuenta de que sistemáticamente elegían colores que armonizaban con su propio tono de piel, ojos y cabello.\n\nItten fue el creador de la clasificación original de los colores en las cuatro estaciones (Primavera, Verano, Otoño e Invierno), basándose en los paisajes naturales. Su trabajo no solo influyó en el arte, sino que sentó las bases para que los futuros consultores de imagen clasificaran la belleza humana de forma científica."
+            "heading": "2. VERANO: La Elegancia de la Suavidad y la Calma",
+            "content": "**El Arquetipo**: Grace Kelly, Kate Middleton, Jennifer Aniston.\n**La Energía**: Etérea, Aristocrática, Serena, Delicada.\n\nEl Verano es la hermana suave del Invierno. Comparte la temperatura fría, pero baja la intensidad. Imagina un jardín inglés al amanecer, cubierto de rocío y neblina. Los colores nunca gritan; susurran. Tienen un matiz grisáceo o 'ahumado' que los hace extremadamente elegantes.\n\n**Características Físicas Clave**:\n- **Piel**: Traslúcida, fina, con venas visibles. Beige rosado o 'hueso'. Se queman fácilmente al sol.\n- **Ojos**: Suelen ser suaves. Azul grisáceo, verde agua, gris puro o avellana frío.\n- **Cabello**: Rubio ceniza ('dirty blonde'), castaño claro ceniza o marrón 'ratón'. Nunca tienen reflejos dorados naturales.\n\n**Sus Mejores Colores**:\n- Azul Cielo, Lavanda, Rosa Palo, Frambuesa suave, Gris Perla, Azul Marino \"lavado\" (Soft Navy).\n\n**Sus Peores Colores**:\n- Negro (demasiado duro), Naranja neón, Amarillo huevo, Colores eléctricos."
         },
         {
-            "heading": "3. Robert Dorr y el Sistema de Armonía de Color (1928)",
-            "content": "Robert Dorr fue el pionero que llevó la colorimetría al gran público. Desarrolló el 'Color Key System', que dividía todos los colores en dos claves: **Key I (Fría)** y **Key II (Cálida)**. Trabajó con empresas de pinturas y cosméticos para asegurar que los productos ofrecidos a los consumidores tuvieran una coherencia cromática subyacente. Su trabajo demostró que la armonía no era una cuestión de suerte, sino de estructura matemática."
+            "heading": "3. OTOÑO: La Riqueza de la Tierra y el Fuego",
+            "content": "**El Arquetipo**: Julia Roberts, Jennifer Lopez, Julianne Moore.\n**La Energía**: Cálida, Envolvente, Natural, Organica.\n\nEl Otoño es la estación de la cosecha. Sus colores son ricos, densos y dorados. Imagina un bosque en octubre: marrones, ocres, verdes musgo y naranjas quemados. No hay frialdad aquí, solo calor acumulado.\n\n**Características Físicas Clave**:\n- **Piel**: Marfil cálido, beige dorado, bronce o 'piel con pecas'. Tienen un 'glow' dorado natural.\n- **Ojos**: Marrón chocolate, ámbar, verde oliva o miel. Tienen motas doradas en el iris.\n- **Cabello**: Pelirrojo, castaño cobrizo, castaño dorado o rubio miel oscuro.\n\n**Sus Mejores Colores**:\n- Marrón Chocolate, Terracota, Verde Oliva, Mostaza, Calabaza, Teja, Salmón oscuro, Oro Viejo.\n\n**Sus Peores Colores**:\n- Fucsia, Gris Hielo, Azul Eléctrico, Rosa Chicle, Negro (te apaga)."
         },
         {
-            "heading": "4. La 'Biblia del Color': Color Me Beautiful de Carole Jackson",
-            "content": "En 1980, la publicación de 'Color Me Beautiful' de **Carole Jackson** convirtió la colorimetría en un fenómeno global de masas. Millones de mujeres (y hombres) descubrieron su 'estación' y empezaron a comprar basándose en paletas personalizadas.\n\nEste libro no solo cambió la forma en que consumimos moda, sino que profesionalizó la figura del asesor de imagen. Jackson popularizó la idea de que conocer tus colores te ahorra tiempo y dinero, un mensaje que sigue siendo relevante hoy en día en la era de la moda sostenible."
+            "heading": "4. PRIMAVERA: La Vitalidad del Sol y la Luz",
+            "content": "**El Arquetipo**: Nicole Kidman (época rubia), Blake Lively, Cameron Diaz.\n**La Energía**: Juvenil, Alegre, Vibrante, Fresca.\n\nLa Primavera es la explosión de vida tras el invierno. Sus colores son cálidos como el Otoño, pero Claros y Brillantes. Imagina un campo de tulipanes bajo el sol del mediodía: amarillos brillantes, verdes lima, corales vivos.\n\n**Características Físicas Clave**:\n- **Piel**: Crema, melocotón o 'marfil dorado'. Tienen una piel que parece transparente y luminosa. Se ruborizan con facilidad (color coral).\n- **Ojos**: Azul brillante, turquesa, verde claro brillante o marrón dorado claro ('topacio').\n- **Cabello**: Rubio dorado, rubio fresa, castaño claro con mucho brillo dorado.\n\n**Sus Mejores Colores**:\n- Coral, Turquesa, Verde Manzana, Amarillo Narciso, Violeta Cálido, Camel dorado, Melocotón.\n\n**Sus Peores Colores**:\n- Negro y Blanco (demasiado planos), Burdeos oscuro, Gris Plomo (te entristece)."
         },
         {
-            "heading": "5. El Cine y la Televisión: La Colorimetría como Narrativa",
-            "content": "En Hollywood, la colorimetría es una herramienta narrativa fundamental. Los diseñadores de vestuario utilizan paletas específicas para indicar la evolución de un personaje. Pensemos en películas como 'El Gran Gatsby' o 'El Diablo viste de Prada'; el uso del color no es accidental. La transición de una actriz de tonos apagados a tonos vibrantes de su estación se utiliza visualmente para comunicar crecimiento, poder y despertar personal."
+            "heading": "5. El 'Flow' entre Estaciones: ¿Qué pasa si no encajo?",
+            "content": "Pocas personas encajan al 100% en una estación pura. Aquí es donde entra el concepto de 'Flow' (Flujo). Una estación puede 'fluir' hacia otra si comparten una característica dominante.\n- **Invierno Profundo (Deep Winter)** fluye hacia **Otoño Profundo**. Ambos son oscuros. Un Invierno Profundo puede llevar el Marrón Chocolate más oscuro del Otoño.\n- **Verano Suave (Soft Summer)** fluye hacia **Otoño Suave**. Ambos son neutros y apagados. Pueden compartir ciertos verdes y azules verdosos.\nEntender tu flujo te permite robar colores de tu estación vecina y ampliar tu paleta."
         },
         {
-            "heading": "6. La Colorimetría en la Era de las Redes Sociales y TikTok",
-            "content": "Estamos viviendo un 'Renacimiento del Color'. Plataformas como TikTok e Instagram han democratizado el análisis de color a través de filtros de realidad aumentada. Lo que antes requería una cita presencial costosa, ahora es un juego viral de 'draping' digital.\n\nSin embargo, esta rapidez también trae confusión. La colorimetría moderna requiere algoritmos que entiendan la luz y la sombra de forma digital, superando las limitaciones de las cámaras de los móviles. Es aquí donde herramientas como MyColors llevan la historia hacia el futuro, combinando la teoría clásica de Itten con la precisión del procesamiento de imagen moderno."
+            "heading": "6. Cómo Probar tu Estación en Casa: El Test de las Telas",
+            "content": "No mires tus rasgos, mira la REACCIÓN de tu piel ante el color. Busca telas de estos colores clave:\n1.  **Fucsia vs Naranja**: \n    - Si el Fucsia te ilumina --> Eres Fría (Invierno/Verano).\n    - Si el Naranja te da vida --> Eres Cálida (Otoño/Primavera).\n2.  **Negro vs Marrón**:\n    - Si el Negro te da poder --> Invierno.\n    - Si el Marrón te hace brillar --> Otoño.\n3.  **Azul Bebé vs Salmón**:\n    - Si el Azul Bebé te limpia --> Verano.\n    - Si el Salmón te da salud --> Primavera."
         },
         {
-            "heading": "7. El Futuro: La Era del Pigmento Personalizado",
-            "content": "La evolución de los pigmentos ha pasado de los tintes naturales (como el carmesí de las cochinillas) a los colores sintéticos y ahora a los píxeles digitales. El siguiente paso en la historia de la colorimetría es la **hiper-personalización**. Impresión de cosméticos en casa basados en tu lectura colorimétrica del día, y tejidos inteligentes que cambian de tonalidad para adaptarse a tu subtono según la temperatura ambiente. La historia del color apenas está comenzando."
+            "heading": "7. Mitos Comunes sobre las Temporadas",
+            "content": "- **'Tengo ojos marrones, soy Otoño'**: Falso. Hay Inviernos con ojos negros y Veranos con ojos avellana fríos.\n- **'Las asiáticas y negras son siempre Invierno u Otoño'**: Falso. Hay muchas mujeres de piel oscura que son Primaveras Brillantes (como Kerry Washington) o Veranos (como Rihanna en algunas épocas).\n- **'Si soy pálida soy Invierno'**: Falso. Puedes ser una Primavera muy pálida. La palidez no indica temperatura."
+        },
+        {
+            "heading": "8. La Importancia del Contraste Personal",
+            "content": "Tu nivel de contraste es tan importante como tu temperatura. \n- **Alto Contraste**: Piel muy clara + Pelo muy oscuro. Necesitas ropa que replique ese contraste (Blanco y Negro).\n- **Bajo Contraste**: Piel clara + Pelo claro. Necesitas ropa monocromática o de bajo contraste para que no 'te coma'."
+        },
+        {
+            "heading": "9. Psicología Estacional: Tu Personalidad de Color",
+            "content": "Curiosamente, la personalidad a menudo se alinea con la estación.\n- **Invierno**: Directas, perfeccionistas, líderes.\n- **Verano**: Observadoras, diplomáticas, detallistas.\n- **Otoño**: Apasionadas, leales, conectadas con la tierra.\n- **Primavera**: Optimistas, comunicativas, espontáneas."
+        },
+        {
+            "heading": "10. Conclusión Práctica: Tu Paleta en el Bolsillo",
+            "content": "Llevar una muestra de tus colores en el móvil te salvará de compras impulsivas. Si entras a una tienda y la prenda no coincide con tu 'abanico', no la compres. Es mejor tener 10 prendas que te queden de 10, que 50 prendas que te queden de 5."
         }
     ],
-    "conclusion": "La historia del color es la historia de cómo aprendimos a vernos a nosotros mismos con mayor claridad. Desde los descubrimientos de Newton hasta la explosión viral de hoy, el objetivo sigue siendo el mismo: encontrar la armonía. Al conocer este legado, no solo heredamos una paleta de colores, sino una herramienta de comunicación no verbal infalible. Te invitamos a formar parte de esta historia en MyColors, donde la tradición y la tecnología se unen para revelar tu brillo único."
+    "conclusion": "Descubrir tu temporada es como encontrar la llave maestra de tu belleza. De repente, todo tiene sentido. Entiendes por qué ese vestido caro nunca te convenció y por qué esa bufanda barata siempre te trae cumplidos. No es magia, es armonía. Te invitamos a usar las herramientas de MyColors para afinar tu diagnóstico y empezar a vivir en tecnicolor.",
+    "faq": [
+        {
+            "question": "¿Qué es una estación 'Suave' (Soft)?",
+            "answer": "Una estación suave (Verano Suave u Otoño Suave) es aquella donde la característica dominante no es ni la temperatura ni la oscuridad, sino la falta de saturación. Sus colores tienen mucho gris añadido. Son personas que se ven mejor en colores deslavados o 'polvorientos' que en colores puros."
+        },
+        {
+            "question": "¿Puedo ser dos estaciones a la vez?",
+            "answer": "Técnicamente no, siempre tienes una estación dominante. Sin embargo, si estás en un 'Flow' (por ejemplo, Invierno que fluye a Verano), puedes usar colores de ambas paletas siempre que compartan la característica principal (en este caso, la temperatura fría)."
+        },
+        {
+            "question": "¿El bronceado cambia mi estación?",
+            "answer": "No. El bronceado solo oscurece tu 'Overtone' (color superficial), pero tu 'Undertone' (subtono sanguíneo) sigue siendo el mismo. Una Verano bronceada sigue necesitando colores fríos y suaves, solo que quizás un poco más oscuros."
+        },
+        {
+            "question": "¿Los hombres también tienen estaciones?",
+            "answer": "¡Por supuesto! La piel y los ojos masculinos funcionan exactamente igual. Un hombre Invierno se verá espectacular con traje negro y camisa blanca, mientras que un hombre Otoño se verá apagado y necesitará trajes marrones, beige o verde oliva."
+        }
+    ]
 }
     },
     {
@@ -109,42 +169,88 @@ export const blogArticles = [
         image: '/images/blog/teoria-color-aplicada.jpg',
         keywords: ['teoría del color', 'psicología del color', 'temperatura color', 'contraste visual'],
         content: {
-    "intro": "El círculo cromático es mucho más que una herramienta para diseñadores gráficos o artistas plásticos; es el mapa definitivo para navegar por las posibilidades infinitas de tu imagen personal. ¿Alguna vez te has sentido bloqueada frente al armario, terminando siempre con la misma combinación segura de negro y azul marino? Lo que te falta no es ropa, sino el entendimiento de las leyes de la armonía visual.\n\nEn esta guía magistral de más de 1800 palabras, vamos a transformar tu percepción del color. Aprenderás a usar el círculo cromático no como una regla rígida, sino como un parque de juegos creativo. Exploraremos técnicas avanzadas de contraste, la psicología oculta tras cada pigmento y cómo construir una identidad visual coherente que proyecte exactamente quién eres sin decir una sola palabra.\n\nDesde la elegancia del monocromo hasta la audacia del contraste complementario, prepárate para dominar el arte de la apariencia personal con la precisión de un maestro del color.",
+    "intro": "La teoría del color puede sonar a clase de arte abstracta, pero cuando la aplicas a tu apariencia personal, se convierte en la herramienta más potente de tu arsenal estético. No es solo saber que 'te queda bien el azul'; es entender qué tono exacto de azul comunica autoridad, cuál comunica creatividad y cuál te hace ver cansada.\n\nEn la era de la imagen, donde somos juzgados en milisegundos por nuestra foto de perfil o nuestra entrada en una sala de reuniones, dominar la teoría del color aplicada ya no es una frivolidad; es una ventaja competitiva. Esta guía no repite los conceptos básicos de las estaciones; va un paso más allá. Vamos a hablar de proporciones, de combinaciones análogas y complementarias aplicadas al maquillaje, de cómo usar el color para corregir ópticamente tus facciones y de la psicología detrás de cada elección cromática.\n\nPrepárate para una masterclass de más de 2000 palabras que convertirá tu espejo en un laboratorio de estilo y tu armario en una galería de arte personal.",
     "sections": [
         {
-            "heading": "1. El Círculo Cromático: Tu Brújula Estética",
-            "content": "Para dominar el color, primero debemos entender su geografía. El círculo cromático organiza los colores en una secuencia lógica basada en su relación entre sí. \n- **Colores Primarios**: Rojo, Azul y Amarillo. Son los padres de todos los demás.\n- **Colores Secundarios**: Naranja, Verde y Violeta. Surgen de la mezcla de los primarios.\n- **Colores Terciarios**: Son los matices intermedios, como el turquesa o el carmesí.\n\nEn la moda, el círculo nos permite predecir qué colores 'vibrarán' juntos y cuáles crearán una transición suave. El secreto es saber en qué parte del círculo se sitúa tu estación personal para elegir tus acentos de forma inteligente."
+            "heading": "1. El Círculo Cromático: Tu Nuevo Mejor Amigo",
+            "content": "Para aplicar la teoría, debes visualizar el círculo cromático. \n- **Colores Primarios**: Rojo, Azul, Amarillo. Son la base.\n- **Colores Secundarios**: Verde, Violeta, Naranja.\n- **Colores Terciarios**: Azul-verdoso, Rojo-anaranjado, etc.\n\n**Aplicación Práctica**: Si quieres neutralizar una mancha roja en tu piel (acné), usas su opuesto en el círculo: el verde (corrector verde). Si quieres resaltar tus ojos azules, usa una sombra naranja/bronce (su complementario). La teoría del círculo es la base de todo maquillaje correctivo."
         },
         {
-            "heading": "2. Armonía Monocromática: El Lujo del Tono sobre Tono",
-            "content": "La armonía monocromática consiste en crear un look utilizando diferentes profundidades y saturaciones de un mismo color. \n**Por qué funciona**:\n- Alarga la silueta visualmente, creando una línea vertical ininterrumpida.\n- Proyecta una imagen de sofisticación extrema y 'Quiet Luxury'.\n\n**Tip de Experto**: Para que un look monocromático no se vea aburrido, mezcla **texturas**. Un pantalón de seda con un jersey de cachemira en el mismo tono de azul creará una tridimensionalidad exquisita que atraerá todas las miradas."
+            "heading": "2. Armonías de Color: Cómo Combinar sin Fallar",
+            "content": "Existen fórmulas matemáticas para combinar colores que siempre funcionan:\n\n1.  **Monocromática**: Un solo color en diferentes tonos (ej. Azul marino + Azul cielo). \n    -   *Efecto*: Alarga la figura, estiliza, proyecta elegancia seria.\n\n2.  **Análoga**: Colores vecinos en el círculo (ej. Azul + Verde + Turquesa).\n    -   *Efecto*: Armonioso, relajante, natural. Ideal para eventos sociales tranquilos.\n\n3.  **Complementaria**: Colores opuestos (ej. Azul + Naranja). \n    -   *Efecto*: Dinámico, energético, atrevido. Ideal para deportes o marcas personales creativas.\n\n4.  **Tríada**: Tres colores equidistantes (ej. Violeta + Naranja + Verde).\n    -   *Efecto*: Muy llamativo y vibrante. Difícil de ejecutar en ropa, fácil en estampados."
         },
         {
-            "heading": "3. Armonía Complementaria: La Audacia del Contraste",
-            "content": "Los colores complementarios son aquellos situados en lados opuestos del círculo (ej. Azul y Naranja, o Violeta y Amarillo). \nEsta combinación es la de mayor impacto visual. Se utiliza para proyectar energía, creatividad y confianza total. Sin embargo, puede ser abrumadora. La clave es la **Regla de Proporción**: un color debe ser el dominante (80%) y el otro debe aparecer solo en accesorios o detalles pequeños (20%)."
+            "heading": "3. Temperatura y Maquillaje: El Error #1",
+            "content": "El error más devastador en la colorimetría aplicada es mezclar temperaturas en el rostro.\n- **Caso Real**: Una mujer con piel fría (Verano) se pone una base de maquillaje con subtono amarillo (porque le dijeron que 'neutraliza'). Resultado: Su cara parece una máscara separada del cuello.\n- **Regla de Oro**: Tu base, corrector, colorete y labial DEBEN compartir la misma temperatura que tu piel. Si eres fría, base rosada/neutra. Si eres cálida, base dorada/amarilla."
         },
         {
-            "heading": "4. Armonía Análoga: La Fluidez de la Naturaleza",
-            "content": "Los colores análogos son vecinos en el círculo cromático (ej. Azul, Azul-Verde y Verde). Esta combinación se siente natural, pacífica y coherente porque es la que más vemos en los paisajes orgánicos. Es ideal para entornos profesionales donde quieres mostrarte creativa pero accesible y equilibrada."
+            "heading": "4. El Color como Corrector Morfológico (Ilusión Óptica)",
+            "content": "Los colores claros y brillantes **expanden** (avanzan). Los colores oscuros y mates **contraen** (retroceden).\n- **Caderas Anchas**: Usa negro, azul marino o mate abajo; colores claros y estampados arriba. Atraerás la mirada al torso.\n- **Hombros Estrechos**: Usa blanco, hombreras o colores brillantes arriba; oscuros abajo.\n- **Busto Grande**: Evita estampados grandes o colores neón en el pecho; opta por colores sólidos y oscuros con escotes en V."
         },
         {
-            "heading": "5. Psicología del Color: Vistiendo con Intención",
-            "content": "Cada color envía un mensaje inconsciente al cerebro del observador:\n- **Rojo**: Acción, pasión, urgencia y poder. Úsalo cuando quieras liderar.\n- **Azul**: Confianza, lógica, calma y autoridad serena. El color del mundo corporativo.\n- **Verde**: Fertilidad, crecimiento, salud y armonía. Ideal para generar confianza.\n- **Amarillo**: Optimismo, inteligencia y atención. Cuidado: puede cansar la vista en grandes dosis."
+            "heading": "5. Color y Textura: La Cuarta Dimensión",
+            "content": "El mismo color cambia según la tela.\n- **Terciopelo Negro**: Absorbe toda la luz. Es un negro profundo y rico (ideal Invierno).\n- **Seda Negra**: Refleja luz. Se ve más grisáceo o plateado.\n- **Lino Negro**: Se ve apagado y texturizado (ideal Otoño/Verano).\nSi eres una estación 'Suave' (Verano/Otoño), te favorecen las texturas mate (lana, lino, algodón). Si eres una estación 'Brillante' (Invierno/Primavera), te favorecen los brillos (satén, charol, lentejuelas)."
         },
         {
-            "heading": "6. La Colorimetría Digital vs. El Ojo Humano",
-            "content": "En la era de las pantallas, la teoría del color ha tenido que adaptarse. Los colores RGB (de luz) se comportan de forma distinta al pigmento físico. Al elegir ropa para videollamadas, debemos considerar la **saturación digital**. Algunos colores pueden verse demasiado vibrantes o 'pixelados' en cámara. Optar por colores de saturación media asegura que tu imagen digital sea tan profesional como la presencial."
+            "heading": "6. El 'Punto de Poder': Dónde Colocar el Color",
+            "content": "El color más importante es el que está en tu 'Zona de Retrato' (del pecho hacia arriba). \n- Puedes usar colores 'prohibidos' si están lejos de la cara (pantalones, zapatos).\n- Si usas un color 'malo' cerca de la cara, compénsalo con un pañuelo de un color 'bueno', unos pendientes grandes de tu metal ideal, o un labial perfecto. Esto crea un 'puente' de armonía."
         },
         {
-            "heading": "7. Cromoterapia en la Moda: Salud Emocional a través del Tinte",
-            "content": "No solo vestimos para los demás, vestimos para nosotros mismos. La cromoterapia sugiere que rodearnos de ciertos pigmentos puede alterar nuestro estado de ánimo. Si te sientes estresada, usar un jersey en un tono azul suave de tu estación puede ayudarte a bajar las pulsaciones. Si necesitas un extra de motivación para ir al gimnasio o afrontar un reto, un toque de fucsia o naranja vibrante funcionará como un 'shot' visual de adrenalina."
+            "heading": "7. Metales y Accesorios: El Toque Final",
+            "content": "La joyería no es neutral.\n- **Oro**: Proyecta calor. Ilumina a las pieles cálidas, pero hace que las frías se vean amarillentas o 'sucias'.\n- **Plata**: Proyecta frío. Limpia y define a las pieles frías, pero hace que las cálidas se vean pálidas o grises.\n- **Oro Rosa**: El comodín universal. Funciona razonablemente bien en casi todos, especialmente en estaciones suaves."
         },
         {
-            "heading": "8. Cómo Crear una Paleta de Color para tu Marca Personal",
-            "content": "Tu marca personal es la huella que dejas en los demás. Elegir 3 colores clave que se repitan en tu vestimenta, redes sociales y tarjetas de visita crea una consistencia poderosa. Estos colores deben salir de **tus mejores neutros** y **tu mejor color de acento**. Cuando la gente ve ese color, inconscientemente piensa en ti. Eso es el branding personal cromático de alto nivel."
+            "heading": "8. Colorimetría en Gafas y Cabello",
+            "content": "- **Gafas**: Son el accesorio más importante porque viven en tu cara. \n    - Inviernos: monturas negras o plateadas.\n    - Otoños: carey o dorado.\n    - Veranos: transparentes, gris humo o metal plateado mate.\n    - Primaveras: dorado brillante o colores vivos.\n- **Cabello**: El marco del rostro. Nunca aclares tu cabello más de 3 tonos de tu base natural si quieres mantener la armonía cromática sin esclavizarte a la raíz."
+        },
+        {
+            "heading": "9. Psicología Aplicada: Vístete para el Objetivo",
+            "content": "- **Entrevista de Trabajo (Sector Creativo)**: Usa morado o verde azulado. Comunica originalidad pero calma.\n- **Entrevista de Trabajo (Sector Finanzas)**: Azul marino y blanco. Tradición, confianza, seriedad.\n- **Primera Cita**: Rosa cuarzo o Melocotón suave. Comunica accesibilidad y romanticismo sin agresividad.\n- **Negociación Salarial**: Negro o Azul Medianoche con un toque de Rojo (poder controlado)."
+        },
+        {
+            "heading": "10. Colorimetría para Videollamadas y el Mundo Digital",
+            "content": "En la era de Zoom, tu 'color digital' importa tanto como el presencial. Las cámaras web comprimen el color y a menudo lavan la piel. \n- **Evita**: Estampados pequeños (crean efecto moiré) y el blanco puro (hace que la cámara baje la exposición y tu cara se vea oscura).\n- **Usa**: Colores sólidos y saturados de tu paleta. Un azul cobalto (Invierno) o un rojo teja (Otoño) te harán destacar en la cuadrícula de una reunión."
+        },
+        {
+            "heading": "11. Maridaje de Estampados Avanzado (Power Clashing)",
+            "content": "Mezclar estampados es el nivel experto de la teoría del color. La regla para que no parezca un disfraz de payaso es mantener la **unidad cromática**.\n- **Ejemplo**: Puedes mezclar rayas marineras (Azul/Blanco) con flores (Azul/Rosa/Verde) SIEMPRE que el 'Azul' sea exactamente el mismo tono en ambas prendas.\n- **Escala**: Mezcla un estampado grande con uno pequeño. Nunca dos del mismo tamaño."
+        },
+        {
+            "heading": "12. El Color y tu Fotogenia",
+            "content": "¿Por qué sales mal en algunas fotos? A menudo es el reflejo del color (Color Cast). Si usas una blusa verde neón y te da el sol, tu barbilla se verá verde en la foto. \n- **Tip de Fotógrafo**: Para retratos, usa cera iluminadora o colores claros cerca del escote para que actúen como un reflector natural (rebote de luz) y rellenen las sombras de las ojeras."
+        },
+        {
+            "heading": "13. Personal Branding: Los Colores de tu Marca Personal",
+            "content": "Tus colores personales deberían alinearse con tu marca profesional. Si eres una abogada penalista (autoridad, seriedad), tu marca personal no debería ser Amarillo Pollito (diversión, infantil), aunque sea tu color favorito. Busca la intersección entre 'Lo que te queda bien' y 'Lo que quieres comunicar'. Si eres una Primavera (colores divertidos) en un entorno serio, usa tus colores en accesorios de alta calidad para mostrar personalidad sin perder profesionalidad."
+        },
+        {
+            "heading": "14. Errores de Iluminación al Comprar",
+            "content": "La luz de los probadores es famosa por engañar. \n- **Fluorescente**: Tira a verde. Hace que todo se vea más frío.\n- **Incandescente (Cálida)**: Tira a amarillo. Hace que todo parezca más cálido.\n- **Regla**: Nunca compres una prenda importante (vestido de novia, traje caro) sin verla bajo luz natural. Sal a la calle de la tienda con la prenda (o pide permiso) para ver su color real."
+        },
+        {
+            "heading": "15. Construyendo tu Marca Personal (Resumen)",
+            "content": "Steve Jobs (Negro), Anna Wintour (Estampados), Mark Zuckerberg (Gris). Todos usan el color (o la falta de él) para crear una marca consistente. \nIdentifica tus 3 colores de poder y úsalos consistentemente en tu ropa, tu web y tus presentaciones. La repetición crea reconocimiento."
         }
     ],
-    "conclusion": "El dominio de la teoría del color es el paso final para pasar de 'vestirse' a 'crear un estilo'. El círculo cromático es tu lienzo, y tu colorimetría personal es tu paleta de pigmentos seguros. Al entender estas leyes, recuperas el control sobre tu imagen y abres un mundo de posibilidades creativas que antes te parecían reservadas para los expertos. Te invitamos a suscribirte a nuestra newsletter en MyColors para recibir más tips semanales sobre armonía visual y transformar tu vida en Technicolor."
+    "conclusion": "La teoría del color aplicada no es vanidad; es inteligencia visual. Es tomar el control del mensaje que envías al mundo antes de abrir la boca. Al dominar estas herramientas, dejas de vestirte por inercia y empiezas a vestirte con intención. Tu apariencia se convierte en una extensión coherente de tu personalidad y tus objetivos.",
+    "faq": [
+        {
+            "question": "¿Qué es la 'zona de retrato'?",
+            "answer": "Es el área comprendida desde tu pecho hasta la parte superior de tu cabeza. Es la zona más crítica para la colorimetría porque los colores aquí reflejan su luz directamente sobre tu rostro. Los pantalones o zapatos importan mucho menos."
+        },
+        {
+            "question": "¿Puedo mezclar Oro y Plata?",
+            "answer": "Sí, la tendencia actual permite mezclar metales ('mixed metals'). Sin embargo, para mantener la armonía, intenta que haya un metal dominante (el que mejor te quede a ti) y usa el otro como acento menor, o busca piezas que ya vengan combinadas para que parezca intencional."
+        },
+        {
+            "question": "¿El maquillaje neutraliza un mal color de ropa?",
+            "answer": "Ayuda, pero no hace milagros. Si llevas un color terrible cerca de la cara, tendrás que usar más maquillaje (base más cubriente, más colorete) para 'devolverle la vida' a tu piel. Usar tus colores correctos te permite usar MENOS maquillaje."
+        },
+        {
+            "question": "¿Cómo sé si un estampado me queda bien?",
+            "answer": "Mira el contraste y el tamaño. Si eres una persona de alto contraste (Invierno), busca estampados geométricos, grandes y definidos. Si eres suave (Verano), busca estampados de acuarela, florales difusos y pequeños (o 'liberty')."
+        }
+    ]
 }
     },
 
@@ -199,7 +305,21 @@ export const blogArticles = [
             "content": "1. **Usar polvos de sol**: El bronceador anaranjado crea manchas artificiales que ensucian tu piel.\n2. **Sombras doradas/amarillas**: Hacen que el blanco de tus ojos y tus dientes se vean amarillentos.\n3. **Labiales color café cálido**: Te darán un aspecto cansado y anticuado.\n4. **No usar corrector**: La piel fría tiende a transparentar las venas azules de la ojera; un buen corrector neutralizador es vital."
         }
     ],
-    "conclusion": "Dominar el maquillaje Invierno es un viaje de auto-descubrimiento estético. Una vez que dejas de intentar encajar en los cánones de 'calidez' y abrazas tu naturaleza fría e intensa, descubres una belleza que es atemporal, poderosa y profundamente elegante. Tu paleta no es una cárcel, es el mapa hacia tu mejor versión. Visita MyColors para descubrir más secretos y productos que te harán brillar con la claridad de un diamante bajo la luz del sol de invierno."
+    "conclusion": "Dominar el maquillaje Invierno es un viaje de auto-descubrimiento estético. Una vez que dejas de intentar encajar en los cánones de 'calidez' y abrazas tu naturaleza fría e intensa, descubres una belleza que es atemporal, poderosa y profundamente elegante. Tu paleta no es una cárcel, es el mapa hacia tu mejor versión. Visita MyColors para descubrir más secretos y productos que te harán brillar con la claridad de un diamante bajo la luz del sol de invierno.",
+    "faq": [
+        {
+            "question": "¿Puedo ser Invierno si no soy pálida?",
+            "answer": "Sí. El invierno se define por el contraste y la temperatura fría, no solo por la palidez. Muchas mujeres de piel oscura o aceitunada fría son Inviernos Profundos."
+        },
+        {
+            "question": "¿Qué labial es imprescindible para una Invierno?",
+            "answer": "Un rojo puro (sin subtono naranja) o un fucsia intenso. Evita los nudes demasiado beige o los corales."
+        },
+        {
+            "question": "¿El gris me queda bien?",
+            "answer": "Sí, el gris carbón o el gris hielo son excelentes neutros para ti. Evita los grises verdosos o cálidos."
+        }
+    ]
 }
     },
     {
@@ -249,7 +369,21 @@ export const blogArticles = [
             "content": "1. **Usar sombras grises o plateadas**: Hacen que tus párpados se vean sombríos, tristes y enfermizos.\n2. **Labiales color café frío o lila**: Te darán un aspecto de 'muerta viviente'.\n3. **Cejas demasiado oscuras y marcadas**: El contraste negro de las cejas con una piel clara y cálida se ve artificial y agresivo. Usa geles con color marrón dorado.\n4. **Maquillaje mate total**: Al quitarle el brillo a tu piel, le quitas su salud visual."
         }
     ],
-    "conclusion": "El maquillaje para la mujer Primavera es una celebración de la luz, el color y la alegría de vivir. Al elegir tonos que armonizan con tu calidez natural, no solo te ves más bella ante el espejo, sino que proyectas una energía contagiosa y luminosa que el resto del mundo percibe como carisma puro. No tengas miedo a los corales y los oros; son tus aliados naturales para conquistar el día. Visita MyColors para validar tu paleta personalizada y empieza a brillar con la intensidad de un sol de mañana hoy mismo."
+    "conclusion": "El maquillaje para la mujer Primavera es una celebración de la luz, el color y la alegría de vivir. Al elegir tonos que armonizan con tu calidez natural, no solo te ves más bella ante el espejo, sino que proyectas una energía contagiosa y luminosa que el resto del mundo percibe como carisma puro. No tengas miedo a los corales y los oros; son tus aliados naturales para conquistar el día. Visita MyColors para validar tu paleta personalizada y empieza a brillar con la intensidad de un sol de mañana hoy mismo.",
+    "faq": [
+        {
+            "question": "¿Qué colores debo evitar si soy Primavera?",
+            "answer": "Evita el negro y el blanco puro cerca de la cara, ya que pueden apagarte. También huye de los colores oscuros y apagados como el burdeos viejo o el gris plomo."
+        },
+        {
+            "question": "¿Puedo usar dorado?",
+            "answer": "¡Es tu mejor metal! El oro brillante resalta la calidez natural de tu piel. El oro rosa también te favorece mucho."
+        },
+        {
+            "question": "¿El azul marino es para mí?",
+            "answer": "Sí, pero busca un azul marino brillante o 'royal', no uno demasiado oscurecido o grisáceo."
+        }
+    ]
 }
     },
     {
@@ -315,7 +449,21 @@ export const blogArticles = [
             "content": "En un mundo frío y tecnológico, tu presencia aporta 'hogar'. La gente se siente cómoda y segura a tu alrededor instintivamente. Usa colores cálidos en reuniones para generar confianza y cercanía. Cuando entras en una habitación vestida de oro viejo y verde bosque, no solo entras tú, entra la naturaleza entera contigo. Esa es tu magia."
         }
     ],
-    "conclusion": "La mujer Otoño tiene el armario más rico y sensual de todas las estaciones. No necesitas brillos artificiales porque tú emanas calor. Al entender tu paleta, dejas de comprar ropa que 'te gusta en la percha' pero que no te gusta en ti. Construyes una colección coherente donde todo combina con todo y donde cada prenda te hace sentir poderosa, conectada y auténtica. Sal ahí fuera y deja que tu luz dorada ilumine el gris del mundo."
+    "conclusion": "La mujer Otoño tiene el armario más rico y sensual de todas las estaciones. No necesitas brillos artificiales porque tú emanas calor. Al entender tu paleta, dejas de comprar ropa que 'te gusta en la percha' pero que no te gusta en ti. Construyes una colección coherente donde todo combina con todo y donde cada prenda te hace sentir poderosa, conectada y auténtica. Sal ahí fuera y deja que tu luz dorada ilumine el gris del mundo.",
+    "faq": [
+        {
+            "question": "¿Cuál es la diferencia entre Otoño Suave y Otoño Verdadero?",
+            "answer": "El Otoño Suave tiene una influencia del Verano, por lo que sus colores son más deslavados y menos intensos. El Otoño Verdadero es puramente cálido y rico."
+        },
+        {
+            "question": "¿Puedo usar negro si soy Otoño?",
+            "answer": "El negro no es tu mejor color. Sustitúyelo por Marrón Chocolate, Verde Oliva Oscuro o Azul Marino Profundo (con subtono cálido)."
+        },
+        {
+            "question": "¿Qué estampado me favorece?",
+            "answer": "Los estampados naturales (hojas, flores, paisley) en tonos tierra te quedan espectaculares."
+        }
+    ]
 }
     },
     {
@@ -381,7 +529,21 @@ export const blogArticles = [
             "content": "Ser Verano no es 'aburrido'. Es ser sofisticada sin esfuerzo. Es la belleza de un jardín inglés bajo la lluvia. Cuando dejas de luchar contra tu temperatura fría y abrazas los azules, los malvas y los grises, descubres que tu piel se ilumina, tus ojos brillan y pareces 10 años más joven. Tira ese bronceador naranja y sal a la calle orgullosa de tu paleta lunar."
         }
     ],
-    "conclusion": "La mujer Verano tiene el regalo de la atemporalidad. Mientras otras estaciones dependen de la moda del momento, tu estilo basado en la suavidad y la elegancia fría siempre funciona. Al construir un armario y un neceser que honra tu naturaleza, te aseguras de estar impecable en cualquier situación, desde una reunión de trabajo hasta una cena romántica. Eres la calma en la tormenta del color; úsalo a tu favor. Visita MyColors para descubrir tu sub-estación exacta (Verano Claro, Suave o Frío) y afinar aún más tu estrategia."
+    "conclusion": "La mujer Verano tiene el regalo de la atemporalidad. Mientras otras estaciones dependen de la moda del momento, tu estilo basado en la suavidad y la elegancia fría siempre funciona. Al construir un armario y un neceser que honra tu naturaleza, te aseguras de estar impecable en cualquier situación, desde una reunión de trabajo hasta una cena romántica. Eres la calma en la tormenta del color; úsalo a tu favor. Visita MyColors para descubrir tu sub-estación exacta (Verano Claro, Suave o Frío) y afinar aún más tu estrategia.",
+    "faq": [
+        {
+            "question": "¿El color lavanda es solo para Verano?",
+            "answer": "Es el color estrella del Verano, pero algunas Primaveras Claras pueden usarlo. Sin embargo, nadie lo luce como un Verano."
+        },
+        {
+            "question": "¿Puedo usar rojo?",
+            "answer": "Sí, busca un rojo frambuesa o un rojo sandía (con base azulada). Evita el rojo tomate o ladrillo."
+        },
+        {
+            "question": "¿Qué blanco debo usar?",
+            "answer": "Evita el blanco óptico brillante. Tu blanco ideal es el 'blanco suave', 'blanco roto' o 'blanco tiza'."
+        }
+    ]
 }
     },
     {
@@ -447,7 +609,21 @@ export const blogArticles = [
             "content": "Tu entrevistador tomará una decisión sobre ti en los primeros 7 segundos. \n- **Azul Marino**: 'Soy parte del equipo, soy leal, soy trabajador'. El mejor color para entrevistas.\n- **Gris Charcoal**: 'Soy analítico, lógico y profesional'. Excelente para puestos técnicos.\n- **Marrón**: 'Soy lento pero seguro'. Puede ser negativo en empresas tech rápidas, positivo en ONGs.\n- **Naranja/Amarillo**: 'Soy el payaso de la clase'. Evítalos en entrevistas serias, guárdalos para el viernes casual."
         }
     ],
-    "conclusion": "La colorimetría masculina no trata de limitar tus opciones ni de obligarte a usar rosa si no quieres. Trata de filtrar el ruido para que solo te quedes con lo que te hace ver como la mejor versión de ti mismo. Un hombre que conoce sus colores ahorra tiempo comprando, ahorra dinero evitando ropa que nunca usa y siempre, invariablemente, se ve impecable sin esfuerzo aparente. Revisa tu armario hoy mismo: elimina lo que te apaga y dale la bienvenida a lo que te potencia. Tu imagen es tu patrimonio; invierte en ella con inteligencia."
+    "conclusion": "La colorimetría masculina no trata de limitar tus opciones ni de obligarte a usar rosa si no quieres. Trata de filtrar el ruido para que solo te quedes con lo que te hace ver como la mejor versión de ti mismo. Un hombre que conoce sus colores ahorra tiempo comprando, ahorra dinero evitando ropa que nunca usa y siempre, invariablemente, se ve impecable sin esfuerzo aparente. Revisa tu armario hoy mismo: elimina lo que te apaga y dale la bienvenida a lo que te potencia. Tu imagen es tu patrimonio; invierte en ella con inteligencia.",
+    "faq": [
+        {
+            "question": "¿La colorimetría funciona igual para hombres?",
+            "answer": "Exactamente igual. La piel masculina reacciona idénticamente a la luz. Un traje del color incorrecto puede hacerte parecer cansado o poco profesional."
+        },
+        {
+            "question": "¿Qué corbata es universal?",
+            "answer": "El burdeos o el azul marino suelen ser apuestas seguras, pero asegúrate de que el tono coincida con tu estación (cálido vs frío)."
+        },
+        {
+            "question": "¿Camisa blanca o azul?",
+            "answer": "Si eres Invierno, blanca. Si eres Verano, azul cielo. Si eres Otoño/Primavera, crema o azul cálido."
+        }
+    ]
 }
     },
     {
@@ -497,7 +673,21 @@ export const blogArticles = [
             "content": "Un metal sucio o rayado pierde su propiedad reflectante y, por tanto, su capacidad de iluminarte. La plata oxidada puede verse 'Otoñal', pero si eres Invierno, necesitas que brille como un espejo. Limpia tus joyas regularmente no solo por higiene, sino por colorimetría: **el brillo es saturación**. Un metal mate es menos intenso que uno brillante, úsalo a tu favor según si eres una estación Suave (mate) o Brillante (brillo)."
         }
     ],
-    "conclusion": "Tu joyería es la firma final de tu estilo; es lo que convierte un conjunto de ropa en un 'look' personal. Unos pendientes del metal correcto pueden hacer el mismo trabajo iluminador que ocho horas de sueño o un buen iluminador. Aprende a escuchar los mensajes que tu piel envía cuando se refleja en el metal y construye una colección que no solo sea valiosa por sus quilates, sino por lo que hace por tu imagen personal. Visita nuestra guía en MyColors para validar tus piezas favoritas hoy mismo."
+    "conclusion": "Tu joyería es la firma final de tu estilo; es lo que convierte un conjunto de ropa en un 'look' personal. Unos pendientes del metal correcto pueden hacer el mismo trabajo iluminador que ocho horas de sueño o un buen iluminador. Aprende a escuchar los mensajes que tu piel envía cuando se refleja en el metal y construye una colección que no solo sea valiosa por sus quilates, sino por lo que hace por tu imagen personal. Visita nuestra guía en MyColors para validar tus piezas favoritas hoy mismo.",
+    "faq": [
+        {
+            "question": "¿Puedo mezclar metales?",
+            "answer": "Sí, es tendencia. Pero intenta que el metal predominante sea el de tu estación (Oro para cálidas, Plata para frías)."
+        },
+        {
+            "question": "¿El oro rosa a quién le queda bien?",
+            "answer": "Es bastante universal, pero favorece especialmente a las estaciones Suaves (Verano y Otoño Suave) y a las Primaveras."
+        },
+        {
+            "question": "¿La plata envejecida cuenta como plata?",
+            "answer": "Sí, pero es mejor para estaciones suaves (Verano/Otoño). Las estaciones brillantes (Invierno/Primavera) necesitan metales brillantes y pulidos."
+        }
+    ]
 }
     },
     {
@@ -563,7 +753,21 @@ export const blogArticles = [
             "content": "Ve a tu armario ahora mismo. Saca todos tus 'básicos'. Agrúpalos en dos pilas: 'Base Amarilla' (Cálidos) y 'Base Gris/Azul' (Fríos). \nProbablemente descubras que tienes una mezcla caótica que te impide vestirte rápido. Tu objetivo: eliminar la pila que no corresponda a tu estación y reconstruir la otra con prendas de mejor calidad."
         }
     ],
-    "conclusion": "Dominar los neutros es dominar el arte de la presencia sutil. No se trata de volverte invisible, sino de crear un marco tan elegante que lo único que la gente vea sea tu rostro, tu sonrisa y tu inteligencia. Los neutros son el lienzo; tú eres la obra de arte. Deja de esconderte detrás de estampados ruidosos y descubre la poderosa serenidad de un buen camel, un gris perfecto o un azul marino profundo. Tu yo del futuro te agradecerá la paz mental cada mañana."
+    "conclusion": "Dominar los neutros es dominar el arte de la presencia sutil. No se trata de volverte invisible, sino de crear un marco tan elegante que lo único que la gente vea sea tu rostro, tu sonrisa y tu inteligencia. Los neutros son el lienzo; tú eres la obra de arte. Deja de esconderte detrás de estampados ruidosos y descubre la poderosa serenidad de un buen camel, un gris perfecto o un azul marino profundo. Tu yo del futuro te agradecerá la paz mental cada mañana.",
+    "faq": [
+        {
+            "question": "¿Qué es un armario cápsula?",
+            "answer": "Es una colección limitada de prendas intercambiables que combinan entre sí. Idealmente, todas pertenecen a tu paleta de color."
+        },
+        {
+            "question": "¿Cuántas prendas necesito?",
+            "answer": "No hay un número fijo, pero 30-40 prendas (incluyendo zapatos) suelen ser suficientes para una temporada completa."
+        },
+        {
+            "question": "¿Los colores neutros son aburridos?",
+            "answer": "Para nada. Son la base de la elegancia. La clave está en jugar con las texturas y los cortes."
+        }
+    ]
 }
     },
     {
@@ -701,7 +905,21 @@ export const blogArticles = [
             "content": "1. **Ropa Arrugada**: Comunica descuido y falta de atención al detalle. Plancha o usa vaporizador.\n2. **Talla Incorrecta**: Un traje muy grande parece prestado; uno muy pequeño parece barato. El sastre es tu mejor inversión.\n3. **Demasiada Piel**: En entornos corporativos, los escotes profundos o faldas muy cortas distraen del mensaje. La regla es: si dudas, no te lo pongas."
         }
     ],
-    "conclusion": "Tu imagen profesional es una herramienta de trabajo más, tan importante como tu ordenador o tu teléfono. Al usar la colorimetría de forma estratégica, dejas de vestirte por inercia y empiezas a vestirte con intención. El azul marino te da autoridad, el rosa te da accesibilidad y el blanco te da claridad. Usa estos códigos para influir positivamente en tu entorno y allanar el camino hacia tus objetivos. En MyColors te ayudamos a descifrar tu código personal para que tu talento brille sin interferencias."
+    "conclusion": "Tu imagen profesional es una herramienta de trabajo más, tan importante como tu ordenador o tu teléfono. Al usar la colorimetría de forma estratégica, dejas de vestirte por inercia y empiezas a vestirte con intención. El azul marino te da autoridad, el rosa te da accesibilidad y el blanco te da claridad. Usa estos códigos para influir positivamente en tu entorno y allanar el camino hacia tus objetivos. En MyColors te ayudamos a descifrar tu código personal para que tu talento brille sin interferencias.",
+    "faq": [
+        {
+            "question": "¿El rojo es profesional?",
+            "answer": "Es un color de poder, úsalo con moderación (ej. una blusa, no un traje completo) si quieres transmitir autoridad pero no agresividad."
+        },
+        {
+            "question": "¿Qué color transmite más confianza?",
+            "answer": "El azul marino es el color universal de la confianza y la profesionalidad en occidente."
+        },
+        {
+            "question": "¿Puedo usar estampados en la oficina?",
+            "answer": "Sí, pero prefiere estampados pequeños y discretos (pata de gallo, rayas finas) a estampados grandes o tropicales."
+        }
+    ]
 }
     },
     {

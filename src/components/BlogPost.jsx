@@ -55,6 +55,70 @@ const parseInlineStyles = (text) => {
     });
 };
 
+const FAQSection = ({ items }) => {
+    if (!items || items.length === 0) return null;
+
+    return (
+        <section className="my-12 bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Preguntas Frecuentes
+            </h3>
+            <div className="space-y-4">
+                {items.map((item, index) => (
+                    <details key={index} className="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <summary className="flex cursor-pointer items-center justify-between p-5 text-gray-900 font-medium hover:bg-purple-50 transition-colors marker:content-none">
+                            <span>{item.question}</span>
+                            <span className="transition group-open:rotate-180 text-purple-400">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <div className="px-5 pb-5 pt-0 text-gray-600 leading-relaxed">
+                            <p>{item.answer}</p>
+                        </div>
+                    </details>
+                ))}
+            </div>
+        </section>
+    );
+};
+
+const RelatedArticles = ({ currentArticleId, category }) => {
+    // Filter articles: same category, not current one, limit to 3
+    const related = blogArticles
+        .filter(article => article.category === category && article.id !== currentArticleId)
+        .slice(0, 3);
+
+    if (related.length === 0) return null;
+
+    return (
+        <aside className="my-16 border-t border-gray-100 pt-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Artículos Relacionados</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {related.map(article => (
+                    <Link key={article.id} to={`/blog/${article.slug}`} className="group block">
+                        <div className="aspect-video rounded-xl overflow-hidden mb-4 bg-gray-100">
+                            <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <span className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2 block">{article.category}</span>
+                        <h4 className="font-bold text-gray-900 leading-snug group-hover:text-purple-700 transition-colors">
+                            {article.title}
+                        </h4>
+                    </Link>
+                ))}
+            </div>
+        </aside>
+    );
+};
+
 const parseKeywords = (text) => {
     // Regex to match keywords case-insensitive
     const regex = /(Primavera|Verano|Otoño|Invierno|Cálido|Frío|Neutro)/gi;
@@ -99,6 +163,7 @@ function BlogPost() {
                 type="article"
                 keywords={post.keywords || ['colorimetría', 'estilo']}
                 url={`/blog/${post.slug}`}
+                article={post} // Pass full post for schema generation
             />
 
             <div className="min-h-screen pt-28 pb-16 bg-white">
@@ -134,7 +199,7 @@ function BlogPost() {
                             <span>•</span>
                             <span className="flex items-center gap-1">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                {post.readTime}
+                                {post.readingTime}
                             </span>
                         </div>
                     </header>
@@ -173,6 +238,9 @@ function BlogPost() {
                                 <RichText text={post.content.conclusion} />
                             </div>
                         </div>
+
+                        {/* FAQ Section */}
+                        {post.content.faq && <FAQSection items={post.content.faq} />}
                     </div>
 
                     <AdSenseAd slot="0987654321" />
@@ -187,6 +255,11 @@ function BlogPost() {
                             <p className="text-gray-600 text-sm">Experta en colorimetría y asesora de imagen personal. Apasionada por ayudar a las personas a descubrir su mejor versión a través del color.</p>
                         </div>
                     </div>
+
+                    {/* Related Articles */}
+                    <RelatedArticles currentArticleId={post.id} category={post.category} />
+
+
 
                     <div className="mt-12 pt-8 border-t border-gray-100">
                         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">¿Te ha gustado este artículo?</h3>

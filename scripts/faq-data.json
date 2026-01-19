@@ -1,0 +1,206 @@
+[
+    {
+        "id": 4,
+        "faq": [
+            {
+                "question": "¿Puedo ser Invierno si no soy pálida?",
+                "answer": "Sí. El invierno se define por el contraste y la temperatura fría, no solo por la palidez. Muchas mujeres de piel oscura o aceitunada fría son Inviernos Profundos."
+            },
+            {
+                "question": "¿Qué labial es imprescindible para una Invierno?",
+                "answer": "Un rojo puro (sin subtono naranja) o un fucsia intenso. Evita los nudes demasiado beige o los corales."
+            },
+            {
+                "question": "¿El gris me queda bien?",
+                "answer": "Sí, el gris carbón o el gris hielo son excelentes neutros para ti. Evita los grises verdosos o cálidos."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "faq": [
+            {
+                "question": "¿Qué colores debo evitar si soy Primavera?",
+                "answer": "Evita el negro y el blanco puro cerca de la cara, ya que pueden apagarte. También huye de los colores oscuros y apagados como el burdeos viejo o el gris plomo."
+            },
+            {
+                "question": "¿Puedo usar dorado?",
+                "answer": "¡Es tu mejor metal! El oro brillante resalta la calidez natural de tu piel. El oro rosa también te favorece mucho."
+            },
+            {
+                "question": "¿El azul marino es para mí?",
+                "answer": "Sí, pero busca un azul marino brillante o 'royal', no uno demasiado oscurecido o grisáceo."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "faq": [
+            {
+                "question": "¿Cuál es la diferencia entre Otoño Suave y Otoño Verdadero?",
+                "answer": "El Otoño Suave tiene una influencia del Verano, por lo que sus colores son más deslavados y menos intensos. El Otoño Verdadero es puramente cálido y rico."
+            },
+            {
+                "question": "¿Puedo usar negro si soy Otoño?",
+                "answer": "El negro no es tu mejor color. Sustitúyelo por Marrón Chocolate, Verde Oliva Oscuro o Azul Marino Profundo (con subtono cálido)."
+            },
+            {
+                "question": "¿Qué estampado me favorece?",
+                "answer": "Los estampados naturales (hojas, flores, paisley) en tonos tierra te quedan espectaculares."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "faq": [
+            {
+                "question": "¿El color lavanda es solo para Verano?",
+                "answer": "Es el color estrella del Verano, pero algunas Primaveras Claras pueden usarlo. Sin embargo, nadie lo luce como un Verano."
+            },
+            {
+                "question": "¿Puedo usar rojo?",
+                "answer": "Sí, busca un rojo frambuesa o un rojo sandía (con base azulada). Evita el rojo tomate o ladrillo."
+            },
+            {
+                "question": "¿Qué blanco debo usar?",
+                "answer": "Evita el blanco óptico brillante. Tu blanco ideal es el 'blanco suave', 'blanco roto' o 'blanco tiza'."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "faq": [
+            {
+                "question": "¿La colorimetría funciona igual para hombres?",
+                "answer": "Exactamente igual. La piel masculina reacciona idénticamente a la luz. Un traje del color incorrecto puede hacerte parecer cansado o poco profesional."
+            },
+            {
+                "question": "¿Qué corbata es universal?",
+                "answer": "El burdeos o el azul marino suelen ser apuestas seguras, pero asegúrate de que el tono coincida con tu estación (cálido vs frío)."
+            },
+            {
+                "question": "¿Camisa blanca o azul?",
+                "answer": "Si eres Invierno, blanca. Si eres Verano, azul cielo. Si eres Otoño/Primavera, crema o azul cálido."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "faq": [
+            {
+                "question": "¿Puedo mezclar metales?",
+                "answer": "Sí, es tendencia. Pero intenta que el metal predominante sea el de tu estación (Oro para cálidas, Plata para frías)."
+            },
+            {
+                "question": "¿El oro rosa a quién le queda bien?",
+                "answer": "Es bastante universal, pero favorece especialmente a las estaciones Suaves (Verano y Otoño Suave) y a las Primaveras."
+            },
+            {
+                "question": "¿La plata envejecida cuenta como plata?",
+                "answer": "Sí, pero es mejor para estaciones suaves (Verano/Otoño). Las estaciones brillantes (Invierno/Primavera) necesitan metales brillantes y pulidos."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "faq": [
+            {
+                "question": "¿Qué es un armario cápsula?",
+                "answer": "Es una colección limitada de prendas intercambiables que combinan entre sí. Idealmente, todas pertenecen a tu paleta de color."
+            },
+            {
+                "question": "¿Cuántas prendas necesito?",
+                "answer": "No hay un número fijo, pero 30-40 prendas (incluyendo zapatos) suelen ser suficientes para una temporada completa."
+            },
+            {
+                "question": "¿Los colores neutros son aburridos?",
+                "answer": "Para nada. Son la base de la elegancia. La clave está en jugar con las texturas y los cortes."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "faq": [
+            {
+                "question": "¿Cómo sé si debo ser rubia?",
+                "answer": "Si fuiste rubia de pequeña, probablemente te quede bien. Si eres de piel fría, busca rubios ceniza. Si eres cálida, rubios dorados."
+            },
+            {
+                "question": "¿El pelirrojo le queda bien a todos?",
+                "answer": "No. El pelirrojo es un color cálido. Favorece a Primaveras y Otoños. En pieles frías puede resaltar rojeces o verse artificial."
+            },
+            {
+                "question": "¿Qué hago con mis cejas al teñirme?",
+                "answer": "Si cambias mucho el tono de tu pelo, ajusta tus cejas 1 o 2 tonos, pero nunca las dejes del mismo color exacto si es muy claro."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "faq": [
+            {
+                "question": "¿El rojo es profesional?",
+                "answer": "Es un color de poder, úsalo con moderación (ej. una blusa, no un traje completo) si quieres transmitir autoridad pero no agresividad."
+            },
+            {
+                "question": "¿Qué color transmite más confianza?",
+                "answer": "El azul marino es el color universal de la confianza y la profesionalidad en occidente."
+            },
+            {
+                "question": "¿Puedo usar estampados en la oficina?",
+                "answer": "Sí, pero prefiere estampados pequeños y discretos (pata de gallo, rayas finas) a estampados grandes o tropicales."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "faq": [
+            {
+                "question": "¿Si me gusta un color 'malo', qué hago?",
+                "answer": "Úsalo en pantalones, zapatos o accesorios lejos de la cara. O úsalo en casa donde la 'percepción' pública importa menos."
+            },
+            {
+                "question": "¿El negro adelgaza?",
+                "answer": "Visualmente contrae, sí. Pero si eres de estación suave o cálida, el negro cerca de la cara te envejecerá. Usa azul marino o chocolate para el mismo efecto adelgazante."
+            },
+            {
+                "question": "¿Debo tirar mi ropa vieja?",
+                "answer": "No. Dónala, véndela o tiñela. O úsala con pañuelos de tus colores correctos cerca del cuello."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "faq": [
+            {
+                "question": "¿El color afecta mi estado de ánimo?",
+                "answer": "Sí, está comprobado. Los colores cálidos estimulan (energía), los fríos calman (relajación)."
+            },
+            {
+                "question": "¿Por qué el verde relaja?",
+                "answer": "Porque es el color que menos esfuerzo exige al ojo humano para enfocarlo. Es el color de la naturaleza."
+            },
+            {
+                "question": "¿Qué color ayuda a la creatividad?",
+                "answer": "El morado y el turquesa suelen asociarse con el pensamiento creativo y lateral."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "faq": [
+            {
+                "question": "¿La prueba de las venas es infalible?",
+                "answer": "No. Muchas personas tienen venas que parecen azules y verdes a la vez. Es solo un indicador más."
+            },
+            {
+                "question": "¿Puedo cambiar de subtono?",
+                "answer": "No, tu subtono es genético. Puede cambiar tu 'overtone' (bronceado, rojeces), pero la base permanece."
+            },
+            {
+                "question": "¿Qué hago si soy neutra?",
+                "answer": "¡Tienes suerte! Puedes usar una gama más amplia de colores. Fíjate más en si te favorecen los colores claros vs oscuros (Valor) o brillantes vs suaves (Croma)."
+            }
+        ]
+    }
+]

@@ -80,6 +80,24 @@ const SEOHead = ({
                     })}
                 </script>
             )}
+
+            {/* Structured Data for FAQPage */}
+            {article && article.content && article.content.faq && article.content.faq.length > 0 && (
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'FAQPage',
+                        mainEntity: article.content.faq.map(item => ({
+                            '@type': 'Question',
+                            name: item.question,
+                            acceptedAnswer: {
+                                '@type': 'Answer',
+                                text: item.answer
+                            }
+                        }))
+                    })}
+                </script>
+            )}
         </Helmet>
     )
 }
@@ -95,7 +113,11 @@ SEOHead.propTypes = {
         publishedDate: PropTypes.string,
         modifiedDate: PropTypes.string,
         author: PropTypes.string,
-        tags: PropTypes.arrayOf(PropTypes.string)
+        tags: PropTypes.arrayOf(PropTypes.string),
+        faq: PropTypes.arrayOf(PropTypes.shape({
+            question: PropTypes.string,
+            answer: PropTypes.string
+        }))
     }),
     noindex: PropTypes.bool
 }
