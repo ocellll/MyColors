@@ -1,26 +1,35 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import Header from './components/Header'
-import UploadSection from './components/UploadSection'
+import Footer from './components/Footer'
+import HomePage from './components/HomePage'
 import ResultsPage from './components/ResultsPage'
 import UpgradeModal from './components/UpgradeModal'
 import WardrobeSection from './components/WardrobeSection'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import TermsOfService from './components/TermsOfService'
-import Footer from './components/Footer'
+import AboutUs from './components/AboutUs'
+import ContactPage from './components/ContactPage'
+import DisclaimerPage from './components/DisclaimerPage'
+import BlogList from './components/BlogList'
+import BlogPost from './components/BlogPost'
+import HowItWorks from './components/HowItWorks'
+import FAQ from './components/FAQ'
+import Glossary from './components/Glossary'
+import Resources from './components/Resources'
+import SeasonGuide from './components/SeasonGuide'
+import PrivacyBanner from './components/PrivacyBanner'
 import { analyzeImage } from './utils/colorAnalysis'
 import { determineSeason } from './utils/seasonDetection'
 import { SEASON_PALETTES, PREMIUM_PALETTES } from './data/seasonColors'
-import ContentSection from './components/ContentSection'
-import AboutPage from './components/AboutPage'
-import PrivacyBanner from './components/PrivacyBanner'
-import BlogList from './components/BlogList'
-import BlogPost from './components/BlogPost'
-import ContactPage from './components/ContactPage'
-import DisclaimerPage from './components/DisclaimerPage'
-import { blogPosts } from './data/blogPosts'
 
 function App() {
-    // User state
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    // --- STATE MANAGEMENT ---
+
+    // User state (Premium, Usage limits)
     const [userState, setUserState] = useState(() => {
         const saved = localStorage.getItem('mycolors_user')
         return saved ? JSON.parse(saved) : {
@@ -30,12 +39,13 @@ function App() {
         }
     })
 
-    // App state
-    const [currentPage, setCurrentPage] = useState('home') // 'home' | 'results' | 'wardrobe' | 'privacy' | 'terms' | 'contact' | 'disclaimer'
+    // Wardrobe state
     const [wardrobe, setWardrobe] = useState(() => {
         const saved = localStorage.getItem('mycolors_wardrobe')
         return saved ? JSON.parse(saved) : []
     })
+
+    // Application state
     const [uploadedImage, setUploadedImage] = useState(null)
     const [imagePreview, setImagePreview] = useState(null)
     const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -45,176 +55,76 @@ function App() {
     })
     const [showUpgradeModal, setShowUpgradeModal] = useState(false)
     const [toast, setToast] = useState(null)
-    const [activeBlogPost, setActiveBlogPost] = useState(null)
 
-    // Persist user state
+    // --- PERSISTENCE EFFECT ---
     useEffect(() => {
         localStorage.setItem('mycolors_user', JSON.stringify(userState))
     }, [userState])
 
-    // Persist wardrobe changes
     useEffect(() => {
         localStorage.setItem('mycolors_wardrobe', JSON.stringify(wardrobe))
     }, [wardrobe])
 
-    // Persist analysis result
     useEffect(() => {
         localStorage.setItem('mycolors_result', JSON.stringify(analysisResult))
     }, [analysisResult])
 
-    // Check for payment success in URL
+    // --- PAYMENT CHECK ---
     useEffect(() => {
         const params = new URLSearchParams(window.location.search)
         if (params.get('success') === 'true' && !userState.isPremium) {
             setUserState(prev => ({ ...prev, isPremium: true }))
             showToast('¡Pago completado! Ya eres Premium ✨')
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname)
         }
     }, [])
 
-    // --- SEO & ROUTING LOGIC ---
-
-    // 1. Handle URL History (Back/Forward)
+    // Scroll to top on route change
     useEffect(() => {
-        const handlePopState = (event) => {
-            if (event.state) {
-                setCurrentPage(event.state.page || 'home')
-                setActiveBlogPost(event.state.postId || null)
-            } else {
-                // Default fallback
-                setCurrentPage('home')
-                setActiveBlogPost(null)
-            }
-        }
-        window.addEventListener('popstate', handlePopState)
-        return () => window.removeEventListener('popstate', handlePopState)
-    }, [])
+        window.scrollTo(0, 0)
+    }, [location.pathname])
 
-    // 2. Initial Load from URL
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search)
-        const page = params.get('p')
-        const postId = params.get('id')
+    // --- CORE LOGIC ---
 
-        if (page) {
-            setCurrentPage(page)
-            if (postId) setActiveBlogPost(postId)
-        }
-    }, [])
-
-    // 3. Update URL & Title when State Changes
-    useEffect(() => {
-        const params = new URLSearchParams()
-        let title = 'MyColors — Análisis de Color Personal'
-
-        if (currentPage !== 'home') {
-            params.set('p', currentPage)
-        }
-
-        switch (currentPage) {
-            case 'home':
-                title = 'MyColors — Análisis de Color Personal'
-                break
-            case 'results':
-                title = 'Mis Resultados — MyColors'
-                break
-            case 'wardrobe':
-                title = 'Mi Armario — MyColors'
-                break
-            case 'blog':
-                title = 'Blog de Moda y Colorimetría — MyColors'
-                break
-            case 'blog-post':
-                if (activeBlogPost) {
-                    params.set('id', activeBlogPost)
-                    const post = blogPosts.find(p => p.id === activeBlogPost)
-                    if (post) title = `${post.title} — MyColors Link`
-                }
-                break
-            case 'about':
-                title = 'Sobre Nosotros — MyColors'
-                break
-            case 'privacy':
-                title = 'Política de Privacidad — MyColors'
-                break
-            case 'terms':
-                title = 'Términos de Servicio — MyColors'
-                break
-            case 'contact':
-                title = 'Contacto — MyColors'
-                break
-            case 'disclaimer':
-                title = 'Aviso Legal — MyColors'
-                break
-        }
-
-        document.title = title
-
-        // Only push if it's different from current (avoid duplicate stack entries)
-        const newSearch = params.toString() ? `?${params.toString()}` : '/'
-        const currentSearch = window.location.search
-
-        if (newSearch !== currentSearch) {
-            window.history.pushState({ page: currentPage, postId: activeBlogPost }, '', newSearch)
-        }
-
-    }, [currentPage, activeBlogPost])
-
-    // Check if user can analyze
     const canAnalyze = () => {
         if (userState.isPremium) return true
-
-        // Allow up to 2 analyses
         if (userState.analyzesUsed < 2) return true
-
-        // If they have used 2 or more, check if 22h have passed since the last one
         if (userState.lastAnalysisDate) {
             const lastDate = new Date(userState.lastAnalysisDate).getTime()
             const now = new Date().getTime()
             const diffHours = (now - lastDate) / (1000 * 60 * 60)
-
-            // If more than 22h passed, reset count (effectively)
             if (diffHours >= 22) return true
         }
-
         return false
     }
 
-    // Show toast notification
     const showToast = (message, duration = 3000) => {
         setToast(message)
         if (window._toastTimeout) clearTimeout(window._toastTimeout)
         window._toastTimeout = setTimeout(() => setToast(null), duration)
     }
 
-    // Handle image upload
     const handleImageUpload = (file) => {
         if (!file) {
             setUploadedImage(null)
             setImagePreview(null)
             return
         }
-
-        // Check file type
         if (!file.type.startsWith('image/')) {
             showToast('Por favor, sube una imagen válida')
             return
         }
-
-        // Check file size (max 10MB)
         if (file.size > 10 * 1024 * 1024) {
             showToast('La imagen es demasiado grande. Máximo 10MB')
             return
         }
-
         setUploadedImage(file)
         const reader = new FileReader()
-        reader.onload = (e) => {
-            setImagePreview(e.target.result)
-        }
+        reader.onload = (e) => setImagePreview(e.target.result)
         reader.readAsDataURL(file)
     }
 
-    // Helper to convert file to base64
     const fileToBase64 = (file) => {
         return new Promise((resolve, reject) => {
             const reader = new FileReader()
@@ -224,7 +134,6 @@ function App() {
         })
     }
 
-    // Handle analyze click
     const handleAnalyze = async () => {
         if (!uploadedImage) {
             showToast('Por favor, sube una foto primero')
@@ -243,7 +152,7 @@ function App() {
             let skinTone;
 
             try {
-                // 1. Try Real AI Analysis (Gemini)
+                // Try Real AI Analysis
                 const imageBase64 = await fileToBase64(uploadedImage)
                 const response = await fetch('/api/analyze-color', {
                     method: 'POST',
@@ -257,31 +166,21 @@ function App() {
                 }
 
                 const aiData = await response.json()
-
-                if (aiData.error) {
-                    throw new Error(aiData.error);
-                }
+                if (aiData.error) throw new Error(aiData.error)
 
                 seasonResult = aiData
                 skinTone = aiData.skinTone
             } catch (aiError) {
-                console.error('AI analysis failed:', aiError)
-                // 2. Fallback to Local Algorithmic Analysis
+                console.warn('Using local fallback mode due to:', aiError.message)
                 skinTone = await analyzeImage(uploadedImage)
                 seasonResult = determineSeason(skinTone)
-
-                // Alert the user that we are using fallback mode (for debugging)
-                console.warn('Using local fallback mode due to:', aiError.message)
             }
 
             let basePalette = SEASON_PALETTES[seasonResult.season]
-
-            // Handle aliases/legacy support
             if (basePalette?.alias) {
                 basePalette = SEASON_PALETTES[basePalette.alias]
             }
 
-            // Merge premium colors if applicable
             let finalColors = basePalette.colors
             if (userState.isPremium && PREMIUM_PALETTES[seasonResult.season]) {
                 finalColors = [...basePalette.colors, ...PREMIUM_PALETTES[seasonResult.season].additionalColors]
@@ -297,12 +196,10 @@ function App() {
                 gradientEnd: basePalette.gradientEnd
             })
 
-            // Update user state
             setUserState(prev => {
                 const now = new Date()
                 const lastDate = prev.lastAnalysisDate ? new Date(prev.lastAnalysisDate) : null
                 const diffHours = lastDate ? (now - lastDate) / (1000 * 60 * 60) : 22
-
                 return {
                     ...prev,
                     analyzesUsed: diffHours >= 22 ? 1 : prev.analyzesUsed + 1,
@@ -310,7 +207,7 @@ function App() {
                 }
             })
 
-            setCurrentPage('results')
+            navigate('/results')
         } catch (error) {
             console.error('Analysis error:', error)
             showToast('Error al analizar la imagen. Intenta con otra foto.')
@@ -319,58 +216,18 @@ function App() {
         }
     }
 
-    // Handle back to home
-    const handleBackToHome = () => {
-        setCurrentPage('home')
-        setUploadedImage(null)
-        setImagePreview(null)
-        setAnalysisResult(null)
-    }
-
-    // Handle upgrade success
-    const handleUpgradeSuccess = () => {
-        setUserState(prev => ({
-            ...prev,
-            isPremium: true
-        }))
-        setShowUpgradeModal(false)
-        showToast('¡Bienvenido a Premium! 🎉')
-    }
-
-    const handleBlogClick = () => {
-        setCurrentPage('blog')
-        window.scrollTo(0, 0)
-    }
-
-    const handlePostClick = (postId) => {
-        setActiveBlogPost(postId)
-        setCurrentPage('blog-post')
-        window.scrollTo(0, 0)
-    }
-
     return (
-        <div className="min-h-screen">
-            {/* Upgrade Modal */}
-            {showUpgradeModal && (
-                <UpgradeModal
-                    onClose={() => setShowUpgradeModal(false)}
-                    onSuccess={handleUpgradeSuccess}
-                />
-            )}
-
+        <div className="min-h-screen flex flex-col">
             <Header
                 isPremium={userState.isPremium}
                 onUpgradeClick={() => setShowUpgradeModal(true)}
-                showBackButton={currentPage !== 'home'}
-                onBackClick={handleBackToHome}
-                onWardrobeClick={() => setCurrentPage('wardrobe')}
-                onBlogClick={handleBlogClick}
             />
 
-            <main>
-                {currentPage === 'home' && (
-                    <>
-                        <UploadSection
+            <main className="flex-grow">
+                <Routes>
+                    {/* Main Tool Routes */}
+                    <Route path="/" element={
+                        <HomePage
                             imagePreview={imagePreview}
                             onImageUpload={handleImageUpload}
                             onAnalyze={handleAnalyze}
@@ -379,128 +236,87 @@ function App() {
                             onUpgradeClick={() => setShowUpgradeModal(true)}
                             isPremium={userState.isPremium}
                         />
-                        <ContentSection />
+                    } />
 
-                        {/* Latest Blog Posts Preview */}
-                        <section className="py-20 px-4 max-w-6xl mx-auto border-t border-gray-100">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl font-bold text-gray-800 mb-4">Últimas Novedades</h2>
-                                <p className="text-gray-600">Descubre consejos expertos sobre colorimetría, moda y maquillaje</p>
-                            </div>
+                    <Route path="/results" element={
+                        analysisResult ? (
+                            <ResultsPage
+                                result={analysisResult}
+                                userPhoto={imagePreview}
+                                isPremium={userState.isPremium}
+                                onAnalyzeAnother={() => {
+                                    setUploadedImage(null)
+                                    setImagePreview(null)
+                                    setAnalysisResult(null)
+                                    navigate('/')
+                                }}
+                                onUpgradeClick={() => setShowUpgradeModal(true)}
+                                showToast={showToast}
+                                onWardrobeClick={() => navigate('/wardrobe')}
+                            />
+                        ) : (
+                            <Navigate to="/" replace />
+                        )
+                    } />
 
-                            <div className="grid md:grid-cols-3 gap-8">
-                                {blogPosts.slice(0, 3).map(post => (
-                                    <div
-                                        key={post.id}
-                                        onClick={() => handlePostClick(post.id)}
-                                        className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
-                                    >
-                                        <div className="aspect-[16/9] overflow-hidden">
-                                            <img
-                                                src={post.image}
-                                                alt={post.title}
-                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                            />
-                                        </div>
-                                        <div className="p-6">
-                                            <div className="flex items-center gap-2 mb-3">
-                                                <span className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-semibold">
-                                                    {post.category}
-                                                </span>
-                                                <span className="text-gray-400 text-xs">{post.readTime}</span>
-                                            </div>
-                                            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors line-clamp-2">
-                                                {post.title}
-                                            </h3>
-                                            <p className="text-gray-500 text-sm line-clamp-2">
-                                                {post.excerpt}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                    <Route path="/wardrobe" element={
+                        <WardrobeSection
+                            userSeason={analysisResult}
+                            wardrobe={wardrobe}
+                            onUpdateWardrobe={setWardrobe}
+                            showToast={showToast}
+                        />
+                    } />
 
-                            <div className="text-center mt-12">
-                                <button
-                                    onClick={handleBlogClick}
-                                    className="btn-secondary px-8 py-3 rounded-full font-medium"
-                                >
-                                    Ver todos los artículos
-                                </button>
-                            </div>
-                        </section>
-                    </>
-                )}
+                    {/* Blog Routes */}
+                    <Route path="/blog" element={<BlogList />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
 
-                {currentPage === 'results' && analysisResult && (
-                    <ResultsPage
-                        result={analysisResult}
-                        userPhoto={imagePreview}
-                        isPremium={userState.isPremium}
-                        onAnalyzeAnother={handleBackToHome}
-                        onUpgradeClick={() => setShowUpgradeModal(true)}
-                        showToast={showToast}
-                        onWardrobeClick={() => setCurrentPage('wardrobe')}
-                    />
-                )}
+                    {/* Informational Pages */}
+                    <Route path="/about" element={<AboutUs />} />
+                    <Route path="/how-it-works" element={<HowItWorks />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/glossary" element={<Glossary />} />
+                    <Route path="/resources" element={<Resources />} />
 
-                {currentPage === 'wardrobe' && (
-                    <WardrobeSection
-                        userSeason={analysisResult}
-                        wardrobe={wardrobe}
-                        onUpdateWardrobe={setWardrobe}
-                        showToast={showToast}
-                    />
-                )}
-                {currentPage === 'privacy' && (
-                    <PrivacyPolicy onBack={handleBackToHome} />
-                )}
+                    {/* Season Guides */}
+                    <Route path="/guia-primavera" element={<SeasonGuide season="spring" />} />
+                    <Route path="/guia-verano" element={<SeasonGuide season="summer" />} />
+                    <Route path="/guia-otono" element={<SeasonGuide season="autumn" />} />
+                    <Route path="/guia-invierno" element={<SeasonGuide season="winter" />} />
 
-                {currentPage === 'terms' && (
-                    <TermsOfService onBack={handleBackToHome} />
-                )}
+                    {/* Legal & Contact */}
+                    <Route path="/privacy" element={<PrivacyPolicy onBack={() => navigate('/')} />} />
+                    <Route path="/terms" element={<TermsOfService onBack={() => navigate('/')} />} />
+                    <Route path="/contact" element={<ContactPage onBack={() => navigate('/')} />} />
+                    <Route path="/disclaimer" element={<DisclaimerPage onBack={() => navigate('/')} />} />
 
-                {currentPage === 'about' && (
-                    <AboutPage onBack={handleBackToHome} />
-                )}
-
-                {currentPage === 'blog' && (
-                    <BlogList onPostClick={handlePostClick} onBack={handleBackToHome} />
-                )}
-
-                {currentPage === 'blog-post' && (
-                    <BlogPost postId={activeBlogPost} onBack={handleBlogClick} />
-                )}
-
-                {currentPage === 'contact' && (
-                    <ContactPage onBack={handleBackToHome} />
-                )}
-
-                {currentPage === 'disclaimer' && (
-                    <DisclaimerPage onBack={handleBackToHome} />
-                )}
+                    {/* Fallback */}
+                    <Route path="*" element={<Navigate to="/" replace />} />
+                </Routes>
             </main>
 
-            <Footer
-                onPrivacyClick={() => setCurrentPage('privacy')}
-                onTermsClick={() => setCurrentPage('terms')}
-                onAboutClick={() => setCurrentPage('about')}
-                onBlogClick={handleBlogClick}
-                onContactClick={() => setCurrentPage('contact')}
-                onDisclaimerClick={() => setCurrentPage('disclaimer')}
-            />
+            <Footer />
+
+            {showUpgradeModal && (
+                <UpgradeModal
+                    onClose={() => setShowUpgradeModal(false)}
+                    onSuccess={() => {
+                        setUserState(prev => ({ ...prev, isPremium: true }))
+                        setShowUpgradeModal(false)
+                        showToast('¡Bienvenido a Premium! 🎉')
+                    }}
+                />
+            )}
 
             <PrivacyBanner />
 
-            {/* Toast Notification */}
-            {
-                toast && (
-                    <div className="toast">
-                        {toast}
-                    </div>
-                )
-            }
-        </div >
+            {toast && (
+                <div className="toast">
+                    {toast}
+                </div>
+            )}
+        </div>
     )
 }
 

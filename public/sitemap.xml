@@ -1,97 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mycolorspro.vercel.app/</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://mycolorspro.vercel.app/blog</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mycolorspro.vercel.app/?p=about</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
+    <loc>https://mycolorspro.vercel.app/about</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/how-it-works</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/faq</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/glossary</loc>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mycolorspro.vercel.app/?p=contact</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
+    <loc>https://mycolorspro.vercel.app/guia-primavera</loc>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mycolorspro.vercel.app/?p=privacy</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
+    <loc>https://mycolorspro.vercel.app/guia-verano</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/guia-otono</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/guia-invierno</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/contact</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mycolorspro.vercel.app/privacy</loc>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://mycolorspro.vercel.app/?p=terms</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
+    <loc>https://mycolorspro.vercel.app/terms</loc>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://mycolorspro.vercel.app/?p=disclaimer</loc>
-    <lastmod>2026-01-12T12:00:00+00:00</lastmod>
+    <loc>https://mycolorspro.vercel.app/disclaimer</loc>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <!-- Blog Posts -->
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=introduccion-colorimetria</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=colores-invierno-2025</loc>
-    <lastmod>2026-01-08T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=armario-capsula-colorimetria</loc>
-    <lastmod>2026-01-05T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=maquillaje-colorimetria</loc>
-    <lastmod>2026-01-03T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=colores-neutros-estacion</loc>
-    <lastmod>2026-01-01T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=errores-colorimetria</loc>
-    <lastmod>2025-12-28T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=historia-colorimetria</loc>
-    <lastmod>2025-12-25T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mycolorspro.vercel.app/?p=blog-post&amp;id=colorimetria-hombres</loc>
-    <lastmod>2025-12-20T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
