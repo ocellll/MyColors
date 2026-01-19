@@ -1,0 +1,18 @@
+--- Blog Article Word Count Audit ---
+Target: 1200-1500 words per article
+
+[1] que-es-colorimetria-personal-guia-completa: 913 words 🔴 THIN
+[2] las-4-temporadas-color-guia-principiantes: 905 words 🔴 THIN
+[3] teoria-color-aplicada-apariencia-personal: 863 words 🔴 THIN
+[4] guia-maquillaje-mujer-invierno: 1363 words 🟡 OK
+[5] guia-maquillaje-mujer-primavera: 1129 words 🟡 OK
+[6] guia-maquillaje-mujer-otono: 1116 words 🟡 OK
+[7] guia-maquillaje-mujer-verano: 1265 words 🟡 OK
+[8] colorimetria-para-hombres-guia-estilo: 1716 words 🟢 GOOD
+[9] joyas-accesorios-oro-plata-segun-piel: 1128 words 🟡 OK
+[10] poder-colores-neutrales-armario-capsula: 1103 words 🟡 OK
+[11] guia-teñir-cabello-segun-estacion: 1135 words 🟡 OK
+[12] combinaciones-colores-profesionales-oficina: 1046 words 🟡 OK
+[13] errores-comunes-colorimetria-vestir: 1080 words 🟡 OK
+[14] psicologia-color-que-comunican-tus-colores: 1232 words 🟡 OK
+[15] como-identificar-subtono-piel-casa: 1360 words 🟡 OK
