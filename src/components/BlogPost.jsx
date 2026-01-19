@@ -76,7 +76,30 @@ function BlogPost() {
                     <AdSenseAd slot="1234567890" />
 
                     <div className="prose prose-lg prose-purple mx-auto text-gray-700 leading-relaxed">
-                        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                        {/* Intro */}
+                        <div className="mb-8 whitespace-pre-line">
+                            {post.content.intro}
+                        </div>
+
+                        {/* Sections */}
+                        {post.content.sections && post.content.sections.map((section, index) => (
+                            <div key={index} className="mb-8">
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                                    {section.heading}
+                                </h2>
+                                <div className="whitespace-pre-line">
+                                    {section.content}
+                                </div>
+                            </div>
+                        ))}
+
+                        {/* Conclusion */}
+                        <div className="mt-8 p-6 bg-purple-50 rounded-2xl border border-purple-100">
+                            <h3 className="text-xl font-bold text-purple-900 mb-4">Conclusión</h3>
+                            <div className="whitespace-pre-line text-purple-800">
+                                {post.content.conclusion}
+                            </div>
+                        </div>
                     </div>
 
                     <AdSenseAd slot="0987654321" />
