@@ -302,7 +302,7 @@ Recuerda que esto no se trata de limitaciones, sino de liberarte de la indecisi�
         publishedDate: '2026-01-13',
         readingTime: '9 min',
         excerpt: 'Descubre la ciencia detrás de la colorimetría: temperatura del color, contraste, saturación y cómo cada factor influye en cómo te perciben los demás.',
-        image: '/images/blog/teoria-color.jpg',
+        image: '/images/blog/teoria-color-aplicada.jpg',
         keywords: ['teoría del color', 'psicología del color', 'temperatura color', 'contraste visual'],
         content: {
             intro: `La colorimetría personal no es magia ni intuición; es ciencia aplicada. Se basa en principios ópticos y psicológicos bien establecidos sobre cómo los colores interactúan entre sí y cómo nuestro cerebro procesa estas interacciones visualmente.
@@ -446,7 +446,648 @@ Comprender estos principios te libera de seguir reglas ciegamente. Podrás anali
 
 La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás viendo es el resultado de interacciones complejas entre la luz, los pigmentos de tu piel, y el color de tu prenda. La colorimetría simplemente te enseña a orquestar esas interacciones a tu favor. ¿Listo para aplicar esta ciencia a tu estilo? Descubre tu temporada de color y empieza a usar el color como la herramienta poderosa que realmente es.`
         }
+    },
+
+    {
+        id: 4,
+        slug: 'guia-maquillaje-mujer-invierno',
+        title: 'Maquillaje para Mujeres Invierno: Guía Definitiva de Tonos Fríos e Intensos',
+        category: 'Maquillaje',
+        author: 'Laura Estilista',
+        publishedDate: '2026-01-12',
+        readingTime: '8 min',
+        excerpt: 'Descubre los labiales, sombras y bases ideales para la estación Invierno. Potencia tu contraste natural con los colores correctos.',
+        image: '/images/blog/maquillaje-invierno.jpg',
+        keywords: ['maquillaje invierno', 'labial rojo frio', 'sombras ojos invierno', 'colorimetria maquillaje'],
+        content: {
+            intro: `Si tu estación es Invierno, tienes una belleza definida por el contraste y la intensidad. Tu piel probablemente tiene un subtono frío (azulado o rosado) y tus rasgos son nítidos. El maquillaje para la mujer Invierno no se trata de esconder, sino de potenciar ese dramatismo natural con colores puros y definidos.
+            
+            Olvida los tonos tierras apagados o los naranjas cálidos que te hacen lucir cansada. Tu paleta es la de Blancanieves: labios rojos intensos, delineados negros precisos y sombras en tonos joya. En esta guía, exploraremos paso a paso cómo construir tu kit de maquillaje perfecto.`,
+            sections: [
+                {
+                    heading: 'La Base Perfecta: El Lienzo',
+                    content: `El error número uno de las mujeres Invierno es usar bases con subtonos amarillos o dorados. Tu piel necesita bases con subtonos **rosados (cool)** o **neutros**.
+                    
+                    **Cómo identificarla:** Al probar la base en tu mandíbula, debe desaparecer completamente. Si se ve "naranja" o "amarillenta", es incorrecta. Busca palabras clave como "Cool", "Rose", "Porcelain" o "Neutral". Evita "Golden", "Honey" o "Warm".
+                    
+                    El acabado ideal para invierno suele ser satinado o mate; el exceso de "glow" bronceado no suele favorecer tanto como una piel de porcelana pulida.`
+                },
+                {
+                    heading: 'Ojos: Definición y Drama',
+                    content: `Tus ojos suelen ser uno de tus rasgos más impactantes. El maquillaje de ojos para invierno se beneficia del contraste.
+                    
+                    **Delineador**: Eres de las afortunadas que pueden llevar un delineador negro líquido (blackest black) durante el día sin verse exagerada. El gris carbón y el azul marino oscuro también son excelentes alternativas.
+                    
+                    **Sombras**:
+                    - **Neutros**: Blanco hielo, gris plata, gris topo (taupe frío), negro.
+                    - **Acentos**: Azul zafiro, violeta real, verde esmeralda, rosa fucsia.
+                    - **Evita**: Marrones rojizos, bronces, naranjas y dorados cálidos.
+                    
+                    La máscara de pestañas debe ser siempre negra profunda para enmarcar la mirada.`
+                },
+                {
+                    heading: 'Labios: El Poder del Color',
+                    content: `Los labios son el punto fuerte de la mujer Invierno. Puedes llevar colores que en otras estaciones se verían abrumadores.
+                    
+                    **Rojos**: Tu rojo ideal es el "True Red" (rojo sangre) o el rojo con base azul (cereza, frambuesa). Evita los rojos anaranjados (tomate-ladrillo).
+                    **Rosas**: Fucsia, magenta, hot pink. Los rosas pálidos deben ser "icy" (helados), no pasteles cálidos.
+                    **Oscuros**: Vino, burdeos, ciruela profundo.
+                    
+                    Un labio rojo mate limpio es un look de diario perfecto para ti.`
+                },
+                {
+                    heading: 'Mejillas: Un Toque de Frío',
+                    content: `El rubor debe simular el sonrojo natural de un día de frío.
+                    
+                    Busca tonos **rosa frío**, **ciruela suave** o **fucsia**. Evita los bronzers naranjas o dorados; si quieres contornear, usa un polvo de contorno de subtono grisáceo (taupe) que imite una sombra real, no un bronceado de sol.`
+                }
+            ],
+            conclusion: `El maquillaje para Invierno es audaz y sofisticado. No temas al color ni al contraste; son tus mejores aliados. Al alinear tu neceser con tu paleta natural, notarás que necesitas menos producto para verte espectacular, porque los colores trabajan a tu favor, no en tu contra.`
+        }
+    },
+    {
+        id: 5,
+        slug: 'guia-maquillaje-mujer-primavera',
+        title: 'Maquillaje para Mujeres Primavera: Frescura, Luz y Color',
+        category: 'Maquillaje',
+        author: 'Laura Estilista',
+        publishedDate: '2026-01-13',
+        readingTime: '7 min',
+        excerpt: 'Resalta tu luminosidad natural con tonos corales, dorados y melocotón. La guía esencial de belleza para la estación Primavera.',
+        image: '/images/blog/maquillaje-primavera.jpg',
+        keywords: ['maquillaje primavera', 'labial coral', 'iluminador dorado', 'sombras calidas'],
+        content: {
+            intro: `La mujer Primavera es sinónimo de luz, calidez y frescura. Tu piel tiene ese "glow" dorado natural y tus ojos suelen brillar con claridad. El objetivo de tu maquillaje es realzar esa vitalidad innata, no apagarla con colores oscuros o pesados.
+            
+            Piensa en un jardín en flor bajo el sol: corales, salmones, turquesas y dorados. Tu belleza es delicada pero vibrante. En esta guía, aprenderás a potenciar tu luminosidad natural.`,
+            sections: [
+                {
+                    heading: 'Piel: Luminosidad Ante Todo',
+                    content: `Tu piel pide a gritos acabados luminosos y ligeros. Las bases muy mates o pesadas pueden hacerte ver mayor o apagada.
+                    
+                    **Base**: Busca subtonos **cálidos (amarillos/dorados)**. Palabras clave: "Golden", "Warm", "Honey". Las BB creams y bases de cobertura ligera a media son ideales para dejar ver la textura natural de tu piel.
+                    
+                    **Iluminador**: ¡Es tu mejor amigo! El iluminador dorado o champán te queda espectacular. Evita los iluminadores plateados o rosados fríos que chocan con tu calidez.`
+                },
+                {
+                    heading: 'Ojos: Brillo y Calidez',
+                    content: `Tus ojos necesitan definición pero sin dureza. El negro puro a menudo es demasiado agresivo para una Primavera (especialmente Primavera Clara).
+                    
+                    **Delineador**: Opta por marrones cálidos, bronce, o incluso azules y verdes brillantes para un toque divertido. El delineador marrón café suele ser mejor opción que el negro líquido.
+                    
+                    **Sombras**:
+                    - **Neutros**: Beige crema, camel, marrón miel, bronce.
+                    - **Acentos**: Verde lima, turquesa, coral, violeta cálido, dorado.
+                    - **Evita**: Grises fríos, negro ahumado pesado, fucsia frío.
+                    
+                    La máscara de pestañas marrón oscuro suele favorecer más que la negra intensa, integrándose mejor con tus rasgos suaves.`
+                },
+                {
+                    heading: 'Labios y Mejillas: La Magia del Melocotón',
+                    content: `Si hay un color que define el maquillaje de Primavera, es el **coral/melocotón**.
+                    
+                    **Rubor**: Melocotón, coral suave, albaricoque. Estos tonos te dan un aspecto de "buena cara" instantáneo.
+                    
+                    **Labios**:
+                    - **Nude**: Beige cálido, melocotón.
+                    - **Vivos**: Coral vibrante, rojo amapola (anaranjado), rosa salmón.
+                    - **Evita**: Labiales vino oscuros, marrones fríos o rosas "Barbie" azulados.
+                    
+                    El gloss y los acabados jugosos quedan especialmente bien en ti, reflejando tu cualidad cristalina y fresca.`
+                }
+            ],
+            conclusion: `Como Primavera, tu superpoder es la frescura. Tu maquillaje debe sentirse ligero y lleno de vida. Al elegir tonos cálidos y claros, logras ese efecto "anti-edad" natural que muchas buscan artificialmente. ¡Brilla con tu propia luz!`
+        }
+    },
+    {
+        id: 6,
+        slug: 'guia-maquillaje-mujer-otono',
+        title: 'Maquillaje para Mujeres Otoño: Tonos Tierra, Calidez y Profundidad',
+        category: 'Maquillaje',
+        author: 'Sofia Color',
+        publishedDate: '2026-01-14',
+        readingTime: '8 min',
+        excerpt: 'Explora la riqueza de los tonos terracota, bronce y oliva. Maquillaje sofisticado y natural para resaltar la belleza otoñal.',
+        image: '/images/blog/maquillaje-otono.jpg',
+        keywords: ['maquillaje otoño', 'sombras tierra', 'labial ladrillo', 'bronzer'],
+        content: {
+            intro: `El Otoño es la estación de la riqueza, la tierra y la calidez profunda. Si eres Otoño, tienes una cualidad sofisticada y natural, a menudo con un brillo dorado o cobrizo en tu piel y cabello.
+            
+            Tu paleta de maquillaje es la más orgánica de todas: piensa en especias, bosques, hojas secas y atardeceres. Terracotas, bronces, verdes musgo y mostazas. Tu belleza se potencia con acabados mates o satinados ricos, huyendo de los colores fríos y artificiales.`,
+            sections: [
+                {
+                    heading: 'Piel: Calidez Dorada',
+                    content: `Tu piel tiene una base cálida inconfundible. Las bases correctas se funden con tu subtono dorado.
+                    
+                    **Base**: Subtonos **amarillos, dorados o neutros-cálidos**. Evita a toda costa las bases rosadas, que te harán ver grisácea.
+                    
+                    **Bronzer**: El Otoño es la estación que mejor lleva el bronzer. Puedes usar polvos bronceadores para dar calidez al rostro de forma natural. Los tonos terracota o cobre funcionan muy bien como contorno e iluminador cálido.`
+                },
+                {
+                    heading: 'Ojos: Ahumados y Naturales',
+                    content: `Los ojos ahumados en tonos tierra son espectaculares en ti. Tienes la capacidad de llevar sombras complejas y oscuras sin verte sobrecargada.
+                    
+                    **Delineador**: Marrón café oscuro, verde oliva oscuro, bronce. El negro puede usarse, pero un marrón profundo suele ser más armonioso.
+                    
+                    **Sombras**:
+                    - **Neutros**: Vainilla, crema, marrón chocolate, camel.
+                    - **Acentos**: Verde militar, mostaza, naranja quemado, cobre, oro viejo.
+                    - **Evita**: Azules celestes, rosas pastel frío, grises plateados.
+                    
+                    Las texturas mates y metálicas (oro, cobre) te favorecen enormemente.`
+                },
+                {
+                    heading: 'Labios: Especias y Tierra',
+                    content: `Tus labiales ideales son cálidos y ricos.
+                    
+                    **Tonos**: Rojo ladrillo, terracota, marrón cobrizo, nude cálido (tipo canela).
+                    **Evita**: Rosas chicle, fucsias fríos o nudes demasiado pálidos que borren tus labios.
+                    
+                    Un labial rojo óxido mate es un statement look clásico y elegante para la mujer Otoño.`
+                },
+                {
+                    heading: 'Mejillas: Rubor Natural',
+                    content: `Busca rubores que parezcan un sonrojo natural por el sol o el ejercicio.
+                    
+                    **Tonos**: Tostados, salmón oscuro, terracota suave.
+                    
+                    La clave es mantener la calidez en todo el rostro. Un look monocromático en tonos bronce/naranja quemado es una apuesta segura y muy favorecedora.`
+                }
+            ],
+            conclusion: `La mujer Otoño posee una elegancia natural que se realza con los colores de la tierra. Tu maquillaje no necesita ser llamativo por su estridencia, sino por su riqueza y armonía. Abraza los tonos cálidos y profundos para irradiar esa confianza sofisticada que te caracteriza.`
+        }
+    },
+    {
+        id: 7,
+        slug: 'guia-maquillaje-mujer-verano',
+        title: 'Maquillaje para Mujeres Verano: Suavidad, Elegancia y Tonos Empolvados',
+        category: 'Maquillaje',
+        author: 'Sofia Color',
+        publishedDate: '2026-01-15',
+        readingTime: '7 min',
+        excerpt: 'La guía para resaltar la delicadeza del Verano con tonos rosados, malvas y grises suaves. Elegancia sin esfuerzo.',
+        image: '/images/blog/maquillaje-verano.jpg',
+        keywords: ['maquillaje verano', 'sombras malva', 'labial rosa', 'piel porcelana'],
+        content: {
+            intro: `El Verano en colorimetría evoca paisajes neblinosos, atardeceres suaves y frescura. Si eres Verano, tu belleza es delicada, suave y fría. Tienes un bajo o medio contraste que requiere colores que no compitan con tus rasgos, sino que los acompañen suavemente.
+            
+            Tu paleta es la de las flores tras la lluvia: rosas viejos, lavandas, grises azulados. El maquillaje excesivamente oscuro o cálido (naranjas) puede endurecer tus facciones incesariamente.`,
+            sections: [
+                {
+                    heading: 'Piel: Frescura de Porcelana',
+                    content: `Tu piel tiene subtonos fríos (rosados) y a menudo es fina o delicada.
+                    
+                    **Base**: Busca subtonos **rosados (cool) o neutros**. Evita las bases amarillas o doradas que parecerán una máscara sobre tu piel.
+                    
+                    **Acabado**: El acabado mate suave o natural es ideal. Cuidado con el exceso de bronzer dorado; si quieres calidez, busca un bronzer con subtono rosado-marrón (tipo "rosewood") o simplemente usa rubor.`
+                },
+                {
+                    heading: 'Ojos: Misterio Suave',
+                    content: `Tus ojos suelen tener matices grises o fríos. El maquillaje de ojos debe ser difuminado y suave; las líneas duras no te favorecen tanto.
+                    
+                    **Delineador**: Gris carbón (charcoal), azul marino, marrón cacao (frío). El negro líquido intenso puede ser muy duro; opta por lápiz difuminado.
+                    
+                    **Sombras**:
+                    - **Neutros**: Gris perla, topo (taupe), blanco suave, marrón rosado.
+                    - **Acentos**: Lavanda, rosa palo, azul cielo, verde menta, ciruela suave.
+                    - **Evita**: Cobre, naranja, marrón dorado, negro intenso.
+                    
+                    El rímel gris oscuro o marrón-negro a menudo se ve más natural y sofisticado en ti que el negro carbón.`
+                },
+                {
+                    heading: 'Labios y Mejillas: Rosas Románticos',
+                    content: `Eres la reina de los rosas.
+                    
+                    **Rubor**: Rosa bebé, rosa viejo, malva. Te da un aspecto saludable y fresco instantáneo.
+                    
+                    **Labios**:
+                    - **Nude**: Rosa nude ("my lips but better").
+                    - **Color**: Frambuesa, ciruela suave, fucsia suave.
+                    - **Evita**: Naranjas, corales cálidos, marrones tierra.
+                    
+                    Los acabados cremosos o ligeramente gloss favorecen tu frescura natural.`
+                }
+            ],
+            conclusion: `La elegancia del Verano reside en la sutileza. Tu maquillaje no necesita gritar para hacerse notar; su poder está en la armonía suave y los tonos empolvados que te hacen ver etérea y sofisticada. Menos es más, y la suavidad es tu mayor fortaleza.`
+        }
+    },
+    {
+        id: 8,
+        slug: 'colorimetria-para-hombres-guia-estilo',
+        title: 'Colorimetría para Hombres: Potencia tu Imagen Profesional y Personal',
+        category: 'Hombres',
+        author: 'Carlos Estilo',
+        publishedDate: '2026-01-16',
+        readingTime: '9 min',
+        excerpt: 'La colorimetría no es solo cosa de mujeres. Aprende a elegir trajes, camisas y corbatas que te hagan ver más líder, saludable y atractivo.',
+        image: '/images/blog/colorimetria-hombres.jpg',
+        keywords: ['moda hombre', 'trajes hombre', 'camisas vestir', 'colorimetria masculina'],
+        content: {
+            intro: `Muchos hombres limitan su armario a azul, negro y gris por miedo a equivocarse. Sin embargo, entender la colorimetría es una herramienta de poder. Usar los colores correcto puede hacerte ver más autoritario en una reunión, más accesible en una cita y más saludable en general.
+            
+            No se trata de usar maquillaje, sino de estrategia visual. La camisa que llevas cerca de la cara ilumina o apaga tus rasgos. En esta guía, desmitificamos el color para el hombre moderno.`,
+            sections: [
+                {
+                    heading: 'La Camisa Blanca: No Sirve para Todos',
+                    content: `La camisa blanca impoluta es un básico, ¿verdad? Sorprendentemente, no.
+                    
+                    - **Invierno**: El blanco puro óptico es excelente para ti.
+                    - **Verano**: Mejor un blanco suave ("off-white") o gris muy pálido.
+                    - **Primavera**: Mejor un marfil o crema muy claro.
+                    - **Otoño**: Definitivamente crema, beige claro o ostra. El blanco puro te hace ver pálido.
+                    
+                    Cambiar el tono de tu camisa "básica" es el ajuste más simple con mayor impacto.`
+                },
+                {
+                    heading: 'El Traje Perfecto: Más Allá del Negro',
+                    content: `El traje negro se suele ver como el estándar de formalidad, pero en realidad, es muy severo y solo favorece realmente a la estación Invierno.
+                    
+                    - **Para Otoños y Primaveras (Cálidos)**: Tus mejores "oscuros" son el Azul Marino (Navy) con base cálida, el Gris Carbón cálido, o incluso marrones oscuros y verdes oliva para sport.
+                    - **Para Veranos (Fríos Suaves)**: El Azul Marino agrisado (Airforce Blue) y el Gris Medio son tus mejores aliados.
+                    - **Para Inviernos (Fríos Intensos)**: Tú sí dominas el Negro y el Azul Midnight oscuro.
+                    
+                    Un traje en el tono correcto de gris o azul te hará ver más competente y en control.`
+                },
+                {
+                    heading: 'Corbatas y Accesorios: Tu Toque de Color',
+                    content: `Aquí es donde puedes jugar con tu paleta de acentos.
+                    
+                    - **Cálidos (Primavera/Otoño)**: Corbatas en rojo tomate, verde bosque, dorado, naranja quemado. Relojes y gemelos dorados.
+                    - **Fríos (Verano/Invierno)**: Corbatas en rojo vino, azul real, plata, lavanda. Relojes y gemelos plateados.
+                    
+                    Si llevas una corbata de un color que te favorece cerca del rostro, puedes "salvar" una camisa o traje que no sea perfecto.`
+                },
+                {
+                    heading: 'Ropa Casual y Sport',
+                    content: `En el estilo casual, las reglas se relajan pero el efecto es el mismo.
+                    
+                    - Una camiseta **camiseta negra** puede hacer que un Verano se vea cansado. Mejor una gris marengo o azul denim.
+                    - Una **camiseta beige** puede hacer que un Invierno parezca enfermo. Mejor una blanca o gris hielo.
+                    - Los hombres de **Otoño** se ven espectaculares con chaquetas de cuero marrón, mientras que los **invierno** dominan el cuero negro.`
+                }
+            ],
+            conclusion: `La colorimetría para hombres es una ventaja competitiva silenciosa. No requiere que cambies tu estilo personal, solo que ajustes los tonos. Al elegir los colores que armonizan contigo, proyectas una imagen de mayor vitalidad y congruencia que los demás notarán, aunque no sepan explicar por qué.`
+        }
+    },
+    {
+        id: 9,
+        slug: 'joyas-accesorios-oro-plata-segun-piel',
+        title: 'Oro vs Plata: La Guía Definitiva para Elegir tus Joyas y Accesorios',
+        category: 'Accesorios',
+        author: 'Equipo MyColors',
+        publishedDate: '2026-01-17',
+        readingTime: '6 min',
+        excerpt: '¿No sabes si invertir en oro o plata? Tu subtono de piel tiene la respuesta. Aprende a elegir los metales que te hacen brillar.',
+        image: '/images/blog/joyas-oro-plata.jpg',
+        keywords: ['joyeria colorimetria', 'oro o plata', 'accesorios piel fria calida', 'metales preciosos'],
+        content: {
+            intro: `Una de las preguntas más rápidas para determinar tu temperatura de color es: "¿Te queda mejor el oro o la plata?". Los metales que usamos cerca del rostro (pendientes, collares) actúan como reflectores de luz.
+            
+            Elegir el metal correcto ilumina tu piel, disimula ojeras y hace que todo el look se vea más caro y coherente. Elegir el incorrecto puede resaltar imperfecciones o simplemente verse "separado" de ti.`,
+            sections: [
+                {
+                    heading: 'La Regla de Oro (y Plata)',
+                    content: `La regla básica es simple:
+                    
+                    - **Pieles Cálidas (Primavera y Otoño)** → **Oro**. El metal dorado armoniza con los subtonos amarillos de la piel.
+                    - **Pieles Frías (Verano e Invierno)** → **Plata**. Los metales blancos (plata, oro blanco, platino) armonizan con los subtonos rosados/azules.
+                    
+                    Pero, ¿qué pasa con el Oro Rosa o el Bronce? Aquí entramos en matices.`
+                },
+                {
+                    heading: 'Metales por Estación',
+                    content: `**Primavera (Cálida + Clara)**
+                    - Mejor: Oro amarillo brillante, Oro claro.
+                    - Bueno: Oro rosa (si es cálido).
+                    - Evitar: Plata envejecida oscura.
+                    
+                    **Otoño (Cálida + Profunda)**
+                    - Mejor: Oro amarillo rico, Oro viejo, Bronce, Cobre.
+                    - Bueno: Madera, materiales naturales cálidos.
+                    - Evitar: Plata brillante, Platino.
+                    
+                    **Verano (Fría + Suave)**
+                    - Mejor: Plata mate, Oro blanco, Platino suave.
+                    - Bueno: Oro rosa (si tira a rosa frío).
+                    - Evitar: Oro amarillo muy "chillón".
+                    
+                    **Invierno (Fría + Intensa)**
+                    - Mejor: Plata brillante, Platino, Oro blanco pulido.
+                    - Bueno: Pewter (peltre), Acero.
+                    - Evitar: Oro amarillo antiguo, Cobre, Bronce.`
+                },
+                {
+                    heading: '¿Qué pasa si me gusta el metal "incorrecto"?',
+                    content: `Muchas personas tienen preferencia personal por el oro o la plata independientemente de su colorimetría, o tienen joyas sentimentales (anillos de boda, herencias).
+                    
+                    **Soluciones:**
+                    1. **Ubicación**: Usa el metal "incorrecto" lejos del rostro (anillos, pulseras, cinturones). Los pendientes y collares son los críticos.
+                    2. **Mixed Metals**: Mezcla ambos metales, asegurándote de que el dominante sea el correcto para ti.
+                    3. **Piedras preciosas**: Si usas unos pendientes de oro siendo fría, asegúrate de que tengan una piedra de tu paleta (ej. zafiro o diamante) que haga de puente.`
+                },
+                {
+                    heading: 'Gafas y Monturas',
+                    content: `No olvides las gafas, ¡están en medio de tu cara!
+                    - **Cálidos**: Monturas doradas, carey (tortoise), marrones, beige.
+                    - **Fríos**: Monturas plateadas, negras, grises, azules, transparentes frías.
+                    
+                    El carey es excelente para Otoños y Primaveras, mientras que el negro o metal plateado es el rey para los Inviernos.`
+                }
+            ],
+            conclusion: `Tus joyas son los puntos de luz de tu outfit. Elegir el metal que armoniza con tu piel crea una sensación de lujo y pertenencia. No tienes que deshacerte de tus joyas sentimentales, pero para tus piezas clave del día a día, seguir tu colorimetría marcará una diferencia sutil pero poderosa.`
+        }
+    },
+    {
+        id: 10,
+        slug: 'poder-colores-neutrales-armario-capsula',
+        title: 'El Poder de los Neutrales: Cómo Construir un Armario Cápsula que Funcione',
+        category: 'Estilo',
+        author: 'Laura Estilista',
+        publishedDate: '2026-01-18',
+        readingTime: '8 min',
+        excerpt: 'Los neutrales son la columna vertebral de tu estilo. Aprende a elegir entre negro, navy, gris, camel y beige según tu estación.',
+        image: '/images/blog/neutrales-capsula.jpg',
+        keywords: ['armario capsula', 'colores neutrales', 'basicos fondo armario', 'combinar ropa'],
+        content: {
+            intro: `Un armario funcional no se construye solo con colores de acento vibrantes; necesita una base sólida. Aquí es donde entran los neutrales. Son los pacificadores de tu armario, las prendas que combinan con todo y permiten que tus colores favoritos brillen.
+            
+            Sin embargo, "neutral" no significa "universal". Un beige que hace brillar a una Otoño puede hacer parecer enferma a una Invierno. Elegir TUS neutrales correctos es el primer paso para un armario cápsula exitoso.`,
+            sections: [
+                {
+                    heading: 'Definiendo tus Neutrales Base',
+                    content: `Cada estación tiene su set de neutrales "core":
+                    
+                    **Inviernos**: Negro puro, Blanco puro, Navy (Azul Marino), Gris Carbón.
+                    - *Tu súper poder*: Eres la única estación que realmente se ve increíble en blanco y negro estricto.
+                    
+                    **Veranos**: Gris suave, Azul grisáceo, Navy suave, Blanco roto (Soft White), Taupe rosado.
+                    - *Evita*: Negro cerca de la cara (te endurece). El azul marino y el gris carbón son tus mejores alternativas oscuras.
+                    
+                    **Otoños**: Marrón chocolate, Camel, Beige cálido, Verde Oliva oscuro, Crema.
+                    - *Evita*: Negro y Gris frío. El marrón chocolate es tu "nuevo negro", mucho más rico y favorecedor.
+                    
+                    **Primaveras**: Camel claro, Beige dorado, Marfil, Marrón miel, Navy claro.
+                    - *Evita*: Negro y Blanco puro. El marfil y el camel mantienen tu luminosidad.`
+                },
+                {
+                    heading: 'La Regla 70/30 del Armario Cápsula',
+                    content: `Para un armario versátil, intenta que el 70% de tus prendas (especialmente pantalones, abrigos, zapatos y bolsos) sean de tus colores neutrales. El 30% restante (blusas, accesorios, vestidos) puede ser de tus colores de acento.
+                    
+                    Esto garantiza que casi cualquier prenda superior combine con cualquier prenda inferior, maximizando tus outfits con menos ropa.`
+                },
+                {
+                    heading: 'Neutrales de Verano vs Invierno',
+                    content: `Es importante adaptar tus neutrales al clima:
+                    
+                    - **Clima Frío**: Oscuros (Negro, Marrón, Navy, Carbón).
+                    - **Clima Cálido**: Claros (Blanco, Beige, Crema, Gris claro, Camel).
+                    
+                    Manteniendo siempre la temperatura correcta (cálida o fría) incluso al cambiar la profundidad.`
+                }
+            ],
+            conclusion: `No subestimes el poder de una camiseta básica o un pantalón en el tono neutral perfecto. Cuando tus básicos armonizan con tu piel, incluso el outfit más simple de "jeans y camiseta" se ve intencional y pulido.`
+        }
+    },
+    {
+        id: 11,
+        slug: 'guia-teñir-cabello-segun-estacion',
+        title: 'Cambios de Look Radicales: Guía para Teñir tu Cabello según tu Estación',
+        category: 'Cabello',
+        author: 'Sofia Color',
+        publishedDate: '2026-01-19',
+        readingTime: '9 min',
+        excerpt: '¿Rubia, morena o pelirroja? Descubre qué tonos de cabello te favorecen y cuáles evitar según tu colorimetría personal.',
+        image: '/images/blog/cabello-tinte.jpg',
+        keywords: ['tinte cabello colorimetria', 'rubio ceniza o dorado', 'pelirrojo piel calida', 'cambio look'],
+        content: {
+            intro: `El cabello enmarca tu rostro; cambiar su color es una de las formas más potentes de alterar tu apariencia. Un color acertado puede quitarte 5 años de encima, mientras que uno incorrecto puede obligarte a usar más maquillaje para compensar.
+            
+            Antes de pedirle a tu estilista ese "rubio de Instagram", averigua si pertenece a tu familia de colores.`,
+            sections: [
+                {
+                    heading: 'Rubios: ¿Ceniza o Dorado?',
+                    content: `El eterno dilema.
+                    - **Primaveras y Otoños**: Necesitan rubios **dorados**, miel, caramelo o fresa. La calidez del cabello debe conectar con la piel. Un rubio ceniza te hará ver gris y apagada.
+                    - **Veranos e Inviernos**: Necesitan rubios **ceniza**, platino, perla o beige frío. Evita los tonos dorados o anaranjados ("brassy") que chocan con tu piel rosada.`
+                },
+                {
+                    heading: 'El Rojo: ¿Para quién es?',
+                    content: `Casi cualquiera puede ser pelirroja, pero el tono importa:
+                    - **Cálidos (Primavera/Otoño)**: Cobre, Tiziano, Rojo anaranjado, Castaño rojizo. Se ve natural y vibrante.
+                    - **Fríos (Verano/Invierno)**: Borgoña, Rojo cereza, Violín, Rojo frío. Evita el cobre anaranjado.`
+                },
+                {
+                    heading: 'Morenos y Castaños',
+                    content: `La profundidad y el reflejo son claves.
+                    - **Invierno**: Negro azabache o castaño muy oscuro frío. Sin reflejos rojos/dorados.
+                    - **Otoño**: Castaño chocolate rico, con reflejos caoba o cobre.
+                    - **Verano**: Castaño medio ceniza ("mousy brown" en el buen sentido), sin calidez.
+                    - **Primavera**: Castaño claro dorado o caramelo.`
+                },
+                {
+                    heading: 'Disimular Canas',
+                    content: `Las canas son naturalmente frías (blanco/gris).
+                    - **Inviernos y Veranos**: A menudo lucen espectaculares dejando sus canas naturales o matizándolas a plata.
+                    - **Otoños y Primaveras**: Las canas pueden "enfriar" demasiado su rostro. Suelen verse mejor manteniendo algo de calidez en la base o usando reflejos dorados para integrar las canas.`
+                }
+            ],
+            conclusion: `Tu cabello es tu accesorio permanente. Respetar tu temperatura natural al teñirte garantiza que el color se vea lujoso y saludable, en lugar de artificial. Si tienes dudas, la naturaleza es sabia: tu color de infancia o tu color natural suele ser la mejor guía de tu paleta ideal.`
+        }
+    },
+    {
+        id: 12,
+        slug: 'combinaciones-colores-profesionales-oficina',
+        title: 'Combinaciones de Colores para la Oficina: Proyecta Liderazgo y Confianza',
+        category: 'Estilo',
+        author: 'Carlos Estilo',
+        publishedDate: '2026-01-20',
+        readingTime: '7 min',
+        excerpt: 'Más allá del traje gris. Aprende a usar el color en el entorno laboral para comunicar profesionalismo y accesibilidad.',
+        image: '/images/blog/estilo-oficina.jpg',
+        keywords: ['ropa oficina mujer', 'ropa trabajo hombre', 'colores liderazgo', 'psicologia color trabajo'],
+        content: {
+            intro: `En el entorno profesional, queremos ser tomados en serio. A menudo, esto nos lleva a un uniforme monótono de negros y grises. Pero el color puede ser una herramienta estratégica de comunicación no verbal.
+            
+            Puedes usar tu paleta personal para proyectar autoridad (alto contraste, colores oscuros) o accesibilidad (bajo contraste, colores claros) según lo requiera la ocasión.`,
+            sections: [
+                {
+                    heading: 'Colores de Autoridad (Power Colors)',
+                    content: `Para presentaciones importantes, negociaciones o entrevistas:
+                    - **Mensaje**: Competencia, seriedad, liderazgo.
+                    - **Colores**: Colores oscuros y profundos de tu paleta.
+                        - Invierno: Negro, Azul marino profundo, Rojo verdadero.
+                        - Otoño: Marrón chocolate, Verde bosque, Terracota oscuro.
+                        - Verano: Azul grisáceo oscuro, Carbón, Burdeos suave.
+                        - Primavera: Azul marino brillante, Camel intenso, Marrón dorado.`
+                },
+                {
+                    heading: 'Colores de Accesibilidad',
+                    content: `Para trabajo en equipo, feedback, primeros días, networking:
+                    - **Mensaje**: Apertura, amabilidad, colaboración.
+                    - **Colores**: Tonos medios y claros, pasteles o neutros suaves.
+                        - Beiges, Cremas, Azules claros, Rosas suaves, Verdes medios.
+                        - Evita el negro estricto cerca del rostro si quieres fomentar la comunicación abierta.`
+                },
+                {
+                    heading: 'El Toque de Color (Accent)',
+                    content: `En ambientes conservadores, usa el color en pequeñas dosis:
+                    - Una blusa de seda en **verde esmeralda** (Invierno) o **verde musgo** (Otoño) bajo un traje neutro.
+                    - Un pañuelo o corbata en **coral** (Primavera) o **azul cielo** (Verano).
+                    
+                    Esto muestra personalidad y atención al detalle sin romper el código de vestimenta.`
+                }
+            ],
+            conclusion: `Vestir para el trabajo no tiene por qué ser aburrido. Usar tu paleta personal te asegura verte siempre pulido y profesional, evitando esa apariencia "cansada" que dan los colores incorrectos bajo las luces fluorescentes de la oficina.`
+        }
+    },
+    {
+        id: 13,
+        slug: 'errores-comunes-colorimetria-vestir',
+        title: '5 Errores Comunes al Vestir (Y Por Qué Ese Color "Bonito" No Te Queda Bien)',
+        category: 'Consejos',
+        author: 'Laura Estilista',
+        publishedDate: '2026-01-21',
+        readingTime: '6 min',
+        excerpt: '¿Por qué esa prenda que te encantó en la tienda no funciona puesta? Analizamos los fallos más habituales al elegir colores.',
+        image: '/images/blog/errores-vestir.jpg',
+        keywords: ['errores estilo', 'ropa no favorece', 'consejos moda', 'compras inteligentes'],
+        content: {
+            intro: `Todos tenemos esa prenda en el armario con la etiqueta puesta. Es preciosa, el color es increíble, pero cada vez que nos la ponemos, terminamos cambiándonos. "Simplemente no me veo bien", pensamos.
+            
+            La culpa no es tuya, ni de tu cuerpo. Es del color. Aquí están los 5 errores de colorimetría más comunes que sabotean tu estilo.`,
+            sections: [
+                {
+                    heading: '1. El Negro por Defecto',
+                    content: `Nos han enseñado que "el negro pega con todo" y "adelgaza". La realidad: El negro es un color frío e intenso (Invierno). A las estaciones cálidas y suaves (Primavera, Otoño, Verano) puede hacerlas ver mayores, marcar líneas de expresión y crear sombras en la papada.
+                    
+                    *Solución*: Cambia el negro por TU oscuro ideal (Marrón chocolate, Navy, Carbón).`
+                },
+                {
+                    heading: '2. Ignorar el Contraste',
+                    content: `Una persona de bajo contraste (ej. rubia de piel clara) vestida de alto contraste (blanco y negro) desaparece; el vestido la lleva a ella. Una persona de alto contraste vestida de beige de pies a cabeza se ve borrosa.
+                    
+                    *Solución*: Replica tu contraste natural en tu ropa.`
+                },
+                {
+                    heading: '3. Enamorarse del Color, no del Efecto',
+                    content: `Te encanta el amarillo mostaza. Es un color precioso. Pero si eres Verano, ese color te hará ver ictérica (amarillenta).
+                    
+                    *Solución*: Ama los colores que te aman a ti. Úsalos en decoración o accesorios lejos de la cara, pero no en blusas.`
+                },
+                {
+                    heading: '4. El "Nude" Equivocado',
+                    content: `El color nude o "carne" debe parecerse a TU piel o complementarla. Un nude beige amarillento en una piel rosada se ve sucio. Un nude rosado en piel dorada se ve gris.
+                    
+                    *Solución*: Prueba el nude en tu brazo. Debe haber armonía, no lucha.`
+                },
+                {
+                    heading: '5. Maquillaje de Temperatura Opuesta',
+                    content: `Llevar ropa de tu estación pero maquillaje de la opuesta (ej. blusa óxido con labial fucsia) crea un choque visual confuso.
+                    
+                    *Solución*: Mantén la coherencia. Ojos, labios, mejillas y ropa superior deberían compartir la misma temperatura.`
+                }
+            ],
+            conclusion: `La moda es para divertirse, pero conocer estas reglas te permite romperlas con intención, no por error. Al evitar estos fallos comunes, tu armario se vuelve mucho más eficiente y tú te sientes más segura.`
+        }
+    },
+    {
+        id: 14,
+        slug: 'psicologia-color-que-comunican-tus-colores',
+        title: 'Psicología del Color: Qué Dicen Tus Colores Sobre Ti Antes de Que Hables',
+        category: 'Estilo',
+        author: 'Equipo MyColors',
+        publishedDate: '2026-01-22',
+        readingTime: '8 min',
+        excerpt: 'Rojo para energía, azul para confianza. Aprende a usar la psicología del color a tu favor combinado con tu paleta personal.',
+        image: '/images/blog/psicologia-color.jpg',
+        keywords: ['psicologia del color', 'significado colores ropa', 'comunicacion no verbal', 'imagen personal'],
+        content: {
+            intro: `Vestirnos es un acto de comunicación. Antes de que digas una palabra, tu ropa ya ha enviado mensajes sobre tu estado de ánimo, tu rol y tu personalidad. La psicología del color estudia estos efectos.
+            
+            Cuando combinas el mensaje psicológico del color con la armonía estética de tu paleta personal, el resultado es magnético.`,
+            sections: [
+                {
+                    heading: 'Rojo: Pasión y Poder',
+                    content: `El color más físico y visceral. Aumenta el pulso de quien lo mira.
+                    - **Mensaje**: Energía, amor, peligro, acción, liderazgo.
+                    - **Úsalo para**: Citas románticas, cuando necesitas energía extra, para ser el centro de atención.
+                    - **Tu versión**: Carmesí (Invierno), Tomate (Primavera), Ladrillo (Otoño), Sandía (Verano).`
+                },
+                {
+                    heading: 'Azul: Confianza y Calma',
+                    content: `El color mental. El favorito universal.
+                    - **Mensaje**: Inteligencia, serenidad, lógica, eficiencia, confianza.
+                    - **Úsalo para**: Entrevistas de trabajo, resolver conflictos, días estresantes.
+                    - **Tu versión**: Royal (Invierno), Turquesa (Primavera), Petróleo (Otoño), Celeste (Verano).`
+                },
+                {
+                    heading: 'Amarillo: Optimismo y Creatividad',
+                    content: `El color emocional. El más visible para el ojo humano.
+                    - **Mensaje**: Alegría, creatividad, amistad, esperanza.
+                    - **Úsalo para**: Eventos creativos, días tristes, celebraciones de día.
+                    - **Tu versión**: Limón (Invierno), Narciso (Primavera), Mostaza (Otoño), Vainilla (Verano).`
+                },
+                {
+                    heading: 'Verde: Equilibrio y Crecimiento',
+                    content: `El puente entre lo cálido y lo frío. Relaja el ojo.
+                    - **Mensaje**: Armonía, salud, naturaleza, dinero, restauración.
+                    - **Úsalo para**: Días largos, sanación, mostrar estabilidad.
+                    - **Tu versión**: Esmeralda (Invierno), Manzana (Primavera), Oliva (Otoño), Menta (Verano).`
+                }
+            ],
+            conclusion: `Elige tu color con intención cada mañana. Pregúntate: ¿Cómo me quiero sentir hoy? ¿Qué quiero proyectar? Tu armario es una caja de herramientas emocionales esperando ser usada.`
+        }
+    },
+    {
+        id: 15,
+        slug: 'como-identificar-subtono-piel-casa',
+        title: 'Cómo Identificar tu Subtono de Piel en Casa: La Guía Práctica Definitiva',
+        category: 'Guías',
+        author: 'Equipo MyColors',
+        publishedDate: '2026-01-23',
+        readingTime: '10 min',
+        excerpt: '¿Eres fría, cálida o neutra? Realiza estos 5 tests caseros infalibles para descubrir tu subtono de piel real.',
+        image: '/images/blog/identificar-subtono.jpg',
+        keywords: ['subtono piel', 'test colorimetria casa', 'piel fria calida neutra', 'analisis color casero'],
+        content: {
+            intro: `El "Santo Grial" de la colorimetría es identificar correctamente tu subtono de piel. No te confundas con el tono superficial (lo pálida o morena que eres); el subtono es la temperatura que subyace y es lo que realmente importa para elegir colores.
+            
+            Muchas personas se diagnostican mal porque miran rojeces superficiales o bronceado. Aquí te presentamos 5 tests cruzados para llegar a la verdad.`,
+            sections: [
+                {
+                    heading: 'Test 1: Las Venas (Con Luz Natural)',
+                    content: `Mira las venas en la parte interna de tu muñeca a la luz del día.
+                    - **Azules / Moradas**: Probablemente Fría.
+                    - **Verdes / Oliva**: Probablemente Cálida.
+                    - **No sabes distinguir / Mezcla**: Probablemente Neutra.`
+                },
+                {
+                    heading: 'Test 2: La Joyería',
+                    content: `Ponte una cadena de plata en un brazo y una de oro amarillo en el otro (o usa papel aluminio vs dorado).
+                    - **Plata**: Se funde con tu piel, se ve elegante. El oro parece "sucio" o separado. → Fría.
+                    - **Oro**: Te hace brillar, se ve saludable. La plata se ve grisácea o barata. → Cálida.`
+                },
+                {
+                    heading: 'Test 3: La Hoja de Papel',
+                    content: `Sostén una hoja de papel blanco puro (bond) junto a tu rostro y cuello (sin maquillaje).
+                    - Si tu piel se ve **rosada** o azulada en comparación: Fría.
+                    - Si tu piel se ve **amarillenta** o cetrina: Cálida.
+                    - Si te ves **grisosa** o verdosa: Neutra-Oliva.`
+                },
+                {
+                    heading: 'Test 4: Reacción al Sol',
+                    content: `Cuando tomas el sol sin protección alta:
+                    - **Te quemas fácil**, te pones roja y te cuesta broncearte: Tendencia Fría.
+                    - **Te bronceas fácil**, coges tono dorado/marrón rápido: Tendencia Cálida.`
+                },
+                {
+                    heading: 'Test 5: Colores Extremos (Naranja vs Fucsia)',
+                    content: `Este es el desempate. Acerca una prenda Naranja vibrante y una Fucsia vibrante a tu cara.
+                    - **Fucsia** te ilumina y Naranja te hace ver enferma/manchada: DEFINITIVAMENTE FRÍA (Invierno/Verano).
+                    - **Naranja** te da vida y Fucsia te hace ver pálida/payaso: DEFINITIVAMENTE CÁLIDA (Primavera/Otoño).`
+                }
+            ],
+            conclusion: `Si después de estos tests sigues con dudas, es muy posible que seas **Neutra**. Las personas neutras pueden usar colores de ambos espectros pero evitando los extremos (ni muy naranja ni muy azul). Y recuerda: ante la duda, nuestro test de IA puede analizar los píxeles de tu piel objetivamente para darte la respuesta definitiva.`
+        }
     }
 ]
-
-// Continue with articles 4-15...
