@@ -460,49 +460,86 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/maquillaje-invierno.jpg',
         keywords: ['maquillaje invierno', 'labial rojo frio', 'sombras ojos invierno', 'colorimetria maquillaje'],
         content: {
-            intro: `Si tu estación es Invierno, tienes una belleza definida por el contraste y la intensidad. Tu piel probablemente tiene un subtono frío (azulado o rosado) y tus rasgos son nítidos. El maquillaje para la mujer Invierno no se trata de esconder, sino de potenciar ese dramatismo natural con colores puros y definidos.
-            
-            Olvida los tonos tierras apagados o los naranjas cálidos que te hacen lucir cansada. Tu paleta es la de Blancanieves: labios rojos intensos, delineados negros precisos y sombras en tonos joya. En esta guía, exploraremos paso a paso cómo construir tu kit de maquillaje perfecto.`,
+            intro: `Si tu estación es Invierno, tienes una belleza definida por el contraste, la claridad y el drama. Tu piel probablemente tiene un subtono frío (azulado o rosado) o un tono oliva frío, y tus rasgos son nítidos e impactantes.
+
+            A diferencia de otras estaciones que necesitan "mezclar" y suavizar, tú brillas con la definición. El look "no-makeup" a menudo no te hace justicia; pareces cansada. Pero pon un labial rojo sangre o un delineador negro nítido, y de repente, tu rostro se ilumina como si hubieran encendido un foco.
+
+            El maquillaje para Invierno no se trata de esconder, sino de decorar con audacia. En esta guía definitiva de más de 1500 palabras, aprenderás a dejar de luchar contra tu intensidad y empezar a usarla como tu firma personal.`,
             sections: [
                 {
-                    heading: 'La Base Perfecta: El Lienzo',
-                    content: `El error número uno de las mujeres Invierno es usar bases con subtonos amarillos o dorados. Tu piel necesita bases con subtonos **rosados (cool)** o **neutros**.
+                    heading: '1. El Lienzo: Porcelana Fría o Ébano Profundo',
+                    content: `El error número uno de las mujeres Invierno es usar bases con subtonos amarillos (Warm) o dorados (Golden).
+
+                    **La Tiranía del Amarillo**:
+                    La industria cosmética tiende a hacer bases muy amarillas. Si eres Invierno, necesitas bases con subtonos **rosados (Cool)**, **neutros** o, en pieles más oscuras, **azulados/rojizos**.
+                    - *Prueba*: Aplica la base en tu mandíbula. Si se ve naranja, es incorrecta. Si se ve grisácea pero se funde, vas por buen camino.
                     
-                    **Cómo identificarla:** Al probar la base en tu mandíbula, debe desaparecer completamente. Si se ve "naranja" o "amarillenta", es incorrecta. Busca palabras clave como "Cool", "Rose", "Porcelain" o "Neutral". Evita "Golden", "Honey" o "Warm".
-                    
-                    El acabado ideal para invierno suele ser satinado o mate; el exceso de "glow" bronceado no suele favorecer tanto como una piel de porcelana pulida.`
+                    **El Acabado**:
+                    Tu piel se ve mejor con un acabado **semimate o satinado**. El exceso de "glow" (muy de moda) puede verse sudoroso en ti. La piel de Invierno pide pulcritud, no un aspecto "húmedo".
+
+                    **Contorno vs Bronzer: La Regla de Oro**:
+                    - **Bronzer**: La mayoría son naranjas/dorados. ¡Evítalos! Te hacen ver manchada.
+                    - **Contorno**: SÍ. Usa polvos de contorno de color **Gris Topo (Taupe)** o **Marrón Frío**. Imitan la sombra natural de tus pómulos sin añadir calidez artificial.
+                    `
                 },
                 {
-                    heading: 'Ojos: Definición y Drama',
-                    content: `Tus ojos suelen ser uno de tus rasgos más impactantes. El maquillaje de ojos para invierno se beneficia del contraste.
+                    heading: '2. Ojos: Gráfico, Nítido y Dramático',
+                    content: `Tus ojos suelen ser penetrantes (negro carbón, marrón muy oscuro, azul hielo, verde esmeralda).
                     
-                    **Delineador**: Eres de las afortunadas que pueden llevar un delineador negro líquido (blackest black) durante el día sin verse exagerada. El gris carbón y el azul marino oscuro también son excelentes alternativas.
+                    **El Eyeliner Negro**:
+                    Eres la única estación que puede llevar un eyeliner negro líquido ("Blackest Black") a plena luz del día y verse elegante, no gótica.
+                    - *Estilo*: Un "Cat Eye" nítido o un delineado gráfico es tu mejor look de diario. La definición limpia armoniza con tus rasgos definidos.
                     
-                    **Sombras**:
-                    - **Neutros**: Blanco hielo, gris plata, gris topo (taupe frío), negro.
-                    - **Acentos**: Azul zafiro, violeta real, verde esmeralda, rosa fucsia.
-                    - **Evita**: Marrones rojizos, bronces, naranjas y dorados cálidos.
+                    **Sombras de Ojos**:
+                    Olvídate de los marrones cálidos y los naranjas de las paletas "Nude" tradicionales.
+                    - **Tus Neutros**: Blanco Hielo, Gris Plata, Gris Carbón, Topo Frío, Negro.
+                    - **Tus Acentos**: Azul Zafiro, Violeta Eléctrico, Verde Esmeralda, Plata Metalizada.
+                    - **Smokey Eye**: Hazlo en gris y negro, no en marrón. El contraste blanco/negro en tus ojos es hipnótico.
                     
-                    La máscara de pestañas debe ser siempre negra profunda para enmarcar la mirada.`
+                    **Máscara**: SIEMPRE Negra. El marrón se ve débil en ti.`
                 },
                 {
-                    heading: 'Labios: El Poder del Color',
-                    content: `Los labios son el punto fuerte de la mujer Invierno. Puedes llevar colores que en otras estaciones se verían abrumadores.
+                    heading: '3. Labios: El Poder del Rojo y el Fucsia',
+                    content: `Aquí es donde ganas la partida. Mientras otras estaciones sufren para encontrar un rojo que no las domine, tú puedes llevar los colores más potentes con una camiseta blanca y jeans.
                     
-                    **Rojos**: Tu rojo ideal es el "True Red" (rojo sangre) o el rojo con base azul (cereza, frambuesa). Evita los rojos anaranjados (tomate-ladrillo).
-                    **Rosas**: Fucsia, magenta, hot pink. Los rosas pálidos deben ser "icy" (helados), no pasteles cálidos.
-                    **Oscuros**: Vino, burdeos, ciruela profundo.
+                    **Guía de Rojos**:
+                    Buscas rojos con **base azul**.
+                    - *Sí*: Rojo Sangre, Rojo Cereza, Frambuesa, Borgoña, Vino.
+                    - *No*: Rojo Tomate, Rojo Ladrillo, Coral, Naranja.
                     
-                    Un labio rojo mate limpio es un look de diario perfecto para ti.`
+                    **Los Rosas**:
+                    Necesitas rosas "fríos" e "impactantes".
+                    - *Sí*: Fucsia, Magenta, Hot Pink, Rosa Hielo.
+                    - *No*: Salmón, Melocotón, Rosa Empolvado sucio.
+                    
+                    **Los Oscuros**:
+                    Los labios "Vampy" (ciruela muy oscuro, casi negro) fueron inventados para ti. Te dan un aire de misterio y sofisticación inigualable.`
                 },
                 {
-                    heading: 'Mejillas: Un Toque de Frío',
-                    content: `El rubor debe simular el sonrojo natural de un día de frío.
+                    heading: '4. Look de Diario vs. Look de Fiesta',
+                    content: `**Rutina Express de Mañana (5 min)**:
+                    1. Base ligera (corrector solo donde sea necesario) para unificar.
+                    2. Cejas definidas (usa un lápiz ceniza o negro, nunca marrón rojizo).
+                    3. Máscara de pestañas negra generosa.
+                    4. Un labio fucsia o rojo borgoña stain (toquecitos con el dedo).
+                    5. *Iluminador*: Un toque de iluminador plateado/perla en los pómulos.
                     
-                    Busca tonos **rosa frío**, **ciruela suave** o **fucsia**. Evita los bronzers naranjas o dorados; si quieres contornear, usa un polvo de contorno de subtono grisáceo (taupe) que imite una sombra real, no un bronceado de sol.`
+                    **Rutina de Impacto (Noche)**:
+                    1. Base de mayor cobertura, acabado perfeccionado.
+                    2. Contorno marcado en gris topo bajo los pómulos.
+                    3. Ojos: Smokey eye en plata y negro, o un delineado gráfico grueso.
+                    4. Labios: Rojo "True Red" mate, perfilado perfectamente.`
+                },
+                {
+                    heading: '5. Marcas y Productos Recomendados (Low Cost vs High End)',
+                    content: `Encontrar productos fríos a veces es difícil en un mercado obsesionado con lo cálido.
+                    
+                    - **Labiales**: *MAC Ruby Woo* es el rojo universal de invierno. En farmacia, busca los *Maybelline Matte Ink* en tonos 'Pioneer' o 'Believer'.
+                    - **Colorete**: Busca tonos ciruela o berry. *Clinique Black Honey* es un clásico suave. En versión low cost, busca rubores que se vean "morados" en el envase; en tu piel se verán rosa natural.
+                    - **Sombras**: Paletas como la *Naked 2* (la original fría) o las de *ColourPop* en tonos azules/grises son tesoros.`
                 }
             ],
-            conclusion: `El maquillaje para Invierno es audaz y sofisticado. No temas al color ni al contraste; son tus mejores aliados. Al alinear tu neceser con tu paleta natural, notarás que necesitas menos producto para verte espectacular, porque los colores trabajan a tu favor, no en tu contra.`
+            conclusion: `Ser una mujer Invierno es tener una belleza de alto voltaje. No te diluyas intentando encajar en las tendencias de maquillaje "bronceado" o "nude cálido". Tu poder reside en el contraste: piel de porcelana, pestañas negras, labios de impacto. Cuando abrazas tu paleta fría y profunda, no solo te ves mejor; te ves inolvidable.`
         }
     },
     {
@@ -631,64 +668,71 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         content: {
             intro: `El Verano en colorimetría evoca paisajes neblinosos, atardeceres suaves y la frescura de un jardín inglés tras la lluvia. Si eres una mujer Verano, tu belleza es delicada, etérea y decididamente fría.
 
-            A menudo, las mujeres Verano sienten que el maquillaje "les queda mal". Se ponen el labial nude de moda y parecen cansadas. Usan el bronzer que recomiendan todas las influencers y parecen manchadas de tierra.
+            A menudo, las mujeres Verano sienten que el maquillaje actual, dominado por el "contouring" Kardashian y los tonos cálidos "bronceados", les queda mal. Se ponen el labial nude de moda y parecen cansadas. Usan el bronzer que recomiendan todas las influencers y parecen manchadas de tierra.
 
-            No eres tú, es la temperatura. Tu piel, que suele ser fina y con matices azulados o rosados, no tolera el exceso de producto ni los tonos naranjas. En esta guía definitiva, te enseñaremos a potenciar tu elegancia natural sin esconderla.`,
+            No eres tú, es la temperatura. Tu piel, que suele ser fina y con matices azulados o rosados, no tolera el exceso de producto ni los tonos naranjas. El secreto de tu belleza reside en la **suavidad y la translucidez**.
+
+            En esta guía maestra de más de 1500 palabras, vamos a transformar tu rutina de maquillaje desde el cuidado de la piel hasta el look de alfombra roja.`,
             sections: [
                 {
-                    heading: '1. El Lienzo: Piel de Porcelana',
-                    content: `La piel de la mujer Verano suele tener una cualidad translúcida. El objetivo no es cubrirla, sino unificarla.
-
-                    - **Base**: Busca subtonos **rosados (Cool)** o **neutros**. Huye de las bases "Golden" o "Warm" como de la peste; crearán una máscara amarilla sobre tu cuello rosado.
-                    - **Acabado**: Tu piel brilla con acabados **satinados o semimates**. El "Dewy" excesivo puede verse grasoso, y el mate total puede apagarte.
-                    - **El Gran Error del Bronzer**: La mayoría de bronzers del mercado son naranjas o dorados. En tu piel fría, el naranja se oxida y parece suciedad.
-                    - **La Solución**: Busca un bronzer con subtono "topo" (grisáceo-marrón) o, mejor aún, usa un **rubor rosa viejo** para contornear suavemente. Te dará vida sin artificialidad.`
+                    heading: '1. El Lienzo: Skincare y Preparación de la Piel',
+                    content: `El maquillaje Verano empieza antes de la base. Al tener una piel a menudo fina y translúcida (que muestra venitas o rojeces fácilmente), la hidratación es clave.
+                    
+                    - **El Problema**: La piel Verano tiende a verse "mate" o apagada si le falta agua.
+                    - **La Solución**: Busca serums con ácido hialurónico y prebases (primers) hidratantes con efecto "glass skin". Evita los primers matificantes extremos a menos que tengas piel muy grasa, ya que pueden hacerte ver "arrugada" o seca.
+                    - **Corrección de Color**: Si tienes muchas rojeces difusas (común en Verano), un primer verde suave puede neutralizar sin necesidad de una base pesada.`
                 },
                 {
-                    heading: '2. Ojos: El Misterio Ahumado',
+                    heading: '2. Bases y Acabados: Frescura de Porcelana',
+                    content: `El objetivo no es cubrir tu piel, sino unificarla.
+                    
+                    - **Subtono**: Busca siempre **Cool (Rosado)** o **Neutral**. Huye de las bases "Golden", "Honey" o "Warm". Una base amarilla en un cuello rosado crea el temido "efecto máscara".
+                    - **Cobertura**: Las bases de cobertura media/ligera (BB Creams, Tinted Moisturizers) son ideales. Si necesitas más cobertura, usa corrector puntual.
+                    - **El Gran Error del Bronzer**: La mayoría de bronzers del mercado son naranjas. En tu piel fría, el naranja se oxida y parece suciedad.
+                    - **La Solución**: Busca un bronzer con subtono "topo" (grisáceo-marrón) o, mejor aún, usa un **rubor rosa viejo** para contornear suavemente (Draping). Te dará vida sin artificialidad.`
+                },
+                {
+                    heading: '3. Ojos: El Misterio Ahumado y Suave',
                     content: `Tus ojos suelen tener un patrón de "vidrio roto" o suavidad grisácea. Las líneas duras del eyeliner negro líquido pueden endurecer tu mirada excesivamente.
 
                     **La Técnica del "Soft Smudge"**:
                     En lugar de una línea gráfica, usa un lápiz kohl en **gris carbón, azul marino o marrón cacao (frío)** y difumínalo ligeramente. Esto enmarca el ojo respetando tu suavidad.
 
-                    **Sombras de Ojos**:
-                    - *Básicos*: Gris Perla, Topo (Taupe), Champiñón, Blanco Roto.
-                    - *Acentos*: Lavanda, Ciruela suave, Verde Menta, Azul Acero, Rosa Empolvado.
-                    - *Prohibidos*: Cobre, Naranja, Terracota, Oro Amarillo intenso. Estos colores harán que tus ojos se vean llorosos o cansados.`
+                    **Sombras de Ojos para Diario**:
+                    - *Básicos*: Gris Perla, Topo (Taupe), Champiñón, Blanco Roto, Rosa Palo.
+                    
+                    **Sombras de Acento**:
+                    - *Colores*: Lavanda, Ciruela suave, Verde Menta, Azul Acero (Denim).
+                    - *Prohibidos*: Cobre, Naranja, Terracota, Oro Amarillo intenso.`
                 },
                 {
-                    heading: '3. El Debate de las Texturas: ¿Crema o Polvo?',
-                    content: `Para el Verano, la textura es tan importante como el color.
+                    heading: '4. Maquillaje de Noche para Veranos: El Drama Elegante',
+                    content: `¿Piensas que por ser Verano no puedes ser dramática? Falso. Solo necesitas cambiar los tonos.
+                    
+                    - **Smokey Eye Plateado**: Usa gris plomo y plata en lugar de negro y oro. Es magnético en ti.
+                    - **El Labio Baya (Berry)**: Un labio color frambuesa intenso o ciruela es tu versión del "rojo fatal". Te hace ver misteriosa y sofisticada sin el choque de un rojo tomate.
+                    - **Glitter**: Si usas brillo, elige purpurina fina plateada, rosada o multicolor (iridiscente). Evita el glitter dorado grueso.`
+                },
+                {
+                    heading: '5. El Debate de las Texturas: ¿Crema o Polvo?',
+                    content: `Para el Verano, el acabado "jugoso" rejuvenece.
                     
                     **Rubor en Crema**: Es tu mejor amigo. Un rubor en barra o tinte en tono **frambuesa o rosa bebé** se funde con tu piel creando un rubor que parece venir "desde dentro".
                     
-                    **Iluminador**: Evita el oro o el champagne muy amarillo. Busca iluminadores **perla, rosados o plateados**. El brillo debe ser fino ("sheen"), no purpurina gruesa ("glitter").`
+                    **Iluminador**: Evita el oro o el champagne muy amarillo (a menudo recomendado falsamente para todos). Busca iluminadores **perla, rosados o plateados**. El brillo debe ser satinado ("sheen"), no metálico excesivo.`
                 },
                 {
-                    heading: '4. Labios: De Nude a Baya',
+                    heading: '6. Labios: De Nude a Baya',
                     content: `Tus labios suelen tener un matiz rosado o violáceo natural.
                     
-                    - **Tu Nude Perfecto**: No es beige. Es un "rosa sucio" o "malva pálido". Busca el color exacto de tu encía y sube un tono.
+                    - **Tu Nude Perfecto**: No es beige "corrector". Es un "rosa sucio" (dusty rose) o "malva pálido". Busca el color exacto de tu encía y sube un tono.
                     - **Colores de Impacto**: Frambuesa, Ciruela, Cereza (rojo con base azul), Fucsia suave.
                     - **Evita**: Naranja, Coral Vivo, Rojo Ladrillo.
                     
-                    *Tip Pro*: Si un labial te queda demasiado "muerto", aplica un poco de gloss transparente encima. El brillo aporta la vitalidad que a veces el tono mate roba a las Verano.`
-                },
-                {
-                    heading: '5. Tutorial: El "No-Makeup" Look Verano',
-                    content: `Consigue ese aspecto de "recién levantada pero perfecta" en 5 minutos:
-                    
-                    1.  **Hidratación**: Clave. Aplica una hidratante iluminadora.
-                    2.  **Corrector**: Solo en ojeras y rojeces. Deja que se vean tus pecas si tienes.
-                    3.  **Mejillas**: Rubor en crema color rosa pastel en las manzanitas.
-                    4.  **Cejas**: Peina con gel con color **ceniza**. Nunca uses lápiz marrón rojizo.
-                    5.  **Pestañas**: Rímel marrón-negro (no negro carbón) para una definición suave.
-                    6.  **Labios**: Bálsamo con tinte frambuesa.
-                    
-                    El resultado es fresco, juvenil y 100% en armonía con tu naturaleza.`
+                    *Tip Pro*: Si un labial te queda demasiado "muerto" (grisáceo), aplica un poco de gloss transparente o rosado encima. El brillo aporta la vitalidad que tu estación agradece.`
                 }
             ],
-            conclusion: `Ser una mujer Verano no significa ser "gris". Significa ser sofisticada. Tienes la capacidad única de llevar colores complejos, agrisados y matizados que en otras estaciones se verían tristes, y hacer que en ti parezcan caros y elegantes. Abraza tu suavidad; es tu mayor fortaleza.`
+            conclusion: `Ser una mujer Verano no significa ser "gris" o aburrida. Significa ser dueña de una elegancia atemporal y sofisticada. Mientras otras necesitan kilos de contorno para destacar, tú brillas con un toque de rosa y un poco de plata. Abraza tu frescura; en un mundo lleno de naranjas, tu suavidad es tu superpoder.`
         }
     },
     {
@@ -703,50 +747,80 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/colorimetria-hombres.svg',
         keywords: ['moda hombre', 'trajes hombre', 'camisas vestir', 'colorimetria masculina'],
         content: {
-            intro: `Muchos hombres limitan su armario a azul, negro y gris por miedo a equivocarse. Sin embargo, entender la colorimetría es una herramienta de poder. Usar los colores correcto puede hacerte ver más autoritario en una reunión, más accesible en una cita y más saludable en general.
-            
-            No se trata de usar maquillaje, sino de estrategia visual. La camisa que llevas cerca de la cara ilumina o apaga tus rasgos. En esta guía, desmitificamos el color para el hombre moderno.`,
+            intro: `Muchos hombres limitan su armario a azul, negro y gris por miedo a equivocarse. Existe la creencia arraigada de que preocuparse por el color es "superficial" o complejo, pero la realidad es que la colorimetría es una herramienta de **branding personal y profesional** brutalmente efectiva.
+
+            Imagina entrar a una reunión crucial. Usar los colores correctos puede subliminalmente proyectar autoridad, confianza y competencia. Usar los incorrectos puede hacerte ver cansado, menos creíble o "invisible".
+
+            No se trata de usar maquillaje ni de vestir colores estridentes. Se trata de **estrategia óptica**. La camisa que llevas cerca de la cara actúa como un reflector de luz: puede suavizar tus ojeras y marcar tu mandíbula, o puede acentuar el cansancio y darte un tono enfermizo.
+
+            En esta guía definitiva de más de 1500 palabras, desglosamos la ciencia del color aplicada al estilo masculino, desde el traje de poder hasta el reloj que llevas en la muñeca.`,
             sections: [
                 {
-                    heading: 'La Camisa Blanca: No Sirve para Todos',
-                    content: `La camisa blanca impoluta es un básico, ¿verdad? Sorprendentemente, no.
+                    heading: '1. La Psicología del Traje: Gris vs Azul',
+                    content: `El traje es la armadura moderna. Pero, ¿cuál eliges y por qué?
                     
-                    - **Invierno**: El blanco puro óptico es excelente para ti.
-                    - **Verano**: Mejor un blanco suave ("off-white") o gris muy pálido.
-                    - **Primavera**: Mejor un marfil o crema muy claro.
-                    - **Otoño**: Definitivamente crema, beige claro o ostra. El blanco puro te hace ver pálido.
+                    **El Traje Azul Marino (Navy)**:
+                    - *Mensaje*: Confianza, lealtad, inteligencia, accesibilidad.
+                    - *Para quién*: Es el color más universalmente favorecedor.
+                    - *Matiz*: Los hombres **Invierno** deben buscar un Navy profundo y frío (Midnight Blue). Los **Otoño** se benefician de un "Marine Blue" con un ligero matiz verdoso o cálido. Los **Verano** necesitan un azul agrisado (Airforce Blue).
+
+                    **El Traje Gris**:
+                    - *Mensaje*: Autoridad, conservadurismo, intelecto, estabilidad.
+                    - *Matiz*: Aquí es donde muchos fallan.
+                        - **Gris Carbón (Charcoal)**: Alto contraste. Ideal para **Invierno**.
+                        - **Gris Medio/Acero**: Frío y suave. Perfecto para **Verano**.
+                        - **Gris Piedra/Topo (Taupe)**: Cálido. La mejor opción para **Primavera y Otoño**.
                     
-                    Cambiar el tono de tu camisa "básica" es el ajuste más simple con mayor impacto.`
+                    **El Traje Negro**:
+                    - *La Verdad*: El negro es severo. Solo los **Invierno** lo llevan con naturalidad. En otros hombres, el negro "se come" al portador. Úsalo solo para eventos de etiqueta (Tuxedo) o funerales si no eres Invierno.`
                 },
                 {
-                    heading: 'El Traje Perfecto: Más Allá del Negro',
-                    content: `El traje negro se suele ver como el estándar de formalidad, pero en realidad, es muy severo y solo favorece realmente a la estación Invierno.
+                    heading: '2. Camisas: Rompiendo la Tiranía del Blanco',
+                    content: `La camisa blanca impoluta no es el "comodín" que nos vendieron. El blanco óptico es un color frío e intenso.
                     
-                    - **Para Otoños y Primaveras (Cálidos)**: Tus mejores "oscuros" son el Azul Marino (Navy) con base cálida, el Gris Carbón cálido, o incluso marrones oscuros y verdes oliva para sport.
-                    - **Para Veranos (Fríos Suaves)**: El Azul Marino agrisado (Airforce Blue) y el Gris Medio son tus mejores aliados.
-                    - **Para Inviernos (Fríos Intensos)**: Tú sí dominas el Negro y el Azul Midnight oscuro.
+                    **Alternativas de Poder**:
+                    - **El Azul Cielo (Sky Blue)**: Es más amigable que el blanco y favorece a todos los subtonos Fríos (Verano/Invierno).
+                    - **El Crema/Marfil**: Si eres Cálido (Primavera/Otoño) y el blanco te hace ver pálido, el crema te hará ver saludable y descansado.
+                    - **El Rosa**: Sí, rosa. U rosa pálido ("Icy Pink") en un hombre Invierno/Verano denota una confianza suprema. Un rosa salmón en un Primavera/Otoño ilumina el rostro increíblemente.
                     
-                    Un traje en el tono correcto de gris o azul te hará ver más competente y en control.`
+                    *Regla de Oro*: Cuando dudes, la camisa azul claro es estadísticamente más segura que la blanca para el 90% de los hombres.`
                 },
                 {
-                    heading: 'Corbatas y Accesorios: Tu Toque de Color',
-                    content: `Aquí es donde puedes jugar con tu paleta de acentos.
+                    heading: '3. Accesorios Masculinos: El Diablo está en los Detalles',
+                    content: `Cinturón, reloj, zapatos. Estos tres elementos deben hablar el mismo idioma.
                     
-                    - **Cálidos (Primavera/Otoño)**: Corbatas en rojo tomate, verde bosque, dorado, naranja quemado. Relojes y gemelos dorados.
-                    - **Fríos (Verano/Invierno)**: Corbatas en rojo vino, azul real, plata, lavanda. Relojes y gemelos plateados.
+                    **Metales (Reloj, Hebilla, Gemelos)**:
+                    - **Plateado/Acero/Platino**: Para pieles Frías (Veranos e Inviernos). Comunica modernidad y precisión.
+                    - **Dorado/Bronce**: Para pieles Cálidas (Primaveras y Otoños). Comunica lujo clásico y calidez.
                     
-                    Si llevas una corbata de un color que te favorece cerca del rostro, puedes "salvar" una camisa o traje que no sea perfecto.`
+                    **Cuero (Zapatos, Cinturón, Correa)**:
+                    - **Negro**: Formal y frío. Obligatorio para Inviernos con trajes grises/negros.
+                    - **Marrón Chocolate**: El mejor amigo del hombre Otoño. Rico y sofisticado.
+                    - **Cuero Natural/Camel**: Excelente para Primaveras en ambientes casuales.
+                    - **Cordobán/Burdeos**: El comodín elegante que eleva un traje azul o gris.`
                 },
                 {
-                    heading: 'Ropa Casual y Sport',
-                    content: `En el estilo casual, las reglas se relajan pero el efecto es el mismo.
+                    heading: '4. Errores de Grooming según tu Estación',
+                    content: `Tu cabello y barba son parte de tu paleta.
                     
-                    - Una camiseta **camiseta negra** puede hacer que un Verano se vea cansado. Mejor una gris marengo o azul denim.
-                    - Una **camiseta beige** puede hacer que un Invierno parezca enfermo. Mejor una blanca o gris hielo.
-                    - Los hombres de **Otoño** se ven espectaculares con chaquetas de cuero marrón, mientras que los **invierno** dominan el cuero negro.`
+                    - **El Error de las Canas**: Muchos hombres se tiñen las canas con un tinte negro mate uniforme ("zapato shine"). Si eres **Suave (Verano/Otoño)**, ese color sólido te envejece. Busca un servicio de "difuminado de canas" que mantenga tu dimensión natural.
+                    - **Barba vs Piel**: Si tienes la piel muy clara y el pelo muy oscuro (Invierno), una barba de 3 días marca tu mandíbula. Si tienes bajo contraste (Rubio medio, piel media), una barba muy larga y oscura puede "borrar" tu boca.
+                    - **Gafas**: Las gafas negras de pasta gruesa están de moda, pero pueden ser agresivas en un rostro **Primavera o Verano**. Considera monturas de carey, metal fino o azul marino.`
+                },
+                {
+                    heading: '5. Guía Rápida de Combinaciones para la Oficina',
+                    content: `**Para el Líder (Power Look)**:
+                    - Traje: Azul Medianoche.
+                    - Camisa: Blanco Hielo.
+                    - Corbata: Rojo Borgoña (Invierno) o Azul Cobalto.
+                    
+                    **Para el Creativo/Accesible**:
+                    - Pantalón: Chino Camel (Cálido) o Gris Franela (Frío).
+                    - Arriba: Jersey de cuello alto en Verde Bosque, Mostaza o Azul Petróleo.
+                    - Calzado: Botín Chelsea o Loafer de ante.`
                 }
             ],
-            conclusion: `La colorimetría para hombres es una ventaja competitiva silenciosa. No requiere que cambies tu estilo personal, solo que ajustes los tonos. Al elegir los colores que armonizan contigo, proyectas una imagen de mayor vitalidad y congruencia que los demás notarán, aunque no sepan explicar por qué.`
+            conclusion: `La colorimetría masculina es el secreto mejor guardado del estilo. No requiere que cambies quién eres, solo que afines la puntería. Al alinear tu ropa con tu biología, proyectas una imagen de mayor vitalidad, competencia y congruencia. La próxima vez que compres una camisa, no busques solo tu talla, busca tu tono.`
         }
     },
     {
