@@ -629,46 +629,66 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/maquillaje-verano.svg',
         keywords: ['maquillaje verano', 'sombras malva', 'labial rosa', 'piel porcelana'],
         content: {
-            intro: `El Verano en colorimetría evoca paisajes neblinosos, atardeceres suaves y frescura. Si eres Verano, tu belleza es delicada, suave y fría. Tienes un bajo o medio contraste que requiere colores que no compitan con tus rasgos, sino que los acompañen suavemente.
-            
-            Tu paleta es la de las flores tras la lluvia: rosas viejos, lavandas, grises azulados. El maquillaje excesivamente oscuro o cálido (naranjas) puede endurecer tus facciones incesariamente.`,
+            intro: `El Verano en colorimetría evoca paisajes neblinosos, atardeceres suaves y la frescura de un jardín inglés tras la lluvia. Si eres una mujer Verano, tu belleza es delicada, etérea y decididamente fría.
+
+            A menudo, las mujeres Verano sienten que el maquillaje "les queda mal". Se ponen el labial nude de moda y parecen cansadas. Usan el bronzer que recomiendan todas las influencers y parecen manchadas de tierra.
+
+            No eres tú, es la temperatura. Tu piel, que suele ser fina y con matices azulados o rosados, no tolera el exceso de producto ni los tonos naranjas. En esta guía definitiva, te enseñaremos a potenciar tu elegancia natural sin esconderla.`,
             sections: [
                 {
-                    heading: 'Piel: Frescura de Porcelana',
-                    content: `Tu piel tiene subtonos fríos (rosados) y a menudo es fina o delicada.
-                    
-                    **Base**: Busca subtonos **rosados (cool) o neutros**. Evita las bases amarillas o doradas que parecerán una máscara sobre tu piel.
-                    
-                    **Acabado**: El acabado mate suave o natural es ideal. Cuidado con el exceso de bronzer dorado; si quieres calidez, busca un bronzer con subtono rosado-marrón (tipo "rosewood") o simplemente usa rubor.`
+                    heading: '1. El Lienzo: Piel de Porcelana',
+                    content: `La piel de la mujer Verano suele tener una cualidad translúcida. El objetivo no es cubrirla, sino unificarla.
+
+                    - **Base**: Busca subtonos **rosados (Cool)** o **neutros**. Huye de las bases "Golden" o "Warm" como de la peste; crearán una máscara amarilla sobre tu cuello rosado.
+                    - **Acabado**: Tu piel brilla con acabados **satinados o semimates**. El "Dewy" excesivo puede verse grasoso, y el mate total puede apagarte.
+                    - **El Gran Error del Bronzer**: La mayoría de bronzers del mercado son naranjas o dorados. En tu piel fría, el naranja se oxida y parece suciedad.
+                    - **La Solución**: Busca un bronzer con subtono "topo" (grisáceo-marrón) o, mejor aún, usa un **rubor rosa viejo** para contornear suavemente. Te dará vida sin artificialidad.`
                 },
                 {
-                    heading: 'Ojos: Misterio Suave',
-                    content: `Tus ojos suelen tener matices grises o fríos. El maquillaje de ojos debe ser difuminado y suave; las líneas duras no te favorecen tanto.
-                    
-                    **Delineador**: Gris carbón (charcoal), azul marino, marrón cacao (frío). El negro líquido intenso puede ser muy duro; opta por lápiz difuminado.
-                    
-                    **Sombras**:
-                    - **Neutros**: Gris perla, topo (taupe), blanco suave, marrón rosado.
-                    - **Acentos**: Lavanda, rosa palo, azul cielo, verde menta, ciruela suave.
-                    - **Evita**: Cobre, naranja, marrón dorado, negro intenso.
-                    
-                    El rímel gris oscuro o marrón-negro a menudo se ve más natural y sofisticado en ti que el negro carbón.`
+                    heading: '2. Ojos: El Misterio Ahumado',
+                    content: `Tus ojos suelen tener un patrón de "vidrio roto" o suavidad grisácea. Las líneas duras del eyeliner negro líquido pueden endurecer tu mirada excesivamente.
+
+                    **La Técnica del "Soft Smudge"**:
+                    En lugar de una línea gráfica, usa un lápiz kohl en **gris carbón, azul marino o marrón cacao (frío)** y difumínalo ligeramente. Esto enmarca el ojo respetando tu suavidad.
+
+                    **Sombras de Ojos**:
+                    - *Básicos*: Gris Perla, Topo (Taupe), Champiñón, Blanco Roto.
+                    - *Acentos*: Lavanda, Ciruela suave, Verde Menta, Azul Acero, Rosa Empolvado.
+                    - *Prohibidos*: Cobre, Naranja, Terracota, Oro Amarillo intenso. Estos colores harán que tus ojos se vean llorosos o cansados.`
                 },
                 {
-                    heading: 'Labios y Mejillas: Rosas Románticos',
-                    content: `Eres la reina de los rosas.
+                    heading: '3. El Debate de las Texturas: ¿Crema o Polvo?',
+                    content: `Para el Verano, la textura es tan importante como el color.
                     
-                    **Rubor**: Rosa bebé, rosa viejo, malva. Te da un aspecto saludable y fresco instantáneo.
+                    **Rubor en Crema**: Es tu mejor amigo. Un rubor en barra o tinte en tono **frambuesa o rosa bebé** se funde con tu piel creando un rubor que parece venir "desde dentro".
                     
-                    **Labios**:
-                    - **Nude**: Rosa nude ("my lips but better").
-                    - **Color**: Frambuesa, ciruela suave, fucsia suave.
-                    - **Evita**: Naranjas, corales cálidos, marrones tierra.
+                    **Iluminador**: Evita el oro o el champagne muy amarillo. Busca iluminadores **perla, rosados o plateados**. El brillo debe ser fino ("sheen"), no purpurina gruesa ("glitter").`
+                },
+                {
+                    heading: '4. Labios: De Nude a Baya',
+                    content: `Tus labios suelen tener un matiz rosado o violáceo natural.
                     
-                    Los acabados cremosos o ligeramente gloss favorecen tu frescura natural.`
+                    - **Tu Nude Perfecto**: No es beige. Es un "rosa sucio" o "malva pálido". Busca el color exacto de tu encía y sube un tono.
+                    - **Colores de Impacto**: Frambuesa, Ciruela, Cereza (rojo con base azul), Fucsia suave.
+                    - **Evita**: Naranja, Coral Vivo, Rojo Ladrillo.
+                    
+                    *Tip Pro*: Si un labial te queda demasiado "muerto", aplica un poco de gloss transparente encima. El brillo aporta la vitalidad que a veces el tono mate roba a las Verano.`
+                },
+                {
+                    heading: '5. Tutorial: El "No-Makeup" Look Verano',
+                    content: `Consigue ese aspecto de "recién levantada pero perfecta" en 5 minutos:
+                    
+                    1.  **Hidratación**: Clave. Aplica una hidratante iluminadora.
+                    2.  **Corrector**: Solo en ojeras y rojeces. Deja que se vean tus pecas si tienes.
+                    3.  **Mejillas**: Rubor en crema color rosa pastel en las manzanitas.
+                    4.  **Cejas**: Peina con gel con color **ceniza**. Nunca uses lápiz marrón rojizo.
+                    5.  **Pestañas**: Rímel marrón-negro (no negro carbón) para una definición suave.
+                    6.  **Labios**: Bálsamo con tinte frambuesa.
+                    
+                    El resultado es fresco, juvenil y 100% en armonía con tu naturaleza.`
                 }
             ],
-            conclusion: `La elegancia del Verano reside en la sutileza. Tu maquillaje no necesita gritar para hacerse notar; su poder está en la armonía suave y los tonos empolvados que te hacen ver etérea y sofisticada. Menos es más, y la suavidad es tu mayor fortaleza.`
+            conclusion: `Ser una mujer Verano no significa ser "gris". Significa ser sofisticada. Tienes la capacidad única de llevar colores complejos, agrisados y matizados que en otras estaciones se verían tristes, y hacer que en ti parezcan caros y elegantes. Abraza tu suavidad; es tu mayor fortaleza.`
         }
     },
     {
@@ -893,38 +913,60 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/cabello-tinte.jpg',
         keywords: ['tinte cabello colorimetria', 'rubio ceniza o dorado', 'pelirrojo piel calida', 'cambio look'],
         content: {
-            intro: `El cabello enmarca tu rostro; cambiar su color es una de las formas más potentes de alterar tu apariencia. Un color acertado puede quitarte 5 años de encima, mientras que uno incorrecto puede obligarte a usar más maquillaje para compensar.
-            
-            Antes de pedirle a tu estilista ese "rubio de Instagram", averigua si pertenece a tu familia de colores.`,
+            intro: `El cabello enmarca tu rostro; cambiar su color es una de las formas más potentes de alterar tu apariencia. Un color acertado puede quitarte 5 años de encima, iluminar tu piel y hacer que tus ojos brillen. Un color incorrecto puede obligarte a usar el doble de corrector y hacerte parecer "gris" o cansada.
+
+            El error número uno es enamorarse de una foto de Pinterest sin considerar la **temperatura de tu piel**. Ese rubio platino que se ve celestial en una modelo Invierno puede verse barato y artificial en una piel cálida de Otoño.
+
+            En esta guía maestra, no solo te decimos qué color elegir, sino cómo mantenerlo y cómo adaptar el resto de tu "marco" (hola, cejas) a tu nuevo look.`,
             sections: [
                 {
-                    heading: 'Rubios: ¿Ceniza o Dorado?',
-                    content: `El eterno dilema.
-                    - **Primaveras y Otoños**: Necesitan rubios **dorados**, miel, caramelo o fresa. La calidez del cabello debe conectar con la piel. Un rubio ceniza te hará ver gris y apagada.
-                    - **Veranos e Inviernos**: Necesitan rubios **ceniza**, platino, perla o beige frío. Evita los tonos dorados o anaranjados ("brassy") que chocan con tu piel rosada.`
+                    heading: '1. Rubios: La Batalla del Ceniza vs Dorado',
+                    content: `El rubio no es un color, es una familia entera.
+                    
+                    **Rubios Fríos (Ceniza, Platino, Perla, Beige Helado)**:
+                    - *Para quién*: **Veranos e Inviernos**.
+                    - *Por qué*: Si tienes piel rosada, el amarillo del rubio dorado lucha contra ella. El ceniza neutraliza la rojez y te da un aire etéreo.
+                    
+                    **Rubios Cálidos (Dorado, Miel, Caramelo, Fresa)**:
+                    - *Para quién*: **Primaveras y Otoños**.
+                    - *Por qué*: Tu piel tiene matices dorados. Un rubio ceniza te hará ver gris y apagada ("como un ratón"). El dorado potencia tu "glow" natural.`
                 },
                 {
-                    heading: 'El Rojo: ¿Para quién es?',
-                    content: `Casi cualquiera puede ser pelirroja, pero el tono importa:
-                    - **Cálidos (Primavera/Otoño)**: Cobre, Tiziano, Rojo anaranjado, Castaño rojizo. Se ve natural y vibrante.
-                    - **Fríos (Verano/Invierno)**: Borgoña, Rojo cereza, Violín, Rojo frío. Evita el cobre anaranjado.`
+                    heading: '2. Rojizos: Cobre vs Borgoña',
+                    content: `Casi todo el mundo puede ser pelirrojo con el tono adecuado.
+
+                    - **El Rojo "Zanahoria"/Cobre (Cálido)**: Es vibrante y naranja. Perfecto para **Primaveras** y **Otoños**. Imagina a Julianne Moore o Nicole Kidman.
+                    - **El Rojo "Vino"/Cereza (Frío)**: Tiene base azul o violeta. Perfecto para **Inviernos** y algunos **Veranos** atrevidos. Es un rojo dramático que crea alto contraste.`
                 },
                 {
-                    heading: 'Morenos y Castaños',
-                    content: `La profundidad y el reflejo son claves.
-                    - **Invierno**: Negro azabache o castaño muy oscuro frío. Sin reflejos rojos/dorados.
-                    - **Otoño**: Castaño chocolate rico, con reflejos caoba o cobre.
-                    - **Verano**: Castaño medio ceniza ("mousy brown" en el buen sentido), sin calidez.
-                    - **Primavera**: Castaño claro dorado o caramelo.`
+                    heading: '3. Las Cejas: El Marco Invisible',
+                    content: `Aquí es donde fallan el 90% de los cambios de look radicales. Si te tiñes el pelo pero dejas las cejas de tu color original (si este choca), el efecto será artificial.
+
+                    - **Regla de Oro**: Tus cejas deben tener la misma **temperatura** que tu cabello, aunque sean más oscuras.
+                    - **Ejemplo**: Si pasas de morena a rubio dorado (Cálido), tus cejas negras (Frías) se verán extrañas. Tíñelas o maquíllalas con un gel marrón cálido.
+                    - **Invierno**: Tus cejas deben ser frías (negro, gris oscuro). Nunca uses lápiz marrón rojizo.
+                    - **Otoño**: Tus cejas necesitan calidez. Un castaño con subtono cobrizo unifica el look.`
                 },
                 {
-                    heading: 'Disimular Canas',
-                    content: `Las canas son naturalmente frías (blanco/gris).
-                    - **Inviernos y Veranos**: A menudo lucen espectaculares dejando sus canas naturales o matizándolas a plata.
-                    - **Otoños y Primaveras**: Las canas pueden "enfriar" demasiado su rostro. Suelen verse mejor manteniendo algo de calidez en la base o usando reflejos dorados para integrar las canas.`
+                    heading: '4. Mantenimiento 101: Champú Azul vs Morado',
+                    content: `Mantener el tono es tan importante como lograrlo.
+                    
+                    - **Champú Morado (Violeta)**: El violeta es el opuesto al amarillo. Úsalo si tu **rubio se está poniendo "pollo"** (amarillento). Esencial para platinos y cenizas.
+                    - **Champú Azul**: El azul es el opuesto al naranja. Úsalo si tu **castaño se está oxidando** (anaranjado/cobrizo) y no quieres que lo haga.
+                    
+                    *Nota*: Si eres Otoño y TIEES un balayage caramelo, ¡no uses champú azul! Matarás la calidez bonita de tu mecha y la dejarás grisácea.`
+                },
+                {
+                    heading: '5. Transición a las Canas (Silver Sisters)',
+                    content: `Dejar las canas es un movimiento de poder. ¿A quién le queda mejor?
+                    
+                    - **Inviernos y Veranos**: Tienen ventaja genética. Sus canas suelen ser plateadas o blanco puro, que armonizan perfectamente con su piel fría.
+                    - **Otoños y Primaveras**: Sus canas a veces se ven amarillentas o simplemente "enfrían" demasiado su rostro cálido.
+                    
+                    *Estrategia para Cálidas*: Si quieres dejarte las canas siendo cálida, considera mantener unos reflejos dorados ("lowlights") alrededor del rostro para no perder esa calidez que te favorece, o asegúrate de usar maquillaje en tonos melocotón/coral para compensar.`
                 }
             ],
-            conclusion: `Tu cabello es tu accesorio permanente. Respetar tu temperatura natural al teñirte garantiza que el color se vea lujoso y saludable, en lugar de artificial. Si tienes dudas, la naturaleza es sabia: tu color de infancia o tu color natural suele ser la mejor guía de tu paleta ideal.`
+            conclusion: `Tu cabello es tu accesorio permanente; lo llevas puesto 24/7. Respetar tu temperatura natural al teñirte garantiza que el color se vea lujoso, caro y saludable, en lugar de artificial. Si tienes dudas, la naturaleza es sabia: tu color de infancia o tu color natural suele ser la mejor guía de tu paleta ideal.`
         }
     },
     {
@@ -986,7 +1028,19 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
                     - *Mensaje*: "Respeto la tradición pero tengo estilo propio y ojo para el detalle".`
                 },
                 {
-                    heading: '5. El Detalle que Marca la Diferencia',
+                    heading: '5. Psicología del Calzado: Poder desde la Base',
+                    content: `Tus zapatos dicen más de ti de lo que crees. Son la base literal y figurada de tu postura.
+
+                    - **El Stiletto/Tacón Clásico**: Comunica autoridad tradicional y elevación. En tonos **nude de tu piel**, alarga la pierna infinitamente. En **rojo o colores vibrantes**, es una declaración de confianza absoluta ("mírame").
+                    - **El Mocasín (Loafer)**: Comunica pragmatismo inteligente. Es el calzado de quien prioriza la eficiencia sin perder estilo.
+                    - **Zapatillas Blancas (Pristinas)**: El nuevo código de poder en industrias creativas y tech. Dice "mi trabajo habla por mí". Pero ojo: deben estar impecables.
+
+                    **Regla de Coordinación**:
+                    - Si llevas **pantalón oscuro**, zapato oscuro (continuidad).
+                    - Si llevas **falda**, zapato nude (alarga) o del color de la parte superior (técnica "sándwich").`
+                },
+                {
+                    heading: '6. El Detalle que Marca la Diferencia',
                     content: `En ambientes muy conservadores donde el color está limitado, usa la textura y los accesorios:
                     - Una corbata de seda con textura en lugar de lisa.
                     - Un pañuelo de cuello con el estampado de tu estación.
@@ -1010,42 +1064,85 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/errores-vestir.jpg',
         keywords: ['errores estilo', 'ropa no favorece', 'consejos moda', 'compras inteligentes'],
         content: {
-            intro: `Todos tenemos esa prenda en el armario con la etiqueta puesta. Es preciosa, el color es increíble, pero cada vez que nos la ponemos, terminamos cambiándonos. "Simplemente no me veo bien", pensamos.
-            
-            La culpa no es tuya, ni de tu cuerpo. Es del color. Aquí están los 5 errores de colorimetría más comunes que sabotean tu estilo.`,
+            intro: `Todos tenemos esa prenda en el armario con la etiqueta puesta. Es preciosa, el color es increíble, pero cada vez que nos la ponemos, terminamos cambiándonos. "Simplemente no me veo bien", pensamos. Y luego volvemos a comprar algo similar dos semanas después.
+
+            Este ciclo de "comprar y no usar" no es un problema de disciplina, es un problema de colorimetría. Tu ojo es atraído por colores que te gustan estéticamente, pero que pueden ser los enemigos mortales de tu piel.
+
+            Identificar estos 8 errores comunes no solo salvará tu estilo, sino también tu cuenta bancaria.`,
             sections: [
                 {
-                    heading: '1. El Negro por Defecto',
-                    content: `Nos han enseñado que "el negro pega con todo" y "adelgaza". La realidad: El negro es un color frío e intenso (Invierno). A las estaciones cálidas y suaves (Primavera, Otoño, Verano) puede hacerlas ver mayores, marcar líneas de expresión y crear sombras en la papada.
+                    heading: '1. El Mito del "Negro Universal"',
+                    content: `Nos han enseñado culturalmente que "el negro pega con todo", "es elegante" y "adelgaza".
                     
-                    *Solución*: Cambia el negro por TU oscuro ideal (Marrón chocolate, Navy, Carbón).`
+                    **La Realidad**: El negro es la ausencia de luz. Es un color frío, pesado y de alto contraste.
+                    - **Si eres Invierno**: Te ves espectacular.
+                    - **Si eres Verano, Primavera u Otoño**: El negro proyecta sombras oscuras en tus líneas de expresión, ojeras y bajo la barbilla (papada). Te hace parecer cansada o mayor.
+                    
+                    **Solución**: Cambia el negro por TU oscuro ideal.
+                    - Otoños → Marrón Chocolate o Verde Oliva Intenso.
+                    - Veranos → Gris Carbón o Azul Marino.
+                    - Primaveras → Azul Marino brillante o Marrón Dorado.`
                 },
                 {
-                    heading: '2. Ignorar el Contraste',
-                    content: `Una persona de bajo contraste (ej. rubia de piel clara) vestida de alto contraste (blanco y negro) desaparece; el vestido la lleva a ella. Una persona de alto contraste vestida de beige de pies a cabeza se ve borrosa.
-                    
-                    *Solución*: Replica tu contraste natural en tu ropa.`
+                    heading: '2. La Trampa de las Rebajas (The Sale Trap)',
+                    content: `Ves una blusa de seda al 70% de descuento. Es de un color "verde neón" que nunca usarías, pero... ¡es seda! ¡está barata!
+
+                    Comprar un color incorrecto solo porque es barato es la forma más rápida de tirar el dinero. Una prenda de 10€ que nunca te pones es más cara que una de 50€ que usas cada semana.
+
+                    **La Regla**: Si el color no te hace brillar sin maquillaje, no lo compres, ni aunque sea gratis.`
                 },
                 {
-                    heading: '3. Enamorarse del Color, no del Efecto',
-                    content: `Te encanta el amarillo mostaza. Es un color precioso. Pero si eres Verano, ese color te hará ver ictérica (amarillenta).
+                    heading: '3. Ignorar la Tela: No Todos los Colores Brillan Igual',
+                    content: `El tejido cambia cómo se percibe el color.
                     
-                    *Solución*: Ama los colores que te aman a ti. Úsalos en decoración o accesorios lejos de la cara, pero no en blusas.`
+                    - **Poliéster barato**: Tiende a hacer que los colores brillantes se vean estridentes y plásticos.
+                    - **Algodón/Lino**: Suaviza y matiza los colores. Un "naranja" en lino es mucho más llevable que en satén sintético.
+                    - **Terciopelo/Ante**: Profundiza el color. Ideal para Otoños e Inviernos que buscan riqueza visual.
+                    
+                    Si vas a usar un color que no es 100% perfecto para tu paleta, búscalo en un tejido natural y mate (lino, lana, algodón). El brillo sintético amplifica el error.`
                 },
                 {
-                    heading: '4. El "Nude" Equivocado',
-                    content: `El color nude o "carne" debe parecerse a TU piel o complementarla. Un nude beige amarillento en una piel rosada se ve sucio. Un nude rosado en piel dorada se ve gris.
+                    heading: '4. Enamorarse del Color, no del Efecto',
+                    content: `Te encanta el amarillo mostaza. Es tu color favorito en decoración. Pero si eres Verano (fría), ese color te hará ver enferma (piel ictérica).
                     
-                    *Solución*: Prueba el nude en tu brazo. Debe haber armonía, no lucha.`
+                    Hay una diferencia gigante entre "colores que me gustan ver" y "colores que me gusta cómo me quedan".
+                    
+                    **Solución**: Usa esos colores "amados pero prohibidos" en pantalones, faldas, zapatos o bolsos. Mantenlos lejos de tu rostro (la "Zona de Retrato").`
                 },
                 {
-                    heading: '5. Maquillaje de Temperatura Opuesta',
-                    content: `Llevar ropa de tu estación pero maquillaje de la opuesta (ej. blusa óxido con labial fucsia) crea un choque visual confuso.
+                    heading: '5. El "Nude" que te Desnuda (Mal)',
+                    content: `El color nude o "carne" es traicionero.
+                    - Un nude beige amarillento en una piel rosada se ve "sucio".
+                    - Un nude rosado en una piel dorada se ve "gris".
+                    - Un nude más claro que tu piel puede hacerte parecer "muerta" (efecto labios borrados).
                     
-                    *Solución*: Mantén la coherencia. Ojos, labios, mejillas y ropa superior deberían compartir la misma temperatura.`
+                    **Solución**: Tu nude ideal debe ser del mismo matiz que tu piel pero 1 o 2 tonos más oscuro (para crear contraste) o más rosado (para dar salud).`
+                },
+                {
+                    heading: '6. Ignorar tu Contraste Natural',
+                    content: `Esto es nivel avanzado, pero crucial.
+                    
+                    - **Bajo Contraste** (Piel clara, pelo claro, ojos claros): Si te vistes de Blanco y Negro (Alto contraste), la ropa te lleva a ti. Te ves "borrada". Necesitas combinaciones suaves (Gris y Rosa, Camel y Crema).
+                    - **Alto Contraste** (Piel clara, pelo negro): Si te vistes toda de beige (Bajo contraste), te ves borrosa y sin definición. Necesitas romper el color (Blanco y Negro, Rojo y Azul).`
+                },
+                {
+                    heading: '7. Maquillaje de Temperatura Opuesta',
+                    content: `Llevas un vestido color teja precioso (Otoño/Cálido) pero te pones un labial fucsia (Invierno/Frío).
+                    
+                    El cerebro humano percibe esta disonancia inmediatamente. Algo "no encaja".
+                    
+                    **Solución**: Armonía total. Tu ropa, tu rubor y tu labial deben cantar la misma canción (todos cálidos o todos fríos).`
+                },
+                {
+                    heading: '8. La Checklist de Compra Definitiva',
+                    content: `Antes de pasar por caja, hazte estas 3 preguntas. Si fallas una, déjalo:
+                    
+                    1.  **¿Me ilumina la cara?** (Ponte la prenda bajo la barbilla frente a un espejo con luz natural).
+                    2.  **¿Tengo al menos 3 cosas con qué combinarlo?** (Que ya estén en tu armario).
+                    3.  **¿Lo compraría si costara el doble?** (Elimina el factor "rebaja").`
                 }
             ],
-            conclusion: `La moda es para divertirse, pero conocer estas reglas te permite romperlas con intención, no por error. Al evitar estos fallos comunes, tu armario se vuelve mucho más eficiente y tú te sientes más segura.`
+            conclusion: `La moda es para divertirse y experimentar, pero conocer estas reglas te permite romperlas con intención, no por error. Al evitar estos fallos comunes, dejarás de tener un armario "lleno de nada" y empezarás a construir una colección que trabaja para ti.`
         }
     },
     {
