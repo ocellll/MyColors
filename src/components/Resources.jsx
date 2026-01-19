@@ -25,7 +25,7 @@ const Resources = () => {
             <SEOHead
                 title="Recursos de Colorimetría y Estilo | MyColors AI"
                 description="Selección curada de libros, herramientas y expertos en colorimetría para profundizar en tu análisis de color personal."
-                url="/recursos"
+                url="/resources"
             />
 
             <div className="min-h-screen pt-28 pb-16 bg-gray-50">
