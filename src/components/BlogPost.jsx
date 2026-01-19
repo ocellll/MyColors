@@ -5,6 +5,81 @@ import { PromoBannerSquare } from './PromoBanner'
 import SEOHead from './SEOHead'
 import AdSenseAd from './AdSenseAd'
 
+// Utility to format text with bold, lists, and colored keywords
+const RichText = ({ text }) => {
+    if (!text) return null;
+
+    // Split text into paragraphs
+    const paragraphs = text.split('\n\n');
+
+    return (
+        <div className="space-y-4">
+            {paragraphs.map((paragraph, pIndex) => {
+                // Check if it's a list
+                if (paragraph.trim().startsWith('-') || paragraph.trim().startsWith('•')) {
+                    const items = paragraph.split('\n').filter(line => line.trim());
+                    return (
+                        <ul key={pIndex} className="list-disc pl-6 space-y-2 my-4 bg-purple-50/50 p-4 rounded-xl border border-purple-100">
+                            {items.map((item, iIndex) => {
+                                const cleanItem = item.replace(/^[-•]\s*/, '');
+                                return <li key={iIndex}>{parseInlineStyles(cleanItem)}</li>;
+                            })}
+                        </ul>
+                    );
+                }
+
+                // Regular paragraph
+                return (
+                    <p key={pIndex} className="mb-4 text-gray-700 leading-relaxed text-lg">
+                        {parseInlineStyles(paragraph)}
+                    </p>
+                );
+            })}
+        </div>
+    );
+};
+
+const parseInlineStyles = (text) => {
+    // 1. Split by bold markers
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+
+    return parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+            // It's bold
+            const content = part.slice(2, -2);
+            return <strong key={index} className="font-extrabold text-gray-900">{parseKeywords(content)}</strong>;
+        } else {
+            // Regular text
+            return <span key={index}>{parseKeywords(part)}</span>;
+        }
+    });
+};
+
+const parseKeywords = (text) => {
+    // Regex to match keywords case-insensitive
+    const regex = /(Primavera|Verano|Otoño|Invierno|Cálido|Frío|Neutro)/gi;
+    const parts = text.split(regex);
+
+    return parts.map((part, index) => {
+        const lower = part.toLowerCase();
+        let className = "";
+
+        // Assign colors based on season/term
+        if (lower.includes('primavera')) className = "text-green-600 font-semibold";
+        else if (lower.includes('verano')) className = "text-blue-400 font-semibold";
+        else if (lower.includes('otoño')) className = "text-orange-600 font-semibold";
+        else if (lower.includes('invierno')) className = "text-indigo-700 font-semibold";
+        else if (lower.includes('cálido')) className = "text-amber-600";
+        else if (lower.includes('frío')) className = "text-blue-500";
+        else if (lower.includes('neutro')) className = "text-gray-500";
+
+        if (className) {
+            return <span key={index} className={`${className} bg-opacity-10 px-0.5 rounded`}>{part}</span>;
+        }
+        return part;
+    });
+};
+
 function BlogPost() {
     const { slug } = useParams()
     const post = blogArticles.find(p => p.slug === slug)
@@ -77,8 +152,8 @@ function BlogPost() {
 
                     <div className="prose prose-lg prose-purple mx-auto text-gray-700 leading-relaxed">
                         {/* Intro */}
-                        <div className="mb-8 whitespace-pre-line">
-                            {post.content.intro}
+                        <div className="mb-8">
+                            <RichText text={post.content.intro} />
                         </div>
 
                         {/* Sections */}
@@ -87,17 +162,15 @@ function BlogPost() {
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                                     {section.heading}
                                 </h2>
-                                <div className="whitespace-pre-line">
-                                    {section.content}
-                                </div>
+                                <RichText text={section.content} />
                             </div>
                         ))}
 
                         {/* Conclusion */}
                         <div className="mt-8 p-6 bg-purple-50 rounded-2xl border border-purple-100">
                             <h3 className="text-xl font-bold text-purple-900 mb-4">Conclusión</h3>
-                            <div className="whitespace-pre-line text-purple-800">
-                                {post.content.conclusion}
+                            <div className="text-purple-800">
+                                <RichText text={post.content.conclusion} />
                             </div>
                         </div>
                     </div>
