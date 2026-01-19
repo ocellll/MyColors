@@ -809,43 +809,76 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/neutrales-capsula.jpg',
         keywords: ['armario capsula', 'colores neutrales', 'basicos fondo armario', 'combinar ropa'],
         content: {
-            intro: `Un armario funcional no se construye solo con colores de acento vibrantes; necesita una base sólida. Aquí es donde entran los neutrales. Son los pacificadores de tu armario, las prendas que combinan con todo y permiten que tus colores favoritos brillen.
-            
-            Sin embargo, "neutral" no significa "universal". Un beige que hace brillar a una Otoño puede hacer parecer enferma a una Invierno. Elegir TUS neutrales correctos es el primer paso para un armario cápsula exitoso.`,
+            intro: `Un armario funcional no se construye solo con colores de acento vibrantes; necesita una base sólida. Aquí es donde entran los neutrales. Son los "pacificadores" de tu armario, las prendas que combinan con todo y permiten que tus colores favoritos brillen sin competir entre sí.
+
+            Sin embargo, existe un mito peligroso: "El beige es universal" o "El gris va con todo". Nada más lejos de la realidad. Un beige amarillento puede hacer parecer enferma a una mujer de estación Invierno, mientras que un gris acero puede apagar completamente la luminosidad de una Primavera.
+
+            Elegir **TUS** neutrales correctos es el primer paso (y el más rentable) para construir un armario cápsula que funcione de verdad. En esta guía, aprenderás a detectar la temperatura oculta de los básicos.`,
             sections: [
                 {
-                    heading: 'Definiendo tus Neutrales Base',
-                    content: `Cada estación tiene su set de neutrales "core":
+                    heading: '1. La Temperatura Oculta: No Todos los Grises son Iguales',
+                    content: `El secreto que nadie te cuenta es que los neutrales tienen matices (undertones).
                     
-                    **Inviernos**: Negro puro, Blanco puro, Navy (Azul Marino), Gris Carbón.
-                    - *Tu súper poder*: Eres la única estación que realmente se ve increíble en blanco y negro estricto.
+                    **El Gris**:
+                    - *Gris Frío*: Tiene base azulada o acero. Ideal para Verano e Invierno.
+                    - *Gris Cálido*: Tiene base amarilla o marrón (tipo "piedra" o "greige"). Ideal para Otoño y Primavera.
                     
-                    **Veranos**: Gris suave, Azul grisáceo, Navy suave, Blanco roto (Soft White), Taupe rosado.
-                    - *Evita*: Negro cerca de la cara (te endurece). El azul marino y el gris carbón son tus mejores alternativas oscuras.
-                    
-                    **Otoños**: Marrón chocolate, Camel, Beige cálido, Verde Oliva oscuro, Crema.
-                    - *Evita*: Negro y Gris frío. El marrón chocolate es tu "nuevo negro", mucho más rico y favorecedor.
-                    
-                    **Primaveras**: Camel claro, Beige dorado, Marfil, Marrón miel, Navy claro.
-                    - *Evita*: Negro y Blanco puro. El marfil y el camel mantienen tu luminosidad.`
+                    **El Beige/Marrón**:
+                    - *Beige Cálido*: Tira a amarillo o dorado (Camel, Arena). Perfecto para Primavera y Otoño.
+                    - *Beige Frío*: Tira a rosado (Taupe, Mushroom). Aceptable para Verano.
+                    - *Marrón*: El Chocolate rico es cálido (Otoño), mientras que el "Cacao" agrisado puede funcionar para Veranos profundos.`
                 },
                 {
-                    heading: 'La Regla 70/30 del Armario Cápsula',
-                    content: `Para un armario versátil, intenta que el 70% de tus prendas (especialmente pantalones, abrigos, zapatos y bolsos) sean de tus colores neutrales. El 30% restante (blusas, accesorios, vestidos) puede ser de tus colores de acento.
-                    
-                    Esto garantiza que casi cualquier prenda superior combine con cualquier prenda inferior, maximizando tus outfits con menos ropa.`
+                    heading: '2. Tus "Core Neutrals" por Estación',
+                    content: `Si tuvieras que comprar solo 5 prendas básicas (abrigo, pantalón de vestir, blazer, jersey, camiseta), ¿de qué color deberían ser?
+
+                    **INVIERNO (Frío + Intenso)**
+                    - **Tus Básicos**: Negro Puro, Blanco Óptico, Azul Marino Profundo (Midnight), Gris Carbón.
+                    - **Tu Superpoder**: Eres la única estación que brilla con el contraste Blanco/Negro estricto. Úsalo a tu favor.
+
+                    **VERANO (Frío + Suave)**
+                    - **Tus Básicos**: Gris Perla, Gris Azulado, Azul Marino Suave (no muy oscuro), Blanco Roto (Soft White), Marrón Rosado (Rosewood).
+                    - **Evita**: El negro cerca de la cara (te endurece las facciones) y los marrones dorados.
+
+                    **OTOÑO (Cálido + Profundo)**
+                    - **Tus Básicos**: Marrón Chocolate, Camel, Beige Cálido, Verde Oliva Oscuro, Crema/Marfil, Azul Marino Cálido (Marine Navy).
+                    - **Tu Superpoder**: El "Look Safari" o "Tierra" te hace ver sofisticada y cara. El negro te apaga; cámbialo por marrón café.
+
+                    **PRIMAVERA (Cálido + Claro)**
+                    - **Tus Básicos**: Camel Dorado, Beige Claro, Marfil, Marrón Miel, Azul Marino Claro.
+                    - **Evita**: El negro y el blanco puro. Te borran. El Marfil y el Camel mantienen tu "glow".`
                 },
                 {
-                    heading: 'Neutrales de Verano vs Invierno',
-                    content: `Es importante adaptar tus neutrales al clima:
+                    heading: '3. El Arte de la Textura: Cómo no Verse Aburrida',
+                    content: `Vestir de neutrales puede parecer "seguro" pero aburrido si no tienes cuidado. El truco de los estilistas es **mezclar texturas**.
+
+                    Si vas vestida toda de gris (look monocromático):
+                    - Combina un jersey de punto grueso (mate/suave) + una falda de satén (brillante/lisa) + botas de ante (rugoso).
+                    - El ojo humano encuentra fascinante el cambio de textura aunque el color sea el mismo.
                     
-                    - **Clima Frío**: Oscuros (Negro, Marrón, Navy, Carbón).
-                    - **Clima Cálido**: Claros (Blanco, Beige, Crema, Gris claro, Camel).
+                    Esto es especialmente crucial para los **Otoños** (que aman las texturas naturales como lana, cuero, pana) y los **Inviernos** (que brillan con contrastes de texturas lisas y estructuradas).`
+                },
+                {
+                    heading: '4. Ejemplo de Armario Cápsula Básico (5 Piezas)',
+                    content: `Imagina que vas de viaje de negocios 3 días. Aquí tienes tu maleta perfecta según tu estación:
+
+                    - **Invierno**: Pantalón Negro + Camisa Blanca + Blazer Negro + Top Azul Royal.
+                    - **Verano**: Pantalón Gris Carbón + Blusa Blanco Roto + Blazer Azul Grisáceo + Top Lavanda.
+                    - **Otoño**: Pantalón Marrón Chocolate + Camisa Crema + Blazer Camel + Top Verde Oliva.
+                    - **Primavera**: Pantalón Azul Marino + Blusa Marfil + Blazer Beige Dorado + Top Coral.`
+                },
+                {
+                    heading: '5. Calzado y Accesorios: La Continuidad',
+                    content: `Un error común es tener ropa cálida pero zapatos negros fríos. Rompe la línea visual y acorta las piernas.
+
+                    - Si tus pantalones son azules o negros → Zapatos negros o navy.
+                    - Si tus pantalones son marrones, beige o camel → Zapatos nude, marrones o cuero natural.
+                    - Si tus pantalones son grises → Zapatos grises, plateados o negros.
                     
-                    Manteniendo siempre la temperatura correcta (cálida o fría) incluso al cambiar la profundidad.`
+                    Mantener la coherencia en los "puntos finales" (pies y cabeza) alarga la silueta y eleva el look inmediatamente.`
                 }
             ],
-            conclusion: `No subestimes el poder de una camiseta básica o un pantalón en el tono neutral perfecto. Cuando tus básicos armonizan con tu piel, incluso el outfit más simple de "jeans y camiseta" se ve intencional y pulido.`
+            conclusion: `Los neutrales son los cimientos de tu casa. Si son sólidos y del tono correcto, todo lo que construyas encima (accesorios, colores de acento) se mantendrá firme y hermoso. No subestimes el poder de una simple camiseta básica; si es de TU neutral perfecto, te verás arreglada incluso en día de descanso.`
         }
     },
     {
@@ -906,38 +939,63 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/estilo-oficina.svg',
         keywords: ['ropa oficina mujer', 'ropa trabajo hombre', 'colores liderazgo', 'psicologia color trabajo'],
         content: {
-            intro: `En el entorno profesional, queremos ser tomados en serio. A menudo, esto nos lleva a un uniforme monótono de negros y grises. Pero el color puede ser una herramienta estratégica de comunicación no verbal.
-            
-            Puedes usar tu paleta personal para proyectar autoridad (alto contraste, colores oscuros) o accesibilidad (bajo contraste, colores claros) según lo requiera la ocasión.`,
+            intro: `En el entorno profesional moderno, la antigua regla de "traje gris o negro obligatorios" ha muerto. Sin embargo, esto ha dado paso a una nueva ansiedad: la parálisis por elección. Queremos ser tomados en serio, pero también queremos expresar nuestra personalidad y parecer accesibles.
+
+            El color es tu herramienta de **branding personal** más rápida. Antes de que entres a la sala de reuniones o enciendas tu cámara en Zoom, tu ropa ya está estableciendo la jerarquía y el tono de la conversación.
+
+            ¿Quieres pedir un aumento? ¿Vas a mentorizar a un junior? ¿Tienes una presentación creativa? Cada uno de estos escenarios requiere una estrategia de color diferente. En esta guía, vamos más allá de los básicos para construir tu armario de poder.`,
             sections: [
                 {
-                    heading: 'Colores de Autoridad (Power Colors)',
-                    content: `Para presentaciones importantes, negociaciones o entrevistas:
-                    - **Mensaje**: Competencia, seriedad, liderazgo.
-                    - **Colores**: Colores oscuros y profundos de tu paleta.
-                        - Invierno: Negro, Azul marino profundo, Rojo verdadero.
-                        - Otoño: Marrón chocolate, Verde bosque, Terracota oscuro.
-                        - Verano: Azul grisáceo oscuro, Carbón, Burdeos suave.
-                        - Primavera: Azul marino brillante, Camel intenso, Marrón dorado.`
+                    heading: '1. Los Códigos de Poder y Autoridad',
+                    content: `Cuando necesitas proyectar competencia, liderazgo y seriedad (por ejemplo, en negociaciones, presentaciones a directivos o entrevistas de alto nivel), la psicología del color sugiere usar **alto contraste** y **colores profundos**.
+
+                    - **Invierno**: Tu "Power Suit" es Negro, Azul Marino Profundo (Midnight Blue) o Carbón. Combínalo con blanco puro para máximo contraste.
+                    - **Otoño**: Tu autoridad se ve en Marrón Chocolate, Verde Bosque u Berenjena oscuro. Combina con crema o beige para un contraste rico pero no estridente.
+                    - **Verano**: El Gris Antracita y el Azul Airforce son tus aliados. Evita el negro que puede hacerte ver cansada.
+                    - **Primavera**: Un Azul Marino Brillante o un Camel Dorado Intenso comunica energía y competencia.`
                 },
                 {
-                    heading: 'Colores de Accesibilidad',
-                    content: `Para trabajo en equipo, feedback, primeros días, networking:
-                    - **Mensaje**: Apertura, amabilidad, colaboración.
-                    - **Colores**: Tonos medios y claros, pasteles o neutros suaves.
-                        - Beiges, Cremas, Azules claros, Rosas suaves, Verdes medios.
-                        - Evita el negro estricto cerca del rostro si quieres fomentar la comunicación abierta.`
+                    heading: '2. Los Códigos de Accesibilidad y Confianza',
+                    content: `Si eres líder de equipo, trabajas en RRHH, o vas a tener una reunión difícil donde necesitas generar empatía, los colores oscuros pueden crear una barrera visual. Aquí necesitas **bajo contraste** y **tonos medios**.
+
+                    - **La Magia del Azul Medio y el Verde**: Son los colores más tranquilizantes. Una camisa o blusa azul cielo (Verano) o turquesa (Primavera) dice "estoy aquí para colaborar".
+                    - **Los Neutros Suaves**: El Camel (Otoño/Primavera) y el Gris Perla o Topo (Verano) eliminan agresividad de la imagen.`
                 },
                 {
-                    heading: 'El Toque de Color (Accent)',
-                    content: `En ambientes conservadores, usa el color en pequeñas dosis:
-                    - Una blusa de seda en **verde esmeralda** (Invierno) o **verde musgo** (Otoño) bajo un traje neutro.
-                    - Un pañuelo o corbata en **coral** (Primavera) o **azul cielo** (Verano).
+                    heading: '3. El Reto del Teletrabajo: Colores para Zoom',
+                    content: `La cámara web es cruel con ciertos colores. Lo que funciona en persona puede vibrar (efecto moiré) o lavarte la cara en pantalla.
+
+                    **Reglas de Oro para Videollamadas**:
+                    - **Colores Sólidos**: Evita estampados pequeños (rayas finas, cuadros) que crean "ruido" visual en la cámara.
+                    - **Color Cerca de la Cara**: En Zoom, eres un busto parlante. El color de tu parte superior es el 100% de tu imagen.
+                    - **Evita el Blanco Puro**: Las cámaras suelen sobreexponer el blanco, haciendo que tu cara se vea oscura en contraste ("efecto fantasma"). Opta por azul, verde, lila o teja.
+                    - **Cuidado con el Negro**: Si tu fondo es oscuro o tu silla es negra, parecerás una cabeza flotante.`
+                },
+                {
+                    heading: '4. Fórmulas de Outfits para Cada Rol',
+                    content: `¿No sabes qué ponerte? Copia estas fórmulas adaptadas a tu estación:
+
+                    **El "Líder Creativo"** (Publicidad, Diseño, Tech):
+                    - *Base*: Pantalón chino o falda midi en neutro (Camel, Navy, Gris).
+                    - *Pieza Clave*: Blazer o Cardigan en color de acento vibrante (Mostaza, Coral, Violeta, Esmeralda).
+                    - *Mensaje*: "Soy profesional pero pienso fuera de la caja".
+
+                    **El "Ejecutivo Moderno"** (Finanzas, Legal, Corporativo):
+                    - *Base*: Traje completo en tu mejor neutro oscuro.
+                    - *Pieza Clave*: Camisa/Blusa en color pastel helado (Icy Blue, Icy Pink, Crema) en lugar de blanco básico.
+                    - *Mensaje*: "Respeto la tradición pero tengo estilo propio y ojo para el detalle".`
+                },
+                {
+                    heading: '5. El Detalle que Marca la Diferencia',
+                    content: `En ambientes muy conservadores donde el color está limitado, usa la textura y los accesorios:
+                    - Una corbata de seda con textura en lugar de lisa.
+                    - Un pañuelo de cuello con el estampado de tu estación.
+                    - Gafas con montura de color (burdeos, carey, azul) en lugar de las "invisibles".
                     
-                    Esto muestra personalidad y atención al detalle sin romper el código de vestimenta.`
+                    Pequeños toques de tu personalidad cromática te humanizan y te hacen memorable.`
                 }
             ],
-            conclusion: `Vestir para el trabajo no tiene por qué ser aburrido. Usar tu paleta personal te asegura verte siempre pulido y profesional, evitando esa apariencia "cansada" que dan los colores incorrectos bajo las luces fluorescentes de la oficina.`
+            conclusion: `Vestir para el trabajo no significa borrar quién eres. Al contrario, usar tu paleta personal en la oficina te da una ventaja competitiva: te ves más saludable, más enérgico y más coherente. Cuando no tienes que preocuparte por si tu ropa te queda bien, puedes concentrarte al 100% en tu trabajo. Eso es el verdadero empoderamiento.`
         }
     },
     {
@@ -1002,40 +1060,139 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         image: '/images/blog/psicologia-color.svg',
         keywords: ['psicologia del color', 'significado colores ropa', 'comunicacion no verbal', 'imagen personal'],
         content: {
-            intro: `Vestirnos es un acto de comunicación. Antes de que digas una palabra, tu ropa ya ha enviado mensajes sobre tu estado de ánimo, tu rol y tu personalidad. La psicología del color estudia estos efectos.
-            
-            Cuando combinas el mensaje psicológico del color con la armonía estética de tu paleta personal, el resultado es magnético.`,
+            intro: `¿Alguna vez te has preguntado por qué los camareros de los restaurantes de lujo visten de negro y camisa blanca? ¿O por qué las señales de "Oferta" son casi siempre rojas? No es coincidencia; es psicología.
+
+            Del mismo modo, la ropa que eliges cada mañana no es solo tela cubriendo tu cuerpo; es una herramienta de **comunicación no verbal** extremadamente potente. De hecho, estudios sugieren que en los primeros **7 segundos** de un encuentro, nuestro cerebro ya ha formado una impresión sólida sobre la otra persona, y adivina qué factor domina esa impresión: el color.
+
+            La **Psicología del Color** es el estudio de cómo los colores afectan nuestras emociones y comportamientos. Cuando aplicas esta ciencia a tu vestimenta diaria, y la combinas con tu paleta de colorimetría personal (tu estación), obtienes un superpoder: la capacidad de **influir en cómo te sienten los demás y, más importante aún, cómo te sientes tú mismo**.
+
+            En este artículo exhaustivo, vamos a desglosar qué comunica exactamente cada color, cómo usarlo estratégicamente y los matices que cambian todo el mensaje.`,
             sections: [
                 {
-                    heading: 'Rojo: Pasión y Poder',
-                    content: `El color más físico y visceral. Aumenta el pulso de quien lo mira.
-                    - **Mensaje**: Energía, amor, peligro, acción, liderazgo.
-                    - **Úsalo para**: Citas románticas, cuando necesitas energía extra, para ser el centro de atención.
-                    - **Tu versión**: Carmesí (Invierno), Tomate (Primavera), Ladrillo (Otoño), Sandía (Verano).`
+                    heading: 'Un Poco de Historia: De Goethe a Eva Heller',
+                    content: `La fascinación por el efecto del color no es nueva. **Johann Wolfgang von Goethe**, el famoso escritor alemán, desafió en 1810 la óptica de Newton proponiendo que el color era una experiencia subjetiva y emocional, no solo física.
+
+                    Más recientemente, la socióloga alemana **Eva Heller** realizó un estudio masivo (entrevistando a 2000 personas) para establecer las relaciones entre colores y sentimientos. Sus hallazgos confirmaron que las asociaciones de color no son aleatorias; son "experiencias universales" enraizadas en nuestro lenguaje y pensamiento.
+
+                    Por ejemplo, asociamos el **rojo** con el calor y la pasión no por capricho, sino porque es el color del fuego y la sangre, dos elementos fundamentales para la supervivencia humana. Estas conexiones primitivas siguen dictando cómo percibimos tu outfit hoy en la oficina.`
                 },
                 {
-                    heading: 'Azul: Confianza y Calma',
-                    content: `El color mental. El favorito universal.
-                    - **Mensaje**: Inteligencia, serenidad, lógica, eficiencia, confianza.
-                    - **Úsalo para**: Entrevistas de trabajo, resolver conflictos, días estresantes.
-                    - **Tu versión**: Royal (Invierno), Turquesa (Primavera), Petróleo (Otoño), Celeste (Verano).`
+                    heading: 'El ROJO: Poder, Pasión y Peligro',
+                    content: `El rojo es el color con más longitud de onda y el que nuestro ojo detecta más rápido. Físicamente, puede aumentar el ritmo cardíaco y la presión arterial de quien lo mira.
+
+                    **Mensaje Positivo**: Energía, pasión, amor, liderazgo, proactividad, coraje. Es el color de los líderes y los pioneros.
+                    **Mensaje Negativo**: Agresividad, peligro, conflicto, dominancia excesiva.
+                    
+                    **Cuándo Usarlo**:
+                    - En una cita romántica (el "efecto rojo" es real en la atracción).
+                    - Cuando tienes que dar una charla y necesitas captar atención inmediata.
+                    - Cuando te sientes cansado y necesitas un "café visual".
+
+                    **Según Tu Estación**:
+                    - **Invierno**: Rojo Sangre o Carmesí (frío y puro).
+                    - **Primavera**: Rojo Amapola o Tomate (vibrante y cálido).
+                    - **Otoño**: Rojo Ladrillo, Óxido o Teja (profundo y cálido).
+                    - **Verano**: Rojo Sandía o Frambuesa suave (frío y suave).`
                 },
                 {
-                    heading: 'Amarillo: Optimismo y Creatividad',
-                    content: `El color emocional. El más visible para el ojo humano.
-                    - **Mensaje**: Alegría, creatividad, amistad, esperanza.
-                    - **Úsalo para**: Eventos creativos, días tristes, celebraciones de día.
-                    - **Tu versión**: Limón (Invierno), Narciso (Primavera), Mostaza (Otoño), Vainilla (Verano).`
+                    heading: 'El AZUL: Confianza, Lógica y Calma',
+                    content: `Es el color favorito de la mayoría de la población mundial y el estándar corporativo por excelencia. ¿Por qué? Porque es el color del cielo y el mar, cosas que percibimos como constantes y eternas.
+
+                    **Mensaje Positivo**: Inteligencia, eficiencia, serenidad, confianza, lealtad, lógica.
+                    **Mensaje Negativo**: Frialdad, falta de emoción, conservadurismo, distanciamiento.
+
+                    **Cuándo Usarlo**:
+                    - Entrevistas de trabajo (es el color más seguro estadísticamente).
+                    - Para resolver conflictos o situaciones tensas.
+                    - Cuando quieres proyectar autoridad sin agresividad.
+
+                    **Según Tu Estación**:
+                    - **Invierno**: Azul Royal o Azul Eléctrico.
+                    - **Primavera**: Azul Turquesa brillante o Azul Klein claro.
+                    - **Otoño**: Azul Petróleo (Teal) o Marino cálido.
+                    - **Verano**: Azul Cielo, Azul Empolvado o Azul Acero.`
                 },
                 {
-                    heading: 'Verde: Equilibrio y Crecimiento',
-                    content: `El puente entre lo cálido y lo frío. Relaja el ojo.
-                    - **Mensaje**: Armonía, salud, naturaleza, dinero, restauración.
-                    - **Úsalo para**: Días largos, sanación, mostrar estabilidad.
-                    - **Tu versión**: Esmeralda (Invierno), Manzana (Primavera), Oliva (Otoño), Menta (Verano).`
+                    heading: 'El AMARILLO: Optimismo y Ansiedad',
+                    content: `El amarillo es el color más luminoso del espectro. Es el color del sol y, evolutivamente, nuestro cerebro lo asocia con la luz y la prosperidad. Sin embargo, es un color inestable; un poco de "suciedad" en el tono lo cambia drásticamente.
+
+                    **Mensaje Positivo**: Alegría, creatividad, amistad, optimismo, agilidad mental.
+                    **Mensaje Negativo**: Ansiedad, irracionalidad, fragilidad, celos (culturalmente).
+
+                    **Cuándo Usarlo**:
+                    - Actividades creativas o lluvias de ideas.
+                    - Eventos sociales diurnos alegres.
+                    - Cuando está nublado y quieres levantar tu propio ánimo.
+
+                    **Según Tu Estación**:
+                    - **Invierno**: Amarillo Limón o Ácido (frío y saturado).
+                    - **Primavera**: Amarillo Narciso o Botón de Oro (cálido y claro).
+                    - **Otoño**: Mostaza, Ocre o Ámbar (cálido y profundo).
+                    - **Verano**: Amarillo Vainilla o Pastel muy suave (frío y claro).`
+                },
+                {
+                    heading: 'El VERDE: Equilibrio y Crecimiento',
+                    content: `Al estar en el centro del espectro, el verde es el color que menos fatiga al ojo humano. Nos conecta con la naturaleza y la vida.
+
+                    **Mensaje Positivo**: Salud, frescura, equilibrio, esperanza, prosperidad, restauración.
+                    **Mensaje Negativo**: Aburrimiento, envidia ("verde de envidia"), inexperiencia ("estar verde").
+
+                    **Cuándo Usarlo**:
+                    - Cuando necesitas calmar a la gente o transmitir estabilidad.
+                    - En profesiones relacionadas con la salud o el bienestar.
+                    - Para empezar nuevos proyectos.
+
+                    **Según Tu Estación**:
+                    - **Invierno**: Verde Esmeralda o Pino.
+                    - **Primavera**: Verde Manzana o Lima.
+                    - **Otoño**: Verde Oliva, Musgo o Bosque.
+                    - **Verano**: Verde Menta o Salvia (suave y agrisado).`
+                },
+                {
+                    heading: 'El NEGRO: Elegancia y Misterio',
+                    content: `Técnicamente la ausencia de luz, el negro es el rey de la moda, pero psicológicamente es complejo.
+
+                    **Mensaje Positivo**: Sofisticación, glamour, autoridad absoluta, misterio, protección.
+                    **Mensaje Negativo**: Duelo, tristeza, inaccesibilidad, frialdad.
+
+                    **El Mito del Negro**: No a todos les queda bien el negro cerca de la cara.
+                    - Si eres **Invierno**, es tu color estrella; te da poder.
+                    - Si eres **Verano**, **Otoño** o **Primavera**, el negro puede marcar ojeras y hacerte ver distante. Úsalo lejos del rostro (pantalones, faldas) o en tejidos transparentes/encaje para suavizarlo.`
+                },
+                {
+                    heading: 'El BLANCO: Pureza y Nuevos Comienzos',
+                    content: `**Mensaje**: Higiene, claridad, simplicidad, honestidad, perfección.
+                    **Riesgo**: Puede parecer estéril, frío o elitista (porque es difícil de mantener limpio).
+
+                    Al igual que el negro, hay muchos blancos:
+                    - **Blanco Puro (Óptico)**: Solo para **Inviernos**.
+                    - **Blanco Roto / Hueso**: Para **Veranos**.
+                    - **Marfil / Crema**: Imprescindible para **Primaveras** y **Otoños**. El matiz amarillo del crema conecta con su piel cálida.`
+                },
+                {
+                    heading: 'El PODER DEL CONTEXTO: ¿Intenso o Suave?',
+                    content: `No es solo el color, es la **saturación** (intensidad) y el **valor** (claridad/oscuridad).
+
+                    - **Colores Oscuros** (Navy, Burdeos, Verde Bosque) comunican **Autoridad y Madurez**. Úsalos cuando quieras ser tomado en serio.
+                    - **Colores Claros** (Pasteles, Beige) comunican **Accesibilidad y Amabilidad**. Úsalos para facilitar la comunicación y la empatía.
+                    - **Colores Vivos** (Fucsia, Naranja) comunican **Energía y Atrevimiento**. Úsalos para destacar.
+                    - **Colores Suaves/Apagados** (Malva, Gris, Oliva) comunican **Sofisticación y Calma**. Úsalos para no abrumar.`
+                },
+                {
+                    heading: 'Ejercicio Práctico: Tu Auditoría Emocional',
+                    content: `Te propongo un reto para esta semana:
+
+                    1.  **Abre tu armario** y mira qué color predomina. ¿Coincide con cómo te sientes o con cómo quieres sentirte?
+                    2.  **Elige una emoción** que necesites mañana (ej. "Confianza" o "Calma").
+                    3.  **Selecciona una prenda** de ese color que esté dentro de tu paleta estacional.
+                    4.  **Observa** cómo cambia tu actitud y la reacción de los demás durante el día.
+
+                    Vestir con intención es el primer paso para vivir con intención. No dejes que tus colores sean un accidente; haz que sean tu mensaje al mundo.`
                 }
             ],
-            conclusion: `Elige tu color con intención cada mañana. Pregúntate: ¿Cómo me quiero sentir hoy? ¿Qué quiero proyectar? Tu armario es una caja de herramientas emocionales esperando ser usada.`
+            conclusion: `La psicología del color no es magia, es neurociencia aplicada a la estética. Tienes en tu armario herramientas capaces de alterar tu estado de ánimo y la percepción de quienes te rodean.
+
+            Pero recuerda: la regla de oro es la **autenticidad**. De nada sirve usar rojo para parecer poderoso si te sientes disfrazado e incómodo. El verdadero poder surge cuando alineas el mensaje psicológico del color con tu propia paleta natural (colorimetría) y tu estilo personal. Ahí es cuando la magia ocurre: te ves bien, te sientes bien y el mundo lo nota.`
         }
     },
     {
