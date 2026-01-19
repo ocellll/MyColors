@@ -626,7 +626,7 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         publishedDate: '2026-01-15',
         readingTime: '7 min',
         excerpt: 'La guía para resaltar la delicadeza del Verano con tonos rosados, malvas y grises suaves. Elegancia sin esfuerzo.',
-        image: '/images/blog/maquillaje-verano.jpg',
+        image: '/images/blog/maquillaje-verano.svg',
         keywords: ['maquillaje verano', 'sombras malva', 'labial rosa', 'piel porcelana'],
         content: {
             intro: `El Verano en colorimetría evoca paisajes neblinosos, atardeceres suaves y frescura. Si eres Verano, tu belleza es delicada, suave y fría. Tienes un bajo o medio contraste que requiere colores que no compitan con tus rasgos, sino que los acompañen suavemente.
@@ -680,7 +680,7 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         publishedDate: '2026-01-16',
         readingTime: '9 min',
         excerpt: 'La colorimetría no es solo cosa de mujeres. Aprende a elegir trajes, camisas y corbatas que te hagan ver más líder, saludable y atractivo.',
-        image: '/images/blog/colorimetria-hombres.jpg',
+        image: '/images/blog/colorimetria-hombres.svg',
         keywords: ['moda hombre', 'trajes hombre', 'camisas vestir', 'colorimetria masculina'],
         content: {
             intro: `Muchos hombres limitan su armario a azul, negro y gris por miedo a equivocarse. Sin embargo, entender la colorimetría es una herramienta de poder. Usar los colores correcto puede hacerte ver más autoritario en una reunión, más accesible en una cita y más saludable en general.
@@ -738,7 +738,7 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         publishedDate: '2026-01-17',
         readingTime: '6 min',
         excerpt: '¿No sabes si invertir en oro o plata? Tu subtono de piel tiene la respuesta. Aprende a elegir los metales que te hacen brillar.',
-        image: '/images/blog/joyas-oro-plata.jpg',
+        image: '/images/blog/joyas-oro-plata.svg',
         keywords: ['joyeria colorimetria', 'oro o plata', 'accesorios piel fria calida', 'metales preciosos'],
         content: {
             intro: `Una de las preguntas más rápidas para determinar tu temperatura de color es: "¿Te queda mejor el oro o la plata?". Los metales que usamos cerca del rostro (pendientes, collares) actúan como reflectores de luz.
@@ -903,7 +903,7 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         publishedDate: '2026-01-20',
         readingTime: '7 min',
         excerpt: 'Más allá del traje gris. Aprende a usar el color en el entorno laboral para comunicar profesionalismo y accesibilidad.',
-        image: '/images/blog/estilo-oficina.jpg',
+        image: '/images/blog/estilo-oficina.svg',
         keywords: ['ropa oficina mujer', 'ropa trabajo hombre', 'colores liderazgo', 'psicologia color trabajo'],
         content: {
             intro: `En el entorno profesional, queremos ser tomados en serio. A menudo, esto nos lleva a un uniforme monótono de negros y grises. Pero el color puede ser una herramienta estratégica de comunicación no verbal.
@@ -999,7 +999,7 @@ La próxima vez que te pongas algo frente al espejo, recuerda: lo que estás vie
         publishedDate: '2026-01-22',
         readingTime: '8 min',
         excerpt: 'Rojo para energía, azul para confianza. Aprende a usar la psicología del color a tu favor combinado con tu paleta personal.',
-        image: '/images/blog/psicologia-color.jpg',
+        image: '/images/blog/psicologia-color.svg',
         keywords: ['psicologia del color', 'significado colores ropa', 'comunicacion no verbal', 'imagen personal'],
         content: {
             intro: `Vestirnos es un acto de comunicación. Antes de que digas una palabra, tu ropa ya ha enviado mensajes sobre tu estado de ánimo, tu rol y tu personalidad. La psicología del color estudia estos efectos.
