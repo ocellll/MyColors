@@ -4,10 +4,10 @@ Target: 1200-1500 words per article
 [1] que-es-colorimetria-personal-guia-completa: 1532 words 🟢 GOOD
 [2] las-4-temporadas-color-guia-principiantes: 1256 words 🟡 OK
 [3] teoria-color-aplicada-apariencia-personal: 1358 words 🟡 OK
-[4] guia-maquillaje-mujer-invierno: 1363 words 🟡 OK
-[5] guia-maquillaje-mujer-primavera: 1129 words 🟡 OK
-[6] guia-maquillaje-mujer-otono: 1116 words 🟡 OK
-[7] guia-maquillaje-mujer-verano: 1265 words 🟡 OK
+[4] guia-maquillaje-mujer-invierno: 1294 words 🟡 OK
+[5] guia-maquillaje-mujer-primavera: 1143 words 🟡 OK
+[6] guia-maquillaje-mujer-otono: 1080 words 🟡 OK
+[7] guia-maquillaje-mujer-verano: 1081 words 🟡 OK
 [8] colorimetria-para-hombres-guia-estilo: 1716 words 🟢 GOOD
 [9] joyas-accesorios-oro-plata-segun-piel: 1128 words 🟡 OK
 [10] poder-colores-neutrales-armario-capsula: 1103 words 🟡 OK
