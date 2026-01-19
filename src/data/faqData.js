@@ -17,7 +17,7 @@ export const faqData = [
         id: 3,
         category: 'Análisis',
         question: '¿Cómo funciona el análisis con IA de MyColors?',
-        answer: 'Nuestro sistema de IA analiza tu foto identificando el tono de piel, subtono, color de cabello y ojos, y nivel de contraste. Compara estos datos con las características de cada temporada de color y determina cuál te corresponde con mayor precisión. El proceso toma segundos y utiliza algoritmos de visión por computadora entrenados con miles de análisis profesionales.'
+        answer: 'Nuestro sistema de IA utiliza visión por computadora para analizar píxel a píxel tu tono de piel, subtono, color de cabello y ojos. Estos datos se comparan con una extensa base de datos de colorimetría estacional para encontrar tu coincidencia ideal. Aunque la precisión total depende de la calidad e iluminación de la foto y ninguna IA es infalible al 100%, nuestro algoritmo se refina constantemente para ofrecerte el resultado más fiable y cercano a una consultoría experta.'
     },
     {
         id: 4,

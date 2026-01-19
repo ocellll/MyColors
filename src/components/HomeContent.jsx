@@ -6,6 +6,17 @@ const HomeContent = () => {
                     Descubre Tu Mejor Versión con la Colorimetría Personal
                 </h2>
 
+                {/* Quick Access Button - Mobile optimization */}
+                <div className="text-center mb-10">
+                    <a
+                        href="#analyze"
+                        className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse"
+                    >
+                        📸  Comenzar Análisis Gratis
+                    </a>
+                    <p className="text-xs text-gray-500 mt-2">Sin registro • Resultados inmediatos</p>
+                </div>
+
                 <p className="lead text-xl text-center mb-10 text-gray-600">
                     ¿Alguna vez has notado que ciertos colores te hacen lucir cansada, mientras que otros iluminan tu rostro al instante?
                     No es magia, es <strong>colorimetría</strong>.
